@@ -1,0 +1,128 @@
+Interset
+Interlingua for Morphosyntactic Tagsets
+
+    https://ufal.mff.cuni.cz/interset
+    
+
+
+https://www.richardsumilang.com/programming/groovy/install-groovy-on-os-x/
+
+
+  
+brew install groovy
+echo "export GROOVY_HOME=/usr/local/opt/groovy/libexec" | tee -a ~/.bash_profile; source ~/.bash_profile
+
+
+
+NLP UK
+    https://github.com/brown-uk/nlp_uk
+    https://github.com/brown-uk/nlp_uk
+    https://github.com/brown-uk/nlp_uk/tree/master/src/main/groovy/org/nlp_uk/tools
+    https://github.com/brown-uk/nlp_uk
+    
+    https://github.com/brown-uk/nlp_uk/tree/master/src/main/groovy/org/nlp_uk/tools
+
+Ukrainian corpus
+    http://lang.org.ua/en/corpora/#anchor8
+    http://lang.org.ua/en/corpora/#anchor8
+    
+    
+
+
+Download
+Корпус  # of tokens # of sentences    Download  Download the lemmatized version
+News    461451019   31021650    1.1GB   951MB
+Wikipedia   185645357   15786948    403MB   371MB
+Fiction 18323509    1811548 41MB    38MB
+Ubercorpus  665419885   48620146    1.6GB   1.5GB 
+
+rsync
+https://www.tecmint.com/rsync-local-remote-file-synchronization-commands/
+rsync -avz rpmpkgs/ root@192.168.0.101:/home/
+    
+    extract downloaded corpora:
+    https://superuser.com/questions/480950/how-to-decompress-a-bz2-file
+        bzip2 -d filename.bz2
+    Note, that this command will not preserve original archive file.
+
+    To preserve the original archive, add the -k option:
+
+        bzip2 -dk filename.bz2
+        
+
+frequency dictionary:
+https://stackoverflow.com/questions/10552803/how-to-create-a-frequency-list-of-every-word-in-a-file
+https://stackoverflow.com/questions/10552803/how-to-create-a-frequency-list-of-every-word-in-a-file
+    tr ' ' '\12' <NAME_OF_FILE| sort | uniq -c | sort -nr > result.txt
+    
+    tr ' ' '\12' <news-lem-10k.txt | sort | uniq -c | sort -nr > news-dict-10k.txt
+    
+    
+redirecting temporary directory to where is more space:
+    http://www.unixcl.com/2009/03/changing-temporary-directory-for-sort.html
+    
+    From man pages of sort(1)
+
+-T, --temporary-directory=DIR
+use DIR for temporaries, not $TMPDIR or /tmp; multiple options specify multiple directories
+
+$ sort -T /home/jadu/ -t "|" -k5 ka.log.32323112.out > ka.log.32323112.out
+
+It worked :-)
+
+Another way would be : export env variable TMPDIR to some directory which have sufficient space.
+
+e.g.
+
+$ export TMPDIR=/path/to/other/directory
+$ sort -t "|" -k5 ka.log.32323112.out > ka.log.32323112.out
+
+It worked too :-)
+
+
+    
+    
+    
+Groovy programming language:
+    https://www.richardsumilang.com/programming/groovy/install-groovy-on-os-x/
+    
+    
+ARC Leeds
+    https://arc.leeds.ac.uk/using-the-systems/why-have-a-scheduler/advanced-sge-task-arrays/
+    https://arc.leeds.ac.uk/using-the-systems/getting-started/using-software-modules/
+    
+Valency lexicons
+    https://ufal.mff.cuni.cz/data/valency
+Valency lexicon
+    https://ufal.mff.cuni.cz/data/valency
+    Institute of Formal and Applied Linguistics
+Charles University, Czech Republic
+Faculty of Mathematics and Physics
+ 
+    https://ufal.mff.cuni.cz/data
+    https://ufal.mff.cuni.cz/interset
+    https://ufal.mff.cuni.cz/data
+    https://www.google.com/search?q=interset+prague&nfpr=1&sa=X&ved=0ahUKEwi30NSLhrThAhXJQxUIHSSFAI8QvgUILCgB&biw=1863&bih=988
+    
+    
+Universal tagger
+    https://github.com/sfu-natlang/glm-parser/blob/master/API%20Doc/UniversalTagger_1.2.md
+    
+    https://github.com/sfu-natlang/glm-parser/blob/master/API%20Doc/DataPool_1.0.md
+    https://github.com/sfu-natlang/glm-parser
+    https://github.com/search?q=tree+adjoining
+    
+    
+Open Review
+    https://openreview.net/
+    
+    
+    
+https://www.clarin.si/repository/xmlui/handle/11356/1187
+https://www.clarin.si/repository/xmlui/handle/11356/1041
+
+
+https://github.blog/2014-05-14-improving-github-for-science/
+
+
+

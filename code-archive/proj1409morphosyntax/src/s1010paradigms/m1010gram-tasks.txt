@@ -1,0 +1,21 @@
+
+
+todo:
+ - to write a parser for the paradigms ::
+ 	>> collect word list in the corpus;
+ 	>> apply the paradigms to word lists
+ 	
+ 	- understanding the structure of the variables going together with segmented inflections
+ 	- workflow: inflection -> paradigm class -> a paradigm verification algorithm
+ 		>> generation... of paradigms...
+ 	- creating Ukrainian resources : relational database with segmentation >> morphology...
+ 		``...>> syntactic predictive typing... >> mobile phone applications...
+ 		>> other languages... >>
+ 		
+ 		>> product interesting for companies like Apl, etc.
+ 		
+ 		>> roadmap --> what comes next -- planning after your successor...
+ 		
+ 		
+ 		
+ 	- verifying features syntactically ?

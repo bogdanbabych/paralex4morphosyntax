@@ -1,0 +1,2 @@
+python3 m1010gram.py ../../../../idata/corp/uanews/uacleaned-corpus100k.txt >../../../../idata/pres/p1409msynt/s110gram/uacleaned-list.txt
+# python3 m110gram.py ../../../../idata/corp/uanews/uacleaned-corpus100k.out

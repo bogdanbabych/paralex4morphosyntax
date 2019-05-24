@@ -1,0 +1,1 @@
+python3 mdParadigms.py uaparadigms.txt >uaparadigms-test.txt

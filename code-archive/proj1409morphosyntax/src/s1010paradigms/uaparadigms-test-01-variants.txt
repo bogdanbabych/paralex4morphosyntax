@@ -1,0 +1,1037 @@
+N.nom.sing.fem
+	 variants:
+		фабрик-а~D1h
+	 variants:
+		робітниц-я~D1s
+	 variants:
+		наді-я~D1j
+	 variants:
+		площ-а~D1m
+N.gen.sing.fem
+	 variants:
+		фабрик-и~D1h
+	 variants:
+		робітниц-і~D1s
+	 variants:
+		наді-ї~D1j
+	 variants:
+		площ-і~D1m
+N.dat.sing.fem
+	 variants:
+		фабриц-і~D1h
+	 variants:
+		робітниц-і~D1s
+	 variants:
+		наді-ї~D1j
+	 variants:
+		площ-і~D1m
+N.acc.sing.fem
+	 variants:
+		фабрик-у~D1h
+	 variants:
+		робітниц-ю~D1s
+	 variants:
+		наді-ю~D1j
+	 variants:
+		площ-у~D1m
+	 variants:
+		
+N.ins.sing.fem
+	 variants:
+		фабрик-ою~D1h
+	 variants:
+		робітниц-ею~D1s
+	 variants:
+		наді-єю~D1j
+	 variants:
+		площ-ею~D1m
+N.loc.sing.fem
+	 variants:
+		фабриц-і~D1h
+	 variants:
+		робітниц-і~D1s
+	 variants:
+		наді-ї~D1j
+	 variants:
+		площ-і~D1m
+N.voc.sing.fem
+	 variants:
+		фабрик-о~D1h
+	 variants:
+		робітниц-е~D1s
+	 variants:
+		наді-є~D1j
+	 variants:
+		площ-е~D1m
+N.nom.plur.fem
+	 variants:
+		фабрик-и~D1h
+	 variants:
+		робітниц-і~D1s
+	 variants:
+		наді-ї~D1j
+	 variants:
+		площ-і~D1m
+N.gen.plur.fem
+	 variants:
+		фабрик-~D1h
+	 variants:
+		робітниц-ь~D1s
+	 variants:
+		наді-й~D1j
+	 variants:
+		площ-~D1m
+N.dat.plur.fem
+	 variants:
+		фабрик-ам~D1h
+	 variants:
+		робітниц-ям~D1s
+	 variants:
+		наді-ям~D1j
+	 variants:
+		площ-ам~D1m
+N.ins.plur.fem
+	 variants:
+		фабрик-ами~D1h
+	 variants:
+		робітниц-ями~D1s
+	 variants:
+		наді-ями~D1j
+	 variants:
+		площ-ами~D1m
+N.loc.plur.fem
+	 variants:
+		фабрик-ах~D1h
+	 variants:
+		робітниц-ях~D1s
+	 variants:
+		наді-ях~D1j
+	 variants:
+		площ-ах~D1m
+N.voc.plur.fem
+	 variants:
+		фабрик-и~D1h
+	 variants:
+		робітниц-і~D1s
+	 variants:
+		наді-ї~D1j
+	 variants:
+		площ-і~D1m
+N.nom.sing.mas
+	 variants:
+		робітник-~D2Mh
+	 variants:
+		сталевар-~D2Mr
+	 variants:
+		учител-ь~D2Ms
+	 variants:
+		секретар-~D2Mrs
+	 variants:
+		кра-й~D2Mjs
+	 variants:
+		товариш-~D2Mm
+	 variants:
+		школяр-~D2Mrm
+N.gen.sing.mas
+	 variants:
+		робітник-а~D2Mh
+	 variants:
+		сталевар-а~D2Mr
+	 variants:
+		учител-я~D2Ms
+	 variants:
+		секретар-я~D2Mrs
+	 variants:
+		кра-ю~D2Mjs
+	 variants:
+		товариш-а~D2Mm
+	 variants:
+		школяр-а~D2Mrm
+N.dat.sing.mas
+	 variants:
+		робітник-ові~D2Mh
+		-у~D2Mh
+	 variants:
+		сталевар-ові~D2Mr
+		-у~D2Mr
+	 variants:
+		учител-еві~D2Ms
+		-ю~D2Ms
+	 variants:
+		секретар-еві~D2Mrs
+		-ю~D2Mrs
+	 variants:
+		кра-єві~D2Mjs
+		-ю~D2Mjs
+	 variants:
+		товариш-еві~D2Mm
+		-у~D2Mm
+	 variants:
+		школяр-еві~D2Mrm
+		-у~D2Mrm
+N.ins.sing.mas
+	 variants:
+		робітник-ом~D2Mh
+	 variants:
+		сталевар-ом~D2Mr
+	 variants:
+		учител-ем~D2Ms
+	 variants:
+		секретар-ем~D2Mrs
+	 variants:
+		кра-єм~D2Mjs
+	 variants:
+		товариш-ем~D2Mm
+	 variants:
+		школяр-ем~D2Mrm
+N.loc.sing.mas
+	 variants:
+		робітник-ові~D2Mh
+		-у~D2Mh
+	 variants:
+		сталевар-ові~D2Mr
+		-і~D2Mr
+	 variants:
+		учител-еві~D2Ms
+		-і~D2Ms
+		-ю~D2Ms
+	 variants:
+		секретар-еві~D2Mrs
+		-і~D2Mrs
+		-ю~D2Mrs
+	 variants:
+		кра-ї~D2Mjs
+		кра-ю~D2Mjs
+	 variants:
+		товариш-еві~D2Mm
+		-і~D2Mm
+		-у~D2Mm
+	 variants:
+		школяр-еві~D2Mrm
+		-і~D2Mrm
+N.voc.sing.mas
+	 variants:
+		робітник-~D2Mh
+		робітнич-у~D2Mh
+		-е~D2Mh
+	 variants:
+		сталевар-е~D2Mr
+	 variants:
+		учител-ю~D2Ms
+	 variants:
+		секретар-ю~D2Mrs
+	 variants:
+		кра-ю~D2Mjs
+	 variants:
+		товариш-у~D2Mm
+	 variants:
+		школяр-е~D2Mrm
+N.nom.plur.mas
+	 variants:
+		робітник-и~D2Mh
+	 variants:
+		сталевар-и~D2Mr
+	 variants:
+		учител-і~D2Ms
+	 variants:
+		секретар-і~D2Mrs
+	 variants:
+		кра-ї~D2Mjs
+	 variants:
+		товариш-і~D2Mm
+	 variants:
+		школяр-і~D2Mrm
+N.gen.plur.mas
+	 variants:
+		робітник-ів~D2Mh
+	 variants:
+		сталевар-ів~D2Mr
+	 variants:
+		учител-ів~D2Ms
+	 variants:
+		секретар-ів~D2Mrs
+	 variants:
+		кра-їв~D2Mjs
+	 variants:
+		товариш-ів~D2Mm
+	 variants:
+		школяр-ів~D2Mrm
+N.dat.plur.mas
+	 variants:
+		робітник-ам~D2Mh
+	 variants:
+		сталевар-ам~D2Mr
+	 variants:
+		учител-ям~D2Ms
+	 variants:
+		секретар-ям~D2Mrs
+	 variants:
+		кра-ям~D2Mjs
+	 variants:
+		товариш-ам~D2Mm
+	 variants:
+		школяр-ам~D2Mrm
+N.ins.plur.mas
+	 variants:
+		робітник-ами~D2Mh
+	 variants:
+		сталевар-ами~D2Mr
+	 variants:
+		учител-ями~D2Ms
+	 variants:
+		секретар-ями~D2Mrs
+	 variants:
+		кра-ями~D2Mjs
+	 variants:
+		товариш-ами~D2Mm
+	 variants:
+		школяр-ами~D2Mrm
+N.loc.plur.mas
+	 variants:
+		робітник-ах~D2Mh
+	 variants:
+		сталевар-ах~D2Mr
+	 variants:
+		учител-ях~D2Ms
+	 variants:
+		секретар-ях~D2Mrs
+	 variants:
+		кра-ях~D2Mjs
+	 variants:
+		товариш-ах~D2Mm
+	 variants:
+		школяр-ах~D2Mrm
+N.voc.plur.mas
+	 variants:
+		робітник-и~D2Mh
+	 variants:
+		сталевар-и~D2Mr
+	 variants:
+		учител-і~D2Ms
+	 variants:
+		секретар-і~D2Mrs
+	 variants:
+		кра-ї~D2Mjs
+	 variants:
+		товариш-і~D2Mm
+	 variants:
+		школяр-і~D2Mrm
+N.nom.sing.neu
+	 variants:
+		міст-о~D2Nh
+	 variants:
+		місц-е~D2Ns
+	 variants:
+		прізвищ-е~D2Nm
+N.gen.sing.neu
+	 variants:
+		міст-а~D2Nh
+	 variants:
+		місц-я~D2Ns
+	 variants:
+		прізвищ-а~D2Nm
+N.dat.sing.neu
+	 variants:
+		міст-у~D2Nh
+	 variants:
+		місц-ю~D2Ns
+	 variants:
+		прізвищ-у~D2Nm
+N.ins.sing.neu
+	 variants:
+		міст-ом~D2Nh
+	 variants:
+		місц-ем~D2Ns
+	 variants:
+		прізвищ-ем~D2Nm
+N.loc.sing.neu
+	 variants:
+		міст-і~D2Nh
+	 variants:
+		місц-і~D2Ns
+	 variants:
+		прізвищ-і~D2Nm
+N.voc.sing.neu
+	 variants:
+		міст-о~D2Nh
+	 variants:
+		місц-е~D2Ns
+	 variants:
+		прізвищ-е~D2Nm
+N.nom.plur.neu
+	 variants:
+		міст-а~D2Nh
+	 variants:
+		місц-я~D2Ns
+	 variants:
+		прізвищ-а~D2Nm
+N.gen.plur.neu
+	 variants:
+		міст-~D2Nh
+	 variants:
+		місц-ь~D2Ns
+	 variants:
+		прізвищ-~D2Nm
+N.dat.plur.neu
+	 variants:
+		міст-ам~D2Nh
+	 variants:
+		місц-ям~D2Ns
+	 variants:
+		прізвищ-ам~D2Nm
+N.ins.plur.neu
+	 variants:
+		міст-ами~D2Nh
+	 variants:
+		місц-ями~D2Ns
+	 variants:
+		прізвищ-ами~D2Nm
+N.loc.plur.neu
+	 variants:
+		міст-ах~D2Nh
+	 variants:
+		місц-ях~D2Ns
+	 variants:
+		прізвищ-ах~D2Nm
+N.voc.plur.neu
+	 variants:
+		міст-а~D2Nh
+	 variants:
+		місц-я~D2Ns
+	 variants:
+		прізвищ-а~D2Nm
+N.nom.sing.fem
+	 variants:
+		тін-ь~D3si
+	 variants:
+		подорож-~D3sb
+	 variants:
+		радіст-ь~D3i
+N.gen.sing.fem
+	 variants:
+		тін-і~D3si
+	 variants:
+		подорож-і~D3sb
+	 variants:
+		радост-і~D3i
+N.dat.sing.fem
+	 variants:
+		тін-і~D3si
+	 variants:
+		подорож-і~D3sb
+	 variants:
+		радост-і~D3i
+N.acc.sing.fem
+	 variants:
+		тін-ь~D3si
+	 variants:
+		подорож-~D3sb
+	 variants:
+		радіст-ь~D3i
+N.ins.sing.fem
+	 variants:
+		тінн-ю~D3si
+	 variants:
+		подорожж-ю~D3sb
+	 variants:
+		радіст-ю~D3i
+N.loc.sing.fem
+	 variants:
+		тін-і~D3si
+	 variants:
+		подорож-і~D3sb
+	 variants:
+		радост-і~D3i
+N.voc.sing.fem
+	 variants:
+		тін-е~D3si
+	 variants:
+		подорож-е~D3sb
+	 variants:
+		радост-е~D3i
+N.nom.plur.fem
+	 variants:
+		тін-і~D3si
+	 variants:
+		подорож-і~D3sb
+	 variants:
+		радост-і~D3i
+N.gen.plur.fem
+	 variants:
+		тін-ей~D3si
+	 variants:
+		подорож-ей~D3sb
+	 variants:
+		радост-ей~D3i
+N.dat.plur.fem
+	 variants:
+		тін-ям~D3si
+	 variants:
+		подорож-ам~D3sb
+	 variants:
+		радост-ям~D3i
+N.ins.plur.fem
+	 variants:
+		тін-ями~D3si
+	 variants:
+		подорож-ами~D3sb
+	 variants:
+		радост-ями~D3i
+N.loc.plur.fem
+	 variants:
+		тін-ях~D3si
+	 variants:
+		подорож-ах~D3sb
+	 variants:
+		радост-ях~D3i
+N.voc.plur.fem
+	 variants:
+		тін-і~D3si
+	 variants:
+		подорож-і~D3sb
+	 variants:
+		радост-і~D3i
+N.nom.sing.neu
+	 variants:
+		курч-а~D4a
+	 variants:
+		ім’-я~D4b
+N.gen.sing.neu
+	 variants:
+		курч-ати~D4a
+	 variants:
+		ім-ені~D4b
+		ім’-я~D4b
+N.dat.sing.neu
+	 variants:
+		курч-аті~D4a
+	 variants:
+		ім-ені~D4b
+N.acc.sing.neu
+	 variants:
+		курч-а~D4a
+	 variants:
+		ім’-я~D4b
+N.ins.sing.neu
+	 variants:
+		курч-ам~D4a
+	 variants:
+		ім-енем~D4b
+		ім’-ям~D4b
+N.loc.sing.neu
+	 variants:
+		курч-аті~D4a
+	 variants:
+		ім-ені~D4b
+N.voc.sing.neu
+	 variants:
+		курч-а~D4a
+	 variants:
+		ім’-я~D4b
+N.nom.plur.neu
+	 variants:
+		курч-ата~D4a
+	 variants:
+		ім-ена~D4b
+N.gen.plur.neu
+	 variants:
+		курч-ат~D4a
+	 variants:
+		ім-ен~D4b
+N.dat.plur.neu
+	 variants:
+		курч-атам~D4a
+	 variants:
+		ім-енам~D4b
+N.ins.plur.neu
+	 variants:
+		курч-атами~D4a
+	 variants:
+		ім-енами~D4b
+N.loc.plur.neu
+	 variants:
+		курч-атах~D4a
+	 variants:
+		ім-енах~D4b
+N.voc.plur.neu
+	 variants:
+		курч-ата~D4a
+	 variants:
+		ім-ена~D4b
+A.nom.sing.mas
+	 variants:
+		гарн-ий~Ah
+	 variants:
+		син-ій~As
+	 variants:
+		безкра-їй~Aj
+	 variants:
+		братів~Ap
+A.gen.sing.mas
+	 variants:
+		гарн-ого~Ah
+	 variants:
+		синь-ого~As
+	 variants:
+		безкрай-ого~Aj
+	 variants:
+		братов-ого~Ap
+A.dat.sing.mas
+	 variants:
+		гарн-ому~Ah
+	 variants:
+		синь-ому~As
+	 variants:
+		безкрай-ому~Aj
+	 variants:
+		братов-ому~Ap
+A.ins.sing.mas
+	 variants:
+		гарн-им~Ah
+	 variants:
+		син-ім~As
+	 variants:
+		безкра-їм~Aj
+	 variants:
+		братов-им~Ap
+A.loc.sing.mas
+	 variants:
+		гарн-ому~Ah
+		-ім~Ah
+	 variants:
+		синь-ому~As
+		син-ім~As
+	 variants:
+		безкрай-ому~Aj
+		безкра-їм~Aj
+	 variants:
+		братов-ому~Ap
+		-ім~Ap
+A.nom.plur.mas
+	 variants:
+		гарн-і~Ah
+	 variants:
+		син-і~As
+	 variants:
+		безкра-ї~Aj
+	 variants:
+		братов-і~Ap
+A.gen.plur.mas
+	 variants:
+		гарн-их~Ah
+	 variants:
+		син-іх~As
+	 variants:
+		безкра-їх~Aj
+	 variants:
+		братов-их~Ap
+A.dat.plur.mas
+	 variants:
+		гарн-им~Ah
+	 variants:
+		син-ім~As
+	 variants:
+		безкра-їм~Aj
+	 variants:
+		братов-им~Ap
+A.ins.plur.mas
+	 variants:
+		гарн-ими~Ah
+	 variants:
+		син-іми~As
+	 variants:
+		безкра-їми~Aj
+	 variants:
+		братов-ими~Ap
+A.loc.plur.mas
+	 variants:
+		гарн-их~Ah
+	 variants:
+		син-іх~As
+	 variants:
+		безкра-їх~Aj
+	 variants:
+		братов-их~Ap
+A.nom.sing.neu
+	 variants:
+		гарн-е~Ah
+	 variants:
+		син-є~As
+	 variants:
+		безкра-є~Aj
+	 variants:
+		братов-е~Ap
+A.gen.sing.neu
+	 variants:
+		гарн-ого~Ah
+	 variants:
+		синь-ого~As
+	 variants:
+		безкрай-ого~Aj
+	 variants:
+		братов-ого~Ap
+A.dat.sing.neu
+	 variants:
+		гарн-ому~Ah
+	 variants:
+		синь-ому~As
+	 variants:
+		безкрай-ому~Aj
+	 variants:
+		братов-ому~Ap
+A.acc.sing.neu
+	 variants:
+		гарн-е~Ah
+	 variants:
+		син-є~As
+	 variants:
+		безкра-є~Aj
+	 variants:
+		братов-е~Ap
+A.ins.sing.neu
+	 variants:
+		гарн-им~Ah
+	 variants:
+		син-ім~As
+	 variants:
+		безкра-їм~Aj
+	 variants:
+		братов-им~Ap
+A.loc.sing.neu
+	 variants:
+		гарн-ому~Ah
+		-ім~Ah
+	 variants:
+		синь-ому~As
+		син-ім~As
+	 variants:
+		безкрай-ому~Aj
+		безкра-їм~Aj
+	 variants:
+		братов-ому~Ap
+		-ім~Ap
+A.nom.plur.neu
+	 variants:
+		гарн-і~Ah
+	 variants:
+		син-і~As
+	 variants:
+		безкра-ї~Aj
+	 variants:
+		братов-і~Ap
+A.gen.plur.neu
+	 variants:
+		гарн-их~Ah
+	 variants:
+		син-іх~As
+	 variants:
+		безкра-їх~Aj
+	 variants:
+		братов-их~Ap
+A.dat.plur.neu
+	 variants:
+		гарн-им~Ah
+	 variants:
+		син-ім~As
+	 variants:
+		безкра-їм~Aj
+	 variants:
+		братов-им~Ap
+A.ins.plur.neu
+	 variants:
+		гарн-ими~Ah
+	 variants:
+		син-іми~As
+	 variants:
+		безкра-їми~Aj
+	 variants:
+		братов-ими~Ap
+A.loc.plur.neu
+	 variants:
+		гарн-их~Ah
+	 variants:
+		син-іх~As
+	 variants:
+		безкра-їх~Aj
+	 variants:
+		братов-их~Ap
+A.nom.sing.fem
+	 variants:
+		гарн-а~Ah
+	 variants:
+		син-я~As
+	 variants:
+		безкра-я~Aj
+	 variants:
+		братов-а~Ap
+A.gen.sing.fem
+	 variants:
+		гарн-ої~Ah
+	 variants:
+		синь-ої~As
+	 variants:
+		безкрай-ої~Aj
+	 variants:
+		братов-ої~Ap
+A.dat.sing.fem
+	 variants:
+		гарн-ій~Ah
+	 variants:
+		син-ій~As
+	 variants:
+		безкра-їй~Aj
+	 variants:
+		братов-ій~Ap
+A.acc.sing.fem
+	 variants:
+		гарн-у~Ah
+	 variants:
+		син-ю~As
+	 variants:
+		безкра-ю~Aj
+	 variants:
+		братов-у~Ap
+A.ins.sing.fem
+	 variants:
+		гарн-ою~Ah
+	 variants:
+		синь-ою~As
+	 variants:
+		безкрай-ою~Aj
+	 variants:
+		братов-ою~Ap
+A.loc.sing.fem
+	 variants:
+		гарн-ій~Ah
+	 variants:
+		син-ій~As
+	 variants:
+		безкра-їй~Aj
+	 variants:
+		братов-ій~Ap
+A.nom.plur.fem
+	 variants:
+		гарн-і~Ah
+	 variants:
+		син-і~As
+	 variants:
+		безкра-ї~Aj
+	 variants:
+		братов-і~Ap
+A.gen.plur.fem
+	 variants:
+		гарн-их~Ah
+	 variants:
+		син-іх~As
+	 variants:
+		безкра-їх~Aj
+	 variants:
+		братов-их~Ap
+A.dat.plur.fem
+	 variants:
+		гарн-им~Ah
+	 variants:
+		син-ім~As
+	 variants:
+		безкра-їм~Aj
+	 variants:
+		братов-им~Ap
+A.ins.plur.fem
+	 variants:
+		гарн-ими~Ah
+	 variants:
+		син-іми~As
+	 variants:
+		безкра-їми~Aj
+	 variants:
+		братов-ими~Ap
+A.loc.plur.fem
+	 variants:
+		гарн-их~Ah
+	 variants:
+		син-іх~As
+	 variants:
+		безкра-їх~Aj
+	 variants:
+		братов-их~Ap
+V.p1.sing.pres
+	 variants:
+		ід-у~D1h
+	 variants:
+		кол-ю~D1m
+	 variants:
+		чу-ю~D1s
+V.p2.sing.pres
+	 variants:
+		ід-еш~D1h
+	 variants:
+		кол-еш~D1m
+	 variants:
+		чу-єш~D1s
+V.p3.sing.pres
+	 variants:
+		ід-е~D1h
+	 variants:
+		кол-е~D1m
+	 variants:
+		чу-є~D1s
+V.p1.plur.pres
+	 variants:
+		ід-емо~D1h
+	 variants:
+		кол-емо~D1m
+	 variants:
+		чу-ємо~D1s
+V.p2.plur.pres
+	 variants:
+		ід-ете~D1h
+	 variants:
+		кол-ете~D1m
+	 variants:
+		чу-єте~D1s
+V.p3.plur.pres
+	 variants:
+		ід-уть~D1h
+	 variants:
+		кол-ють~D1m
+	 variants:
+		чу-ють~D1s
+V.p1.sing.pres
+	 variants:
+		робл-ю~D2h
+	 variants:
+		бач-у~D2m
+	 variants:
+		го-ю~D2s
+V.p2.sing.pres
+	 variants:
+		роб-иш~D2h
+	 variants:
+		бач-иш~D2m
+	 variants:
+		го-їш~D2s
+V.p3.sing.pres
+	 variants:
+		роб-ить~D2h
+	 variants:
+		бач-ить
+	 variants:
+		го-їть~D2s
+V.p1.plur.pres
+	 variants:
+		роб-имо~D2h
+	 variants:
+		бач-имо~D2m
+	 variants:
+		го-їмо~D2s
+V.p2.plur.pres
+	 variants:
+		роб-ите~D2h
+	 variants:
+		бач-ите~D2m
+	 variants:
+		го-їте~D2s
+V.p3.plur.pres
+	 variants:
+		робл-ять~D2h
+	 variants:
+		бач-ать~D2m
+	 variants:
+		го-ять~D2s
+V.mas.sing.past
+	 variants:
+		бра-в~DPv
+	 variants:
+		ніс-~DPz
+	 variants:
+		пік-~DPz
+V.fem.sing.past
+	 variants:
+		бра-ла~DPv
+	 variants:
+		нес-ла~DPz
+	 variants:
+		пек-ла~DPz
+V.neu.sing.past
+	 variants:
+		бра-ло~DPv
+	 variants:
+		нес-ло~DPz
+	 variants:
+		пек-ло~DPz
+V.mfn.plur.past
+	 variants:
+		бра-ли~DPv
+	 variants:
+		нес-ли~DPz
+	 variants:
+		пек-ли~DPz
+V.inf
+	 variants:
+		бра-ти~DPv
+	 variants:
+		нес-ти~DPz
+	 variants:
+		пек-ти~DPz
+V.p1.sing.futr
+	 variants:
+		бра-тиму~DFh
+	 variants:
+		нес-тиму~DFm
+	 variants:
+		пек-тиму~DFs
+V.p2.sing.futr
+	 variants:
+		бра-тимеш~DFh
+	 variants:
+		нес-тимеш~DFm
+	 variants:
+		пек-тимеш~DFs
+V.p3.sing.futr
+	 variants:
+		бра-тиме~DFh
+	 variants:
+		нес-тиме~DFm
+	 variants:
+		пек-тиме~DFs
+V.p1.plur.futr
+	 variants:
+		бра-тимемо~DFh
+		-тимем~DFh
+	 variants:
+		нес-тимемо~DFm
+		-тимем~DFm
+	 variants:
+		пек-тимемо~DFs
+		-тимем~DFs
+V.p2.plur.futr
+	 variants:
+		бра-тимете~DFh
+	 variants:
+		нес-тимете~DFm
+	 variants:
+		пек-тимете~DFs
+V.p1.plur.futr
+	 variants:
+		бра-тимуть~DFh
+	 variants:
+		нес-тимуть~DFm
+	 variants:
+		пек-тимуть~DFs
+V.p2.sing.impr
+	 variants:
+		бер-и~DIy
+	 variants:
+		купуй-~DIz
+V.p1.plur.impr
+	 variants:
+		бер-ім~DIy
+		-імо~DIy
+	 variants:
+		купуй-мо~DIz
+V.p2.plur.impr
+	 variants:
+		бер-іть~DIy
+		-те~DIy
+	 variants:
+		купуй-те~DIz

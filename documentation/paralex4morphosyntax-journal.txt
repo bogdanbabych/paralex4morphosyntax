@@ -1,0 +1,586 @@
+2019-04-08
+    Journal of experiments on automated aquisition of morphological forms for new words
+    
+    
+Preparation stage 
+    -- project "paralex4langid": identification of russian text in Ukrainian corpus; ~1% of sentences are expected to be filtered out
+    
+    Using pre-cleaned corpora available on:
+    http://lang.org.ua/en/corpora/#anchor8
+    
+    news
+    wikipedia
+    fiction
+    ubercorpus
+    
+    
+
+
+------ 
+Stage 1
+    Uploading paralex4langid to the workspace:
+    Output:
+    
+bash-3.2$ rsync -avzh stage02langid/ smlbb@arc3:/home/home02/smlbb/smlbb/langid/
+smlbb@arc3's password:
+building file list ... done
+./
+__init__.py
+langid-news.lemmatized.shuffled.10k_log.txt
+langid-news.lemmatized.shuffled.10k_ru.txt
+langid-news.lemmatized.shuffled.10k_uk.txt
+langid-news.tokenized.shuffled.10k_log.txt
+langid-news.tokenized.shuffled.10k_ru.txt
+langid-news.tokenized.shuffled.10k_uk.txt
+langid.py
+langid.sh
+news.lemmatized.shuffled.10k.txt
+news.tokenized.shuffled.10k.txt
+uniq-ru_ngramsEd.txt
+
+sent 2.26M bytes  received 290 bytes  122.01K bytes/sec
+total size is 7.60M  speedup is 3.37
+
+
+----
+
+Stage 2
+    Creating a workspace for each corpus
+    
+    langid> 
+    corpus>
+    
+        each corpus in a separate directory
+        creating dowlonad files with URLS
+            downloading
+            unzipping:
+            bzip2 -dk 
+                bzip2 -d wiki_dump.lemmatized.txt.bz2
+        
+        fict
+        law
+        news
+        wiki
+        
+    plan:
+    > to clean & > to join
+    
+Stage 3 
+    with downloaded corpus files:
+        > clean them up;
+        > join cleaned versions in one directory
+        > sort : separately and jointly...
+
+
+    stages to run :
+    1. download a corpus with wget script
+    
+    
+    // + create Russian dictionaries for this corpus
+    
+    
+
+
+        
+Stage 3.1
+        cleanup:
+        prepend the query submission script to the shell scripts:
+        
+#$ -cwd -V
+#$ -l h_rt=10:00:00
+#$ -l h_vmem=10000M
+
+running jobs on the server arc3
+    qsub scriptNameXX.sh
+
+
+
+
+
+Stage 3.2
+# load python package:
+    module avail
+    module list
+    module load python
+
+[smlbb@login1.arc3 langid]$ python    
+Python 3.6.0 (default, Feb 22 2017, 16:36:12)
+[GCC 6.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+
+Stage 3.x:
+Downloading the dictionary file for local experiments:
+
+    rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/fict/fiction.tokenized.shuffled_uk-frqdict.txt ./
+    
+
+downloading results:
+fiction:
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/fict/fiction.tokenized.shuffled_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+fiction.tokenized.shuffled_uk-frqdict.txt
+
+sent 42 bytes  received 3.44M bytes  299.14K bytes/sec
+total size is 18.86M  speedup is 5.48
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/fict/fiction.lemmatized.shuffled_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+fiction.lemmatized.shuffled_uk-frqdict.txt
+
+sent 42 bytes  received 1.96M bytes  230.76K bytes/sec
+total size is 9.71M  speedup is 4.95
+    
+    
+wiki:
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/wiki/wiki_dump.tokenized_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+wiki_dump.tokenized_uk-frqdict.txt
+
+sent 42 bytes  received 31.37M bytes  478.95K bytes/sec
+total size is 153.20M  speedup is 4.88
+
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/wiki/wiki_dump.lemmatized_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+wiki_dump.lemmatized_uk-frqdict.txt
+
+sent 42 bytes  received 27.33M bytes  459.32K bytes/sec
+total size is 129.22M  speedup is 4.73
+
+all:
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/all/corpus_all_tokenized_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+corpus_all_tokenized_uk-frqdict.txt
+
+sent 42 bytes  received 50.93M bytes  487.36K bytes/sec
+total size is 246.76M  speedup is 4.85
+
+
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/all/corpus_all_lemmatized_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+corpus_all_lemmatized_uk-frqdict.txt
+
+sent 42 bytes  received 43.43M bytes  474.61K bytes/sec
+total size is 204.80M  speedup is 4.72
+
+
+bash-3.2$
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/law/laws.txt.tokenized_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+laws.txt.tokenized_uk-frqdict.txt
+
+sent 42 bytes  received 9.65M bytes  378.46K bytes/sec
+total size is 43.18M  speedup is 4.47
+
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/law/laws.txt.lemmatized_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+laws.txt.lemmatized_uk-frqdict.txt
+
+sent 42 bytes  received 7.55M bytes  387.33K bytes/sec
+total size is 32.87M  speedup is 4.35
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/news/news.tokenized.shuffled_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+news.tokenized.shuffled_uk-frqdict.txt
+
+sent 42 bytes  received 19.13M bytes  472.30K bytes/sec
+total size is 94.59M  speedup is 4.94
+bash-3.2$ rsync -avzh smlbb@arc3:/home/home02/smlbb/smlbb/corpus/news/news.lemmatized.shuffled_uk-frqdict.txt ./
+smlbb@arc3's password:
+receiving file list ... done
+news.lemmatized.shuffled_uk-frqdict.txt
+
+sent 42 bytes  received 14.07M bytes  446.66K bytes/sec
+total size is 66.26M  speedup is 4.71
+bash-3.2$ wc corpus_all_lemmatized_uk-frqdict.txt corpus_all_tokenized_uk-frqdict.txt fiction.lemmatized.shuffled_uk-frqdict.txt fiction.tokenized.shuffled_uk-frqdict.txt laws.txt.lemmatized_uk-frqdict.txt laws.txt.tokenized_uk-frqdict.txt news.lemmatized.shuffled_uk-frqdict.txt news.tokenized.shuffled_uk-frqdict.txt wiki_dump.lemmatized_uk-frqdict.txt wiki_dump.tokenized_uk-frqdict.txt
+ 8286232 17103816 204799804 corpus_all_lemmatized_uk-frqdict.txt
+ 9661641 19983674 246755063 corpus_all_tokenized_uk-frqdict.txt
+  366834  761026 9705780 fiction.lemmatized.shuffled_uk-frqdict.txt
+  714415 1481074 18863836 fiction.tokenized.shuffled_uk-frqdict.txt
+ 1514536 3120975 32874777 laws.txt.lemmatized_uk-frqdict.txt
+ 1858839 3845710 43179897 laws.txt.tokenized_uk-frqdict.txt
+ 2530107 5245843 66263328 news.lemmatized.shuffled_uk-frqdict.txt
+ 3475707 7220689 94586967 news.tokenized.shuffled_uk-frqdict.txt
+ 5293308 10896210 129221201 wiki_dump.lemmatized_uk-frqdict.txt
+ 6096593 12563444 153198255 wiki_dump.tokenized_uk-frqdict.txt
+ 39798212 82222461 999448908 total
+ 
+ 
+
+Stage 4:
+    create 
+    the baseline:
+    
+
+
+bash-3.2$ ./gradlew expand
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not determine java version from '11'.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+
+bash-3.2$
+bash-3.2$ ./gradlew expand
+Downloading https://services.gradle.org/distributions/gradle-5.1.1-bin.zip
+.................................................................................
+
+Welcome to Gradle 5.1.1!
+
+Here are the highlights of this release:
+ - Control which dependencies can be retrieved from which repositories
+ - Production-ready configuration avoidance APIs
+
+For more details see https://docs.gradle.org/5.1.1/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+<-------------> 0% EXECUTING [1m 43s]
+> :compileJava > Resolve files of :compileClasspath > picocli-3.7.0.jar > 31 KB/238 KB downloaded
+> :compileJava > Resolve files of :compileClasspath > ant-1.9.13.jar > 367 KB/1.97 MB downloaded
+> :compileJava > Resolve files of :compileClasspath > groovy-xml-2.5.5.jar > 111 KB/216 KB downloaded
+> :compileJava > Resolve files of :compileClasspath > groovy-test-2.5.5.jar > 47 KB/82 KB downloaded
+> :compileJava > Resolve files of :compileClasspath > groovy-2.5.5.jar > 464 KB/5.19 MB downloaded
+> :compileJava > Resolve files of :compileClasspath > jline-2.14.6.jar > 95 KB/262 KB downloaded
+> :compileJava > Resolve files of :compileClasspath > junit-4.12.jar > 79 KB/307 KB downloaded
+> :compileJava > Resolve files of :compileClasspath > logback-core-1.2.3.jar > 316 KB/460 KB downloaded
+
+
+
+
+
+=======
+
+
+bash-3.2$
+bash-3.2$ ./gradlew expand
+Downloading https://services.gradle.org/distributions/gradle-5.1.1-bin.zip
+.................................................................................
+
+Welcome to Gradle 5.1.1!
+
+Here are the highlights of this release:
+ - Control which dependencies can be retrieved from which repositories
+ - Production-ready configuration avoidance APIs
+
+For more details see https://docs.gradle.org/5.1.1/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Task :reverseAdvp
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.vmplugin.v7.Java7$1 (file:/Users/bogdan/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.5.5/2388f952b369f6b11cde8e15ec872e9ca3e0ff3e/groovy-2.5.5.jar) to constructor java.lang.invoke.MethodHandles$Lookup(java.lang.Class,int)
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.vmplugin.v7.Java7$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+> Task :reverseVerbs
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.vmplugin.v7.Java7$1 (file:/Users/bogdan/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.5.5/2388f952b369f6b11cde8e15ec872e9ca3e0ff3e/groovy-2.5.5.jar) to constructor java.lang.invoke.MethodHandles$Lookup(java.lang.Class,int)
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.vmplugin.v7.Java7$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+
+> Task :testExpand
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.vmplugin.v7.Java7$1 (file:/Users/bogdan/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.5.5/2388f952b369f6b11cde8e15ec872e9ca3e0ff3e/groovy-2.5.5.jar) to constructor java.lang.invoke.MethodHandles$Lookup(java.lang.Class,int)
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.vmplugin.v7.Java7$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+06:21:25.756 [main] INFO  Expand - Got 10 additional tags
+Loading affixes from directory ../data/affix
+WARNING: overlapping match ані in np3:
+        ані:
+06:21:26.013 [main] INFO  ExpandAll - Processing file alt.lst, 2 lines
+06:21:26.037 [main] INFO  ExpandAll - Processing file base.lst, 184 lines
+06:21:26.266 [main] INFO  ExpandAll - Processing file composite.lst, 470 lines
+06:21:26.269 [main] INFO  ExpandAll - Processing file dot-abbr.lst, 2 lines
+06:21:26.271 [main] INFO  ExpandAll - Processing file geography.lst, 1 lines
+06:21:26.273 [main] INFO  ExpandAll - Processing file names.lst, 24 lines
+06:21:26.275 [main] INFO  ExpandAll - Processing file twisters.lst, 1 lines
+06:21:26.275 [main] INFO  ExpandAll - Expanding 684 lines
+06:21:26.711 [main] ERROR Expand - Additional tags not used: [бачилось verb, бачиться verb, бачся verb]
+06:21:26.899 [main] INFO  Util - Collecting words and lemmas...
+06:21:27.064 [Thread-2] INFO  Util - 2589 spelling word forms
+06:21:27.065 [Thread-1] INFO  Util - 2642 total word forms
+06:21:27.065 [main] INFO  Expand - Writing output files...
+06:21:27.253 [main] INFO  Util - Всього лем: 349
+
+06:21:27.255 [main] INFO  Util - No stats/ directory, skipping dict_stats.txt
+
+> Task :expandForCorp
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.codehaus.groovy.vmplugin.v7.Java7$1 (file:/Users/bogdan/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.5.5/2388f952b369f6b11cde8e15ec872e9ca3e0ff3e/groovy-2.5.5.jar) to constructor java.lang.invoke.MethodHandles$Lookup(java.lang.Class,int)
+WARNING: Please consider reporting this to the maintainers of org.codehaus.groovy.vmplugin.v7.Java7$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+06:21:28.915 [main] INFO  Expand - Got 95 additional tags
+Loading affixes from directory ../data/affix
+WARNING: overlapping match ані in np3:
+        ані:
+06:21:29.094 [main] INFO  ExpandAll - Processing file alt.lst, 445 lines
+06:21:29.159 [main] INFO  ExpandAll - Processing file base-abbr.lst, 1012 lines
+06:21:29.684 [main] INFO  ExpandAll - Processing file base-composite.lst, 2195 lines
+06:21:29.696 [main] INFO  ExpandAll - Processing file base-compound.lst, 913 lines
+06:21:30.644 [main] INFO  ExpandAll - Processing file base.lst, 206037 lines
+06:21:30.648 [main] INFO  ExpandAll - Processing file colors.lst, 327 lines
+06:21:30.655 [main] INFO  ExpandAll - Processing file dot-abbr.lst, 253 lines
+06:21:30.666 [main] INFO  ExpandAll - Processing file exceptions.lst, 881 lines
+06:21:30.702 [main] INFO  ExpandAll - Processing file geo-other.lst, 6052 lines
+06:21:30.981 [main] INFO  ExpandAll - Processing file geo-ukr-composite.lst, 2612 lines
+06:21:30.988 [main] INFO  ExpandAll - Processing file geo-ukr-hydro.lst, 1143 lines
+06:21:31.109 [main] INFO  ExpandAll - Processing file geo-ukr-koatuu.lst, 24497 lines
+06:21:31.113 [main] INFO  ExpandAll - Processing file ignored.lst, 410 lines
+06:21:31.114 [main] INFO  ExpandAll - Processing file lang.lst, 204 lines
+06:21:31.191 [main] INFO  ExpandAll - Processing file names-anim.lst, 18992 lines
+06:21:31.255 [main] INFO  ExpandAll - Processing file names-composite.lst, 430 lines
+06:21:31.261 [main] INFO  ExpandAll - Processing file names-other.lst, 830 lines
+06:21:31.268 [main] INFO  ExpandAll - Processing file pronouns.lst, 1030 lines
+06:21:31.273 [main] INFO  ExpandAll - Processing file rare.lst, 498 lines
+06:21:31.279 [main] INFO  ExpandAll - Processing file slang.lst, 956 lines
+06:21:31.279 [main] INFO  ExpandAll - Processing file subst.lst, 12 lines
+06:21:31.387 [main] INFO  ExpandAll - Processing file twisters.lst, 6922 lines
+06:21:31.387 [main] INFO  ExpandAll - Expanding 276651 lines
+<==========---> 80% EXECUTING [7m 24s]
+> IDLE
+> IDLE
+> IDLE
+> IDLE
+> :expandForCorp
+> IDLE
+> IDLE
+> IDLE
+
+
+
+======
+
+06:21:31.387 [main] INFO  ExpandAll - Expanding 276651 lines
+06:22:49.181 [main] INFO  Expand - Sorting...
+
+06:23:37.958 [main] INFO  Expand - Sorting time: 48776
+06:23:37.958 [main] INFO  Expand - Total out_lines 5690688
+
+06:23:37.958 [main] INFO  Expand - Processing time: 126571
+06:23:37.958 [main] INFO  Util - Collecting words and lemmas...
+<==========---> 80% EXECUTING [9m 33s]
+> IDLE
+> IDLE
+> IDLE
+> IDLE
+> :expandForCorp
+> IDLE
+> IDLE
+> IDLE
+
+
+
+06:23:37.958 [main] INFO  Expand - Sorting time: 48776
+06:23:37.958 [main] INFO  Expand - Total out_lines 5690688
+
+06:23:37.958 [main] INFO  Expand - Processing time: 126571
+06:23:37.958 [main] INFO  Util - Collecting words and lemmas...
+06:24:18.376 [Thread-2] INFO  Util - 3095796 spelling word forms
+06:24:21.200 [Thread-1] INFO  Util - 3243715 total word forms
+06:24:21.200 [main] INFO  Expand - Word list time: 43242
+06:24:21.200 [main] INFO  Expand - Writing output files...
+
+
+
+06:23:37.958 [main] INFO  Expand - Sorting time: 48776
+06:23:37.958 [main] INFO  Expand - Total out_lines 5690688
+
+06:23:37.958 [main] INFO  Expand - Processing time: 126571
+06:23:37.958 [main] INFO  Util - Collecting words and lemmas...
+06:24:18.376 [Thread-2] INFO  Util - 3095796 spelling word forms
+06:24:21.200 [Thread-1] INFO  Util - 3243715 total word forms
+06:24:21.200 [main] INFO  Expand - Word list time: 43242
+06:24:21.200 [main] INFO  Expand - Writing output files...
+06:25:11.275 [main] INFO  Expand - Write dict_corp_lt time: 50075
+06:25:20.203 [main] ERROR OutputValidator - verb lemma is missing [pres:s:1, pres:s:2, pres:s:3, pres:p:1, pres:p:2, pres:p:3] for: мусіти verb:imperf:inf:rare
+06:25:20.925 [main] ERROR OutputValidator - noun lemma is missing [v_rod, v_dav, v_oru, v_mis, v_kly] on gender m for: оплот noun:inanim:m:v_naz:bad
+06:25:21.959 [main] ERROR OutputValidator - noun lemma is missing [v_rod, v_dav, v_oru, v_mis, v_kly] on gender m for: поклон noun:inanim:m:v_naz:bad
+06:25:24.789 [main] INFO  Expand - Indent lines time: 13514
+<==========---> 80% EXECUTING [11m 25s]
+> IDLE
+> IDLE
+> IDLE
+> IDLE
+> :expandForCorp
+> IDLE
+> IDLE
+> IDLE
+
+
+06:23:37.958 [main] INFO  Expand - Processing time: 126571
+06:23:37.958 [main] INFO  Util - Collecting words and lemmas...
+06:24:18.376 [Thread-2] INFO  Util - 3095796 spelling word forms
+06:24:21.200 [Thread-1] INFO  Util - 3243715 total word forms
+06:24:21.200 [main] INFO  Expand - Word list time: 43242
+06:24:21.200 [main] INFO  Expand - Writing output files...
+06:25:11.275 [main] INFO  Expand - Write dict_corp_lt time: 50075
+06:25:20.203 [main] ERROR OutputValidator - verb lemma is missing [pres:s:1, pres:s:2, pres:s:3, pres:p:1, pres:p:2, pres:p:3] for: мусіти verb:imperf:inf:rare
+06:25:20.925 [main] ERROR OutputValidator - noun lemma is missing [v_rod, v_dav, v_oru, v_mis, v_kly] on gender m for: оплот noun:inanim:m:v_naz:bad
+06:25:21.959 [main] ERROR OutputValidator - noun lemma is missing [v_rod, v_dav, v_oru, v_mis, v_kly] on gender m for: поклон noun:inanim:m:v_naz:bad
+06:25:24.789 [main] INFO  Expand - Indent lines time: 13514
+06:26:15.418 [main] INFO  Expand - Write dict_corp_vis time: 50629
+06:26:17.204 [main] INFO  Util - Всього лем: 382817
+
+
+BUILD SUCCESSFUL in 26m 25s
+7 actionable tasks: 7 executed
+
+bash-3.2$
+
+
+
+
+Stage 5:
+    location of data for further expriments:
+    /Users/bogdan/elisp/_ghdata
+    
+    
+    
+    bash-3.2$ ls
+    code            
+!! >> dict_uk_expand_lists    
+    hardwords-examples  
+    medical-corpus      
+    src         
+    temp2check      
+    ud-uk           
+!!>> ukcorpus        
+    wordnet
+
+
+Further tasks:
+    1. implement paradigm generation
+    2. check coverage
+    3. check overlap...
+    ...
+    4. check overalap on all corpora
+    
+        >> different genres :: different results
+        >> linguistic significance...
+        
+    4.1. check overlap of old news corpus vs. new news corpus
+        >> how much does the language change ???
+        >> reasons .. political, etc. ?
+        
+        check 
+    ?? further :: modelling alternations in stem...
+    
+    5. start writing paper
+    
+
+
+
+
+
+Stage 6: implementing paradigm filling algorithm
+    - what actually works -- from previous projects: reading paradigm file...
+    
+    - readers for corpus frequency dictionary files...
+
+
+
+
+LSplits:: вшанувати : [('вшануват', 'и', [('D1h', 'n112.N.gen.sing.fem', 'фабрик'), ('D2Mh', 'n221.N.nom.plur.mas', 'робітник'), ('D2Mr', 'n221.N.nom.plur.mas', 'сталевар'), ('VIy', 'v612.V.p2.sing.impr', 'бер')]), ('вшанув', 'ати', [('D4a', 'n512.N.gen.sing.neu', 'курч')]), ('вшанува', 'ти', [('VPv', 'v411.V.inf', 'бра'), ('VPz', 'v411.V.inf', 'нес'), ('VPz', 'v411.V.inf', 'пек')])]
+hyp:: оступався : 22
+LSplits:: оступався : [('оступавс', 'я', [('D1s', 'n111.N.nom.sing.fem', 'робітниц'), ('D1j', 'n111.N.nom.sing.fem', 'наді'), ('D2Ms', 'n212.N.gen.sing.mas', 'учител'), ('D2Mrs', 'n212.N.gen.sing.mas', 'секретар'), ('D2Ns', 'n312.N.gen.sing.neu', 'місц'), ('D2Ns', 'n321.N.nom.plur.neu', 'місц'), ('D4b', 'n511.N.nom.sing.neu', 'ім’'), ('D4b', 'n512.N.gen.sing.neu', 'ім’'), ('As', 'a311.A.nom.sing.fem', 'син'), ('Aj', 'a311.A.nom.sing.fem', 'безкра')])]
+hyp:: побесідувати : 18
+LSplits:: побесідувати : [('побесідуват', 'и', [('D1h', 'n112.N.gen.sing.fem', 'фабрик'), ('D2Mh', 'n221.N.nom.plur.mas', 'робітник'), ('D2Mr', 'n221.N.nom.plur.mas', 'сталевар'), ('VIy', 'v612.V.p2.sing.impr', 'бер')]), ('побесідув', 'ати', [('D4a', 'n512.N.gen.sing.neu', 'курч')]), ('побесідува', 'ти', [('VPv', 'v411.V.inf', 'бра'), ('VPz', 'v411.V.inf', 'нес'), ('VPz', 'v411.V.inf', 'пек')])]
+hyp:: пропустимо : 15
+LSplits:: пропустимо : [('пропустим', 'о', [('D1h', 'n117.N.voc.sing.fem', 'фабрик'), ('D2Nh', 'n311.N.nom.sing.neu', 'міст')]), ('пропуст', 'имо', [('V2h', 'v221.V.p1.plur.pres', 'роб'), ('V2m', 'v221.V.p1.plur.pres', 'бач')]), ('пропусти', 'мо', [('VIz', 'v621.V.p1.plur.impr', 'купуй')])]
+hyp:: оберуть : 13
+LSplits:: оберуть : [('оберут', 'ь', [('D1s', 'n122.N.gen.plur.fem', 'робітниц'), ('D2Ms', 'n211.N.nom.sing.mas', 'учител'), ('D2Ns', 'n322.N.gen.plur.neu', 'місц'), ('D3si', 'n411.N.nom.sing.fem', 'тін'), ('D3i', 'n411.N.nom.sing.fem', 'радіст'), ('D3si', 'n414.N.acc.sing.fem', 'тін'), ('D3i', 'n414.N.acc.sing.fem', 'радіст')]), ('обер', 'уть', [('C1h', 'v123.V.p3.plur.pres', 'ід')])]
+hyp:: скоцюрбився : 11
+LSplits:: скоцюрбився : [('скоцюрбивс', 'я', [('D1s', 'n111.N.nom.sing.fem', 'робітниц'), ('D1j', 'n111.N.nom.sing.fem', 'наді'), ('D2Ms', 'n212.N.gen.sing.mas', 'учител'), ('D2Mrs', 'n212.N.gen.sing.mas', 'секретар'), ('D2Ns', 'n312.N.gen.sing.neu', 'місц'), ('D2Ns', 'n321.N.nom.plur.neu', 'місц'), ('D4b', 'n511.N.nom.sing.neu', 'ім’'), ('D4b', 'n512.N.gen.sing.neu', 'ім’'), ('As', 'a311.A.nom.sing.fem', 'син'), ('Aj', 'a311.A.nom.sing.fem', 'безкра')])]
+hyp:: мерцеві : 10
+LSplits:: мерцеві : [('мерцев', 'і', [('D1s', 'n112.N.gen.sing.fem', 'робітниц'), ('D1m', 'n112.N.gen.sing.fem', 'площ'), ('D1h', 'n113.N.dat.sing.fem', 'фабриц'), ('D1s', 'n113.N.dat.sing.fem', 'робітниц'), ('D1m', 'n113.N.dat.sing.fem', 'площ'), ('D2Mr', 'n216.N.loc.sing.mas', ''), ('D2Ms', 'n216.N.loc.sing.mas', ''), ('D2Mrs', 'n216.N.loc.sing.mas', ''), ('D2Mm', 'n216.N.loc.sing.mas', ''), ('D2Mrm', 'n216.N.loc.sing.mas', ''), ('D2Ms', 'n221.N.nom.plur.mas', 'учител'), ('D2Mrs', 'n221.N.nom.plur.mas', 'секретар'), ('D2Mm', 'n221.N.nom.plur.mas', 'товариш'), ('D2Mrm', 'n221.N.nom.plur.mas', 'школяр'), ('D2Nh', 'n316.N.loc.sing.neu', 'міст'), ('D2Ns', 'n316.N.loc.sing.neu', 'місц'), ('D2Nm', 'n316.N.loc.sing.neu', 'прізвищ'), ('D3si', 'n412.N.gen.sing.fem', 'тін'), ('D3sb', 'n412.N.gen.sing.fem', 'подорож'), ('D3i', 'n412.N.gen.sing.fem', 'радост'), ('Ah', 'a121.A.nom.plur.mas', 'гарн'), ('As', 'a121.A.nom.plur.mas', 'син'), ('Ap', 'a121.A.nom.plur.mas', 'братов')]), ('мерц', 'еві', [('D2Ms', 'n213.N.dat.sing.mas', 'учител'), ('D2Mrs', 'n213.N.dat.sing.mas', 'секретар'), ('D2Mm', 'n213.N.dat.sing.mas', 'товариш'), ('D2Mrm', 'n213.N.dat.sing.mas', 'школяр'), ('D2Ms', 'n216.N.loc.sing.mas', 'учител'), ('D2Mrs', 'n216.N.loc.sing.mas', 'секретар'), ('D2Mm', 'n216.N.loc.sing.mas', 'товариш'), ('D2Mrm', 'n216.N.loc.sing.mas', 'школяр')])]
+hyp:: зловживання : 9
+LSplits:: зловживання : [('зловживанн', 'я', [('D1s', 'n111.N.nom.sing.fem', 'робітниц'), ('D1j', 'n111.N.nom.sing.fem', 'наді'), ('D2Ms', 'n212.N.gen.sing.mas', 'учител'), ('D2Mrs', 'n212.N.gen.sing.mas', 'секретар'), ('D2Ns', 'n312.N.gen.sing.neu', 'місц'), ('D2Ns', 'n321.N.nom.plur.neu', 'місц'), ('D4b', 'n511.N.nom.sing.neu', 'ім’'), ('D4b', 'n512.N.gen.sing.neu', 'ім’'), ('As', 'a311.A.nom.sing.fem', 'син'), ('Aj', 'a311.A.nom.sing.fem', 'безкра')])]
+hyp:: кочових : 8
+LSplits:: кочових : [('кочов', 'их', [('Ah', 'a122.A.gen.plur.mas', 'гарн'), ('Ap', 'a122.A.gen.plur.mas', 'братов'), ('Ah', 'a126.A.loc.plur.mas', 'гарн'), ('Ap', 'a126.A.loc.plur.mas', 'братов')])]
+hyp:: пережитків : 7
+LSplits:: пережитків : [('пережитк', 'ів', [('D2Mh', 'n222.N.gen.plur.mas', 'робітник'), ('D2Mr', 'n222.N.gen.plur.mas', 'сталевар'), ('D2Ms', 'n222.N.gen.plur.mas', 'учител'), ('D2Mrs', 'n222.N.gen.plur.mas', 'секретар'), ('D2Mm', 'n222.N.gen.plur.mas', 'товариш'), ('D2Mrm', 'n222.N.gen.plur.mas', 'школяр')]), ('пережиткі', 'в', [('VPv', 'v311.V.mas.sing.past', 'бра')])]
+hyp:: упоюючий : 6
+LSplits:: упоюючий : [('упоюючи', 'й', [('D1j', 'n122.N.gen.plur.fem', 'наді'), ('D2Mjs', 'n211.N.nom.sing.mas', 'кра')]), ('упоююч', 'ий', [('Ah', 'a111.A.nom.sing.mas', 'гарн')])]
+hyp:: кошмарного : 6
+LSplits:: кошмарного : [('кошмарног', 'о', [('D1h', 'n117.N.voc.sing.fem', 'фабрик'), ('D2Nh', 'n311.N.nom.sing.neu', 'міст')]), ('кошмарн', 'ого', [('Ah', 'a112.A.gen.sing.mas', 'гарн'), ('As', 'a112.A.gen.sing.mas', 'синь'), ('Aj', 'a112.A.gen.sing.mas', 'безкрай'), ('Ap', 'a112.A.gen.sing.mas', 'братов')])]
+hyp:: твоєго : 5
+LSplits:: твоєго : [('твоєг', 'о', [('D1h', 'n117.N.voc.sing.fem', 'фабрик'), ('D2Nh', 'n311.N.nom.sing.neu', 'міст')])]
+hyp:: нiсенiтниця : 5
+LSplits:: нiсенiтниця : [('нiсенiтниц', 'я', [('D1s', 'n111.N.nom.sing.fem', 'робітниц'), ('D1j', 'n111.N.nom.sing.fem', 'наді'), ('D2Ms', 'n212.N.gen.sing.mas', 'учител'), ('D2Mrs', 'n212.N.gen.sing.mas', 'секретар'), ('D2Ns', 'n312.N.gen.sing.neu', 'місц'), ('D2Ns', 'n321.N.nom.plur.neu', 'місц'), ('D4b', 'n511.N.nom.sing.neu', 'ім’'), ('D4b', 'n512.N.gen.sing.neu', 'ім’'), ('As', 'a311.A.nom.sing.fem', 'син'), ('Aj', 'a311.A.nom.sing.fem', 'безкра')])]
+hyp:: більярді : 5
+LSplits:: більярді : [('більярд', 'і', [('D1s', 'n112.N.gen.sing.fem', 'робітниц'), ('D1m', 'n112.N.gen.sing.fem', 'площ'), ('D1h', 'n113.N.dat.sing.fem', 'фабриц'), ('D1s', 'n113.N.dat.sing.fem', 'робітниц'), ('D1m', 'n113.N.dat.sing.fem', 'площ'), ('D2Mr', 'n216.N.loc.sing.mas', ''), ('D2Ms', 'n216.N.loc.sing.mas', ''), ('D2Mrs', 'n216.N.loc.sing.mas', ''), ('D2Mm', 'n216.N.loc.sing.mas', ''), ('D2Mrm', 'n216.N.loc.sing.mas', ''), ('D2Ms', 'n221.N.nom.plur.mas', 'учител'), ('D2Mrs', 'n221.N.nom.plur.mas', 'секретар'), ('D2Mm', 'n221.N.nom.plur.mas', 'товариш'), ('D2Mrm', 'n221.N.nom.plur.mas', 'школяр'), ('D2Nh', 'n316.N.loc.sing.neu', 'міст'), ('D2Ns', 'n316.N.loc.sing.neu', 'місц'), ('D2Nm', 'n316.N.loc.sing.neu', 'прізвищ'), ('D3si', 'n412.N.gen.sing.fem', 'тін'), ('D3sb', 'n412.N.gen.sing.fem', 'подорож'), ('D3i', 'n412.N.gen.sing.fem', 'радост'), ('Ah', 'a121.A.nom.plur.mas', 'гарн'), ('As', 'a121.A.nom.plur.mas', 'син'), ('Ap', 'a121.A.nom.plur.mas', 'братов')])]
+hyp:: ревними : 4
+LSplits:: ревними : [('ревним', 'и', [('D1h', 'n112.N.gen.sing.fem', 'фабрик'), ('D2Mh', 'n221.N.nom.plur.mas', 'робітник'), ('D2Mr', 'n221.N.nom.plur.mas', 'сталевар'), ('VIy', 'v612.V.p2.sing.impr', 'бер')]), ('ревн', 'ими', [('Ah', 'a125.A.ins.plur.mas', 'гарн'), ('Ap', 'a125.A.ins.plur.mas', 'братов')])]
+hyp:: Наступала : 4
+LSplits:: Наступала : [('Наступал', 'а', [('D1h', 'n111.N.nom.sing.fem', 'фабрик'), ('D1m', 'n111.N.nom.sing.fem', 'площ'), ('D2Mh', 'n212.N.gen.sing.mas', 'робітник'), ('D2Mr', 'n212.N.gen.sing.mas', 'сталевар'), ('D2Mm', 'n212.N.gen.sing.mas', 'товариш'), ('D2Mrm', 'n212.N.gen.sing.mas', 'школяр'), ('D2Nh', 'n312.N.gen.sing.neu', 'міст'), ('D2Nm', 'n312.N.gen.sing.neu', 'прізвищ'), ('D2Nh', 'n321.N.nom.plur.neu', 'міст'), ('D2Nm', 'n321.N.nom.plur.neu', 'прізвищ'), ('D4a', 'n511.N.nom.sing.neu', 'курч'), ('Ah', 'a311.A.nom.sing.fem', 'гарн'), ('Ap', 'a311.A.nom.sing.fem', 'братов')]), ('Наступа', 'ла', [('VPv', 'v312.V.fem.sing.past', 'бра'), ('VPz', 'v312.V.fem.sing.past', 'нес'), ('VPz', 'v312.V.fem.sing.past', 'пек')])]
+hyp:: духовому : 4
+LSplits:: духовому : [('духовом', 'у', [('D1h', 'n144.N.acc.sing.fem', 'фабрик'), ('D1m', 'n144.N.acc.sing.fem', 'площ'), ('D2Mh', 'n213.N.dat.sing.mas', ''), ('D2Mr', 'n213.N.dat.sing.mas', ''), ('D2Mm', 'n213.N.dat.sing.mas', ''), ('D2Mrm', 'n213.N.dat.sing.mas', ''), ('D2Mh', 'n216.N.loc.sing.mas', ''), ('D2Mm', 'n216.N.loc.sing.mas', ''), ('D2Nh', 'n313.N.dat.sing.neu', 'міст'), ('D2Nm', 'n313.N.dat.sing.neu', 'прізвищ'), ('Ah', 'a314.A.acc.sing.fem', 'гарн'), ('Ap', 'a314.A.acc.sing.fem', 'братов'), ('V1h', 'v111.V.p1.sing.pres', 'ід'), ('V2m', 'v211.V.p1.sing.pres', 'бач')]), ('духов', 'ому', [('Ah', 'a113.A.dat.sing.mas', 'гарн'), ('As', 'a113.A.dat.sing.mas', 'синь'), ('Aj', 'a113.A.dat.sing.mas', 'безкрай'), ('Ap', 'a113.A.dat.sing.mas', 'братов')])]
+
+
+
+
+
+bash-3.2$ ./s1010frqListParadigms2.sh
+initialising
+240
+10485864
+checking hypotheses
+
+hyp:: вшанувати : 28
+LSplits:: вшанувати : [('вшануват', 'и', [('D1h', 'n112.N.gen.sing.fem', 'фабрик'), ('D2Mh', 'n221.N.nom.plur.mas', 'робітник'), ('D2Mr', 'n221.N.nom.plur.mas', 'сталевар'), ('VIy', 'v612.V.p2.sing.impr', 'бер')]), ('вшанув', 'ати', [('D4a', 'n512.N.gen.sing.neu', 'курч')]), ('вшанува', 'ти', [('VPv', 'v411.V.inf', 'бра'), ('VPz', 'v411.V.inf', 'нес'), ('VPz', 'v411.V.inf', 'пек')])]
+LHypotheses:: вшанувати : [('вшануват|а', 'n111.N.nom.sing.fem', 'D1h', 'фабрик'), ('вшануват|и', 'n112.N.gen.sing.fem', 'D1h', 'фабрик'), ('вшануват|і', 'n113.N.dat.sing.fem', 'D1h', 'фабриц'), ('вшануват|у', 'n144.N.acc.sing.fem', 'D1h', 'фабрик'), ('вшануват|ою', 'n115.N.ins.sing.fem', 'D1h', 'фабрик'), ('вшануват|о', 'n117.N.voc.sing.fem', 'D1h', 'фабрик'), ('вшануват|', 'n122.N.gen.plur.fem', 'D1h', 'фабрик'), ('вшануват|ам', 'n123.N.dat.plur.fem', 'D1h', 'фабрик'), ('вшануват|ами', 'n125.N.ins.plur.fem', 'D1h', 'фабрик'), ('вшануват|ах', 'n126.N.loc.plur.fem', 'D1h', 'фабрик')]
+LHypotheses:: вшанувати : [('вшануват|', 'n211.N.nom.sing.mas', 'D2Mh', 'робітник'), ('вшануват|а', 'n212.N.gen.sing.mas', 'D2Mh', 'робітник'), ('вшануват|ові', 'n213.N.dat.sing.mas', 'D2Mh', 'робітник'), ('вшануват|у', 'n213.N.dat.sing.mas', 'D2Mh', ''), ('вшануват|ом', 'n215.N.ins.sing.mas', 'D2Mh', 'робітник'), ('вшануват|ові', 'n216.N.loc.sing.mas', 'D2Mh', 'робітник'), ('вшануват|у', 'n216.N.loc.sing.mas', 'D2Mh', ''), ('вшануват|и', 'n221.N.nom.plur.mas', 'D2Mh', 'робітник'), ('вшануват|ів', 'n222.N.gen.plur.mas', 'D2Mh', 'робітник'), ('вшануват|ам', 'n223.N.dat.plur.mas', 'D2Mh', 'робітник'), ('вшануват|ами', 'n225.N.ins.plur.mas', 'D2Mh', 'робітник'), ('вшануват|ах', 'n226.N.loc.plur.mas', 'D2Mh', 'робітник')]
+LHypotheses:: вшанувати : [('вшануват|', 'n211.N.nom.sing.mas', 'D2Mr', 'сталевар'), ('вшануват|а', 'n212.N.gen.sing.mas', 'D2Mr', 'сталевар'), ('вшануват|ові', 'n213.N.dat.sing.mas', 'D2Mr', 'сталевар'), ('вшануват|у', 'n213.N.dat.sing.mas', 'D2Mr', ''), ('вшануват|ом', 'n215.N.ins.sing.mas', 'D2Mr', 'сталевар'), ('вшануват|ові', 'n216.N.loc.sing.mas', 'D2Mr', 'сталевар'), ('вшануват|і', 'n216.N.loc.sing.mas', 'D2Mr', ''), ('вшануват|и', 'n221.N.nom.plur.mas', 'D2Mr', 'сталевар'), ('вшануват|ів', 'n222.N.gen.plur.mas', 'D2Mr', 'сталевар'), ('вшануват|ам', 'n223.N.dat.plur.mas', 'D2Mr', 'сталевар'), ('вшануват|ами', 'n225.N.ins.plur.mas', 'D2Mr', 'сталевар'), ('вшануват|ах', 'n226.N.loc.plur.mas', 'D2Mr', 'сталевар')]
+LHypotheses:: вшанувати : [('вшануват|и', 'v612.V.p2.sing.impr', 'VIy', 'бер'), ('вшануват|ім', 'v621.V.p1.plur.impr', 'VIy', 'бер'), ('вшануват|імо', 'v621.V.p1.plur.impr', 'VIy', ''), ('вшануват|іть', 'v623.V.p2.plur.impr', 'VIy', 'бер')]
+LHypotheses:: вшанувати : [('вшанув|а', 'n511.N.nom.sing.neu', 'D4a', 'курч'), ('вшанув|ати', 'n512.N.gen.sing.neu', 'D4a', 'курч'), ('вшанув|аті', 'n513.N.dat.sing.neu', 'D4a', 'курч'), ('вшанув|ам', 'n515.N.ins.sing.neu', 'D4a', 'курч'), ('вшанув|ата', 'n521.N.nom.plur.neu', 'D4a', 'курч'), ('вшанув|ат', 'n522.N.gen.plur.neu', 'D4a', 'курч'), ('вшанув|атам', 'n523.N.dat.plur.neu', 'D4a', 'курч'), ('вшанув|атами', 'n525.N.ins.plur.neu', 'D4a', 'курч'), ('вшанув|атах', 'n526.N.loc.plur.neu', 'D4a', 'курч')]
+LHypotheses:: вшанувати : [('вшанува|в', 'v311.V.mas.sing.past', 'VPv', 'бра'), ('вшанува|ла', 'v312.V.fem.sing.past', 'VPv', 'бра'), ('вшанува|ло', 'v313.V.neu.sing.past', 'VPv', 'бра'), ('вшанува|ли', 'v321.V.mfn.plur.past', 'VPv', 'бра'), ('вшанува|ти', 'v411.V.inf', 'VPv', 'бра')]
+LHypotheses:: вшанувати : [('вшанува|', 'v311.V.mas.sing.past', 'VPz', 'ніс'), ('вшанува|', 'v311.V.mas.sing.past', 'VPz', 'пік'), ('вшанува|ла', 'v312.V.fem.sing.past', 'VPz', 'нес'), ('вшанува|ла', 'v312.V.fem.sing.past', 'VPz', 'пек'), ('вшанува|ло', 'v313.V.neu.sing.past', 'VPz', 'нес'), ('вшанува|ло', 'v313.V.neu.sing.past', 'VPz', 'пек'), ('вшанува|ли', 'v321.V.mfn.plur.past', 'VPz', 'нес'), ('вшанува|ли', 'v321.V.mfn.plur.past', 'VPz', 'пек'), ('вшанува|ти', 'v411.V.inf', 'VPz', 'нес'), ('вшанува|ти', 'v411.V.inf', 'VPz', 'пек')]
+LHypotheses:: вшанувати : [('вшанува|', 'v311.V.mas.sing.past', 'VPz', 'ніс'), ('вшанува|', 'v311.V.mas.sing.past', 'VPz', 'пік'), ('вшанува|ла', 'v312.V.fem.sing.past', 'VPz', 'нес'), ('вшанува|ла', 'v312.V.fem.sing.past', 'VPz', 'пек'), ('вшанува|ло', 'v313.V.neu.sing.past', 'VPz', 'нес'), ('вшанува|ло', 'v313.V.neu.sing.past', 'VPz', 'пек'), ('вшанува|ли', 'v321.V.mfn.plur.past', 'VPz', 'нес'), ('вшанува|ли', 'v321.V.mfn.plur.past', 'VPz', 'пек'), ('вшанува|ти', 'v411.V.inf', 'VPz', 'нес'), ('вшанува|ти', 'v411.V.inf', 'VPz', 'пек')]
+hyp:: скоцюрбився : 11
+LSplits:: скоцюрбився : [('скоцюрбивс', 'я', [('D1s', 'n111.N.nom.sing.fem', 'робітниц'), ('D1j', 'n111.N.nom.sing.fem', 'наді'), ('D2Ms', 'n212.N.gen.sing.mas', 'учител'), ('D2Mrs', 'n212.N.gen.sing.mas', 'секретар'), ('D2Ns', 'n312.N.gen.sing.neu', 'місц'), ('D2Ns', 'n321.N.nom.plur.neu', 'місц'), ('D4b', 'n511.N.nom.sing.neu', 'ім’'), ('D4b', 'n512.N.gen.sing.neu', 'ім’'), ('As', 'a311.A.nom.sing.fem', 'син'), ('Aj', 'a311.A.nom.sing.fem', 'безкра')])]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|я', 'n111.N.nom.sing.fem', 'D1s', 'робітниц'), ('скоцюрбивс|і', 'n112.N.gen.sing.fem', 'D1s', 'робітниц'), ('скоцюрбивс|і', 'n113.N.dat.sing.fem', 'D1s', 'робітниц'), ('скоцюрбивс|ю', 'n144.N.acc.sing.fem', 'D1s', 'робітниц'), ('скоцюрбивс|ею', 'n115.N.ins.sing.fem', 'D1s', 'робітниц'), ('скоцюрбивс|е', 'n117.N.voc.sing.fem', 'D1s', 'робітниц'), ('скоцюрбивс|ь', 'n122.N.gen.plur.fem', 'D1s', 'робітниц'), ('скоцюрбивс|ям', 'n123.N.dat.plur.fem', 'D1s', 'робітниц'), ('скоцюрбивс|ями', 'n125.N.ins.plur.fem', 'D1s', 'робітниц'), ('скоцюрбивс|ях', 'n126.N.loc.plur.fem', 'D1s', 'робітниц')]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|я', 'n111.N.nom.sing.fem', 'D1j', 'наді'), ('скоцюрбивс|ї', 'n112.N.gen.sing.fem', 'D1j', 'наді'), ('скоцюрбивс|ї', 'n113.N.dat.sing.fem', 'D1j', 'наді'), ('скоцюрбивс|ю', 'n144.N.acc.sing.fem', 'D1j', 'наді'), ('скоцюрбивс|єю', 'n115.N.ins.sing.fem', 'D1j', 'наді'), ('скоцюрбивс|є', 'n117.N.voc.sing.fem', 'D1j', 'наді'), ('скоцюрбивс|й', 'n122.N.gen.plur.fem', 'D1j', 'наді'), ('скоцюрбивс|ям', 'n123.N.dat.plur.fem', 'D1j', 'наді'), ('скоцюрбивс|ями', 'n125.N.ins.plur.fem', 'D1j', 'наді'), ('скоцюрбивс|ях', 'n126.N.loc.plur.fem', 'D1j', 'наді')]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|ь', 'n211.N.nom.sing.mas', 'D2Ms', 'учител'), ('скоцюрбивс|я', 'n212.N.gen.sing.mas', 'D2Ms', 'учител'), ('скоцюрбивс|еві', 'n213.N.dat.sing.mas', 'D2Ms', 'учител'), ('скоцюрбивс|ю', 'n213.N.dat.sing.mas', 'D2Ms', ''), ('скоцюрбивс|ем', 'n215.N.ins.sing.mas', 'D2Ms', 'учител'), ('скоцюрбивс|еві', 'n216.N.loc.sing.mas', 'D2Ms', 'учител'), ('скоцюрбивс|і', 'n216.N.loc.sing.mas', 'D2Ms', ''), ('скоцюрбивс|ю', 'n216.N.loc.sing.mas', 'D2Ms', ''), ('скоцюрбивс|і', 'n221.N.nom.plur.mas', 'D2Ms', 'учител'), ('скоцюрбивс|ів', 'n222.N.gen.plur.mas', 'D2Ms', 'учител'), ('скоцюрбивс|ям', 'n223.N.dat.plur.mas', 'D2Ms', 'учител'), ('скоцюрбивс|ями', 'n225.N.ins.plur.mas', 'D2Ms', 'учител'), ('скоцюрбивс|ях', 'n226.N.loc.plur.mas', 'D2Ms', 'учител')]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|', 'n211.N.nom.sing.mas', 'D2Mrs', 'секретар'), ('скоцюрбивс|я', 'n212.N.gen.sing.mas', 'D2Mrs', 'секретар'), ('скоцюрбивс|еві', 'n213.N.dat.sing.mas', 'D2Mrs', 'секретар'), ('скоцюрбивс|ю', 'n213.N.dat.sing.mas', 'D2Mrs', ''), ('скоцюрбивс|ем', 'n215.N.ins.sing.mas', 'D2Mrs', 'секретар'), ('скоцюрбивс|еві', 'n216.N.loc.sing.mas', 'D2Mrs', 'секретар'), ('скоцюрбивс|і', 'n216.N.loc.sing.mas', 'D2Mrs', ''), ('скоцюрбивс|ю', 'n216.N.loc.sing.mas', 'D2Mrs', ''), ('скоцюрбивс|і', 'n221.N.nom.plur.mas', 'D2Mrs', 'секретар'), ('скоцюрбивс|ів', 'n222.N.gen.plur.mas', 'D2Mrs', 'секретар'), ('скоцюрбивс|ям', 'n223.N.dat.plur.mas', 'D2Mrs', 'секретар'), ('скоцюрбивс|ями', 'n225.N.ins.plur.mas', 'D2Mrs', 'секретар'), ('скоцюрбивс|ях', 'n226.N.loc.plur.mas', 'D2Mrs', 'секретар')]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|е', 'n311.N.nom.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|я', 'n312.N.gen.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ю', 'n313.N.dat.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ем', 'n315.N.ins.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|і', 'n316.N.loc.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|я', 'n321.N.nom.plur.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ь', 'n322.N.gen.plur.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ям', 'n323.N.dat.plur.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ями', 'n325.N.ins.plur.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ях', 'n326.N.loc.plur.neu', 'D2Ns', 'місц')]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|е', 'n311.N.nom.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|я', 'n312.N.gen.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ю', 'n313.N.dat.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ем', 'n315.N.ins.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|і', 'n316.N.loc.sing.neu', 'D2Ns', 'місц'), ('скоцюрбивс|я', 'n321.N.nom.plur.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ь', 'n322.N.gen.plur.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ям', 'n323.N.dat.plur.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ями', 'n325.N.ins.plur.neu', 'D2Ns', 'місц'), ('скоцюрбивс|ях', 'n326.N.loc.plur.neu', 'D2Ns', 'місц')]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|я', 'n511.N.nom.sing.neu', 'D4b', 'ім’'), ('скоцюрбивс|ені', 'n512.N.gen.sing.neu', 'D4b', 'ім'), ('скоцюрбивс|я', 'n512.N.gen.sing.neu', 'D4b', 'ім’'), ('скоцюрбивс|ені', 'n513.N.dat.sing.neu', 'D4b', 'ім'), ('скоцюрбивс|енем', 'n515.N.ins.sing.neu', 'D4b', 'ім'), ('скоцюрбивс|ям', 'n515.N.ins.sing.neu', 'D4b', 'ім’'), ('скоцюрбивс|ена', 'n521.N.nom.plur.neu', 'D4b', 'ім'), ('скоцюрбивс|ен', 'n522.N.gen.plur.neu', 'D4b', 'ім'), ('скоцюрбивс|енам', 'n523.N.dat.plur.neu', 'D4b', 'ім'), ('скоцюрбивс|енами', 'n525.N.ins.plur.neu', 'D4b', 'ім'), ('скоцюрбивс|енах', 'n526.N.loc.plur.neu', 'D4b', 'ім')]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|я', 'n511.N.nom.sing.neu', 'D4b', 'ім’'), ('скоцюрбивс|ені', 'n512.N.gen.sing.neu', 'D4b', 'ім'), ('скоцюрбивс|я', 'n512.N.gen.sing.neu', 'D4b', 'ім’'), ('скоцюрбивс|ені', 'n513.N.dat.sing.neu', 'D4b', 'ім'), ('скоцюрбивс|енем', 'n515.N.ins.sing.neu', 'D4b', 'ім'), ('скоцюрбивс|ям', 'n515.N.ins.sing.neu', 'D4b', 'ім’'), ('скоцюрбивс|ена', 'n521.N.nom.plur.neu', 'D4b', 'ім'), ('скоцюрбивс|ен', 'n522.N.gen.plur.neu', 'D4b', 'ім'), ('скоцюрбивс|енам', 'n523.N.dat.plur.neu', 'D4b', 'ім'), ('скоцюрбивс|енами', 'n525.N.ins.plur.neu', 'D4b', 'ім'), ('скоцюрбивс|енах', 'n526.N.loc.plur.neu', 'D4b', 'ім')]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|ій', 'a111.A.nom.sing.mas', 'As', 'син'), ('скоцюрбивс|ого', 'a112.A.gen.sing.mas', 'As', 'синь'), ('скоцюрбивс|ому', 'a113.A.dat.sing.mas', 'As', 'синь'), ('скоцюрбивс|ім', 'a115.A.ins.sing.mas', 'As', 'син'), ('скоцюрбивс|і', 'a121.A.nom.plur.mas', 'As', 'син'), ('скоцюрбивс|іх', 'a122.A.gen.plur.mas', 'As', 'син'), ('скоцюрбивс|іми', 'a125.A.ins.plur.mas', 'As', 'син'), ('скоцюрбивс|іх', 'a126.A.loc.plur.mas', 'As', 'син'), ('скоцюрбивс|є', 'a211.A.nom.sing.neu', 'As', 'син'), ('скоцюрбивс|я', 'a311.A.nom.sing.fem', 'As', 'син'), ('скоцюрбивс|ої', 'a312.A.gen.sing.fem', 'As', 'синь'), ('скоцюрбивс|ій', 'a313.A.dat.sing.fem', 'As', 'син'), ('скоцюрбивс|ю', 'a314.A.acc.sing.fem', 'As', 'син'), ('скоцюрбивс|ою', 'a315.A.ins.sing.fem', 'As', 'синь'), ('скоцюрбивс|ій', 'a316.A.loc.sing.fem', 'As', 'син')]
+LHypotheses:: скоцюрбився : [('скоцюрбивс|їй', 'a111.A.nom.sing.mas', 'Aj', 'безкра'), ('скоцюрбивс|ого', 'a112.A.gen.sing.mas', 'Aj', 'безкрай'), ('скоцюрбивс|ому', 'a113.A.dat.sing.mas', 'Aj', 'безкрай'), ('скоцюрбивс|їм', 'a115.A.ins.sing.mas', 'Aj', 'безкра'), ('скоцюрбивс|ї', 'a121.A.nom.plur.mas', 'Aj', 'безкра'), ('скоцюрбивс|їх', 'a122.A.gen.plur.mas', 'Aj', 'безкра'), ('скоцюрбивс|їми', 'a125.A.ins.plur.mas', 'Aj', 'безкра'), ('скоцюрбивс|їх', 'a126.A.loc.plur.mas', 'Aj', 'безкра'), ('скоцюрбивс|є', 'a211.A.nom.sing.neu', 'Aj', 'безкра'), ('скоцюрбивс|я', 'a311.A.nom.sing.fem', 'Aj', 'безкра'), ('скоцюрбивс|ої', 'a312.A.gen.sing.fem', 'Aj', 'безкрай'), ('скоцюрбивс|їй', 'a313.A.dat.sing.fem', 'Aj', 'безкра'), ('скоцюрбивс|ю', 'a314.A.acc.sing.fem', 'Aj', 'безкра'), ('скоцюрбивс|ою', 'a315.A.ins.sing.fem', 'Aj', 'безкрай'), ('скоцюрбивс|їй', 'a316.A.loc.sing.fem', 'Aj', 'безкра')]
+hyp:: упоюючий : 6
+LSplits:: упоюючий : [('упоюючи', 'й', [('D1j', 'n122.N.gen.plur.fem', 'наді'), ('D2Mjs', 'n211.N.nom.sing.mas', 'кра')]), ('упоююч', 'ий', [('Ah', 'a111.A.nom.sing.mas', 'гарн')])]
+LHypotheses:: упоюючий : [('упоюючи|я', 'n111.N.nom.sing.fem', 'D1j', 'наді'), ('упоюючи|ї', 'n112.N.gen.sing.fem', 'D1j', 'наді'), ('упоюючи|ї', 'n113.N.dat.sing.fem', 'D1j', 'наді'), ('упоюючи|ю', 'n144.N.acc.sing.fem', 'D1j', 'наді'), ('упоюючи|єю', 'n115.N.ins.sing.fem', 'D1j', 'наді'), ('упоюючи|є', 'n117.N.voc.sing.fem', 'D1j', 'наді'), ('упоюючи|й', 'n122.N.gen.plur.fem', 'D1j', 'наді'), ('упоюючи|ям', 'n123.N.dat.plur.fem', 'D1j', 'наді'), ('упоюючи|ями', 'n125.N.ins.plur.fem', 'D1j', 'наді'), ('упоюючи|ях', 'n126.N.loc.plur.fem', 'D1j', 'наді')]
+LHypotheses:: упоюючий : [('упоюючи|й', 'n211.N.nom.sing.mas', 'D2Mjs', 'кра'), ('упоюючи|ю', 'n212.N.gen.sing.mas', 'D2Mjs', 'кра'), ('упоюючи|єві', 'n213.N.dat.sing.mas', 'D2Mjs', 'кра'), ('упоюючи|ю', 'n213.N.dat.sing.mas', 'D2Mjs', ''), ('упоюючи|єм', 'n215.N.ins.sing.mas', 'D2Mjs', 'кра'), ('упоюючи|ї', 'n216.N.loc.sing.mas', 'D2Mjs', 'кра'), ('упоюючи|ю', 'n216.N.loc.sing.mas', 'D2Mjs', 'кра'), ('упоюючи|ї', 'n221.N.nom.plur.mas', 'D2Mjs', 'кра'), ('упоюючи|їв', 'n222.N.gen.plur.mas', 'D2Mjs', 'кра'), ('упоюючи|ям', 'n223.N.dat.plur.mas', 'D2Mjs', 'кра'), ('упоюючи|ями', 'n225.N.ins.plur.mas', 'D2Mjs', 'кра'), ('упоюючи|ях', 'n226.N.loc.plur.mas', 'D2Mjs', 'кра')]
+LHypotheses:: упоюючий : [('упоююч|ий', 'a111.A.nom.sing.mas', 'Ah', 'гарн'), ('упоююч|ого', 'a112.A.gen.sing.mas', 'Ah', 'гарн'), ('упоююч|ому', 'a113.A.dat.sing.mas', 'Ah', 'гарн'), ('упоююч|им', 'a115.A.ins.sing.mas', 'Ah', 'гарн'), ('упоююч|і', 'a121.A.nom.plur.mas', 'Ah', 'гарн'), ('упоююч|их', 'a122.A.gen.plur.mas', 'Ah', 'гарн'), ('упоююч|ими', 'a125.A.ins.plur.mas', 'Ah', 'гарн'), ('упоююч|их', 'a126.A.loc.plur.mas', 'Ah', 'гарн'), ('упоююч|е', 'a211.A.nom.sing.neu', 'Ah', 'гарн'), ('упоююч|а', 'a311.A.nom.sing.fem', 'Ah', 'гарн'), ('упоююч|ої', 'a312.A.gen.sing.fem', 'Ah', 'гарн'), ('упоююч|ій', 'a313.A.dat.sing.fem', 'Ah', 'гарн'), ('упоююч|у', 'a314.A.acc.sing.fem', 'Ah', 'гарн'), ('упоююч|ою', 'a315.A.ins.sing.fem', 'Ah', 'гарн'), ('упоююч|ій', 'a316.A.loc.sing.fem', 'Ah', 'гарн')]
+hyp:: ревними : 4
+LSplits:: ревними : [('ревним', 'и', [('D1h', 'n112.N.gen.sing.fem', 'фабрик'), ('D2Mh', 'n221.N.nom.plur.mas', 'робітник'), ('D2Mr', 'n221.N.nom.plur.mas', 'сталевар'), ('VIy', 'v612.V.p2.sing.impr', 'бер')]), ('ревн', 'ими', [('Ah', 'a125.A.ins.plur.mas', 'гарн'), ('Ap', 'a125.A.ins.plur.mas', 'братов')])]
+LHypotheses:: ревними : [('ревним|а', 'n111.N.nom.sing.fem', 'D1h', 'фабрик'), ('ревним|и', 'n112.N.gen.sing.fem', 'D1h', 'фабрик'), ('ревним|і', 'n113.N.dat.sing.fem', 'D1h', 'фабриц'), ('ревним|у', 'n144.N.acc.sing.fem', 'D1h', 'фабрик'), ('ревним|ою', 'n115.N.ins.sing.fem', 'D1h', 'фабрик'), ('ревним|о', 'n117.N.voc.sing.fem', 'D1h', 'фабрик'), ('ревним|', 'n122.N.gen.plur.fem', 'D1h', 'фабрик'), ('ревним|ам', 'n123.N.dat.plur.fem', 'D1h', 'фабрик'), ('ревним|ами', 'n125.N.ins.plur.fem', 'D1h', 'фабрик'), ('ревним|ах', 'n126.N.loc.plur.fem', 'D1h', 'фабрик')]
+LHypotheses:: ревними : [('ревним|', 'n211.N.nom.sing.mas', 'D2Mh', 'робітник'), ('ревним|а', 'n212.N.gen.sing.mas', 'D2Mh', 'робітник'), ('ревним|ові', 'n213.N.dat.sing.mas', 'D2Mh', 'робітник'), ('ревним|у', 'n213.N.dat.sing.mas', 'D2Mh', ''), ('ревним|ом', 'n215.N.ins.sing.mas', 'D2Mh', 'робітник'), ('ревним|ові', 'n216.N.loc.sing.mas', 'D2Mh', 'робітник'), ('ревним|у', 'n216.N.loc.sing.mas', 'D2Mh', ''), ('ревним|и', 'n221.N.nom.plur.mas', 'D2Mh', 'робітник'), ('ревним|ів', 'n222.N.gen.plur.mas', 'D2Mh', 'робітник'), ('ревним|ам', 'n223.N.dat.plur.mas', 'D2Mh', 'робітник'), ('ревним|ами', 'n225.N.ins.plur.mas', 'D2Mh', 'робітник'), ('ревним|ах', 'n226.N.loc.plur.mas', 'D2Mh', 'робітник')]
+LHypotheses:: ревними : [('ревним|', 'n211.N.nom.sing.mas', 'D2Mr', 'сталевар'), ('ревним|а', 'n212.N.gen.sing.mas', 'D2Mr', 'сталевар'), ('ревним|ові', 'n213.N.dat.sing.mas', 'D2Mr', 'сталевар'), ('ревним|у', 'n213.N.dat.sing.mas', 'D2Mr', ''), ('ревним|ом', 'n215.N.ins.sing.mas', 'D2Mr', 'сталевар'), ('ревним|ові', 'n216.N.loc.sing.mas', 'D2Mr', 'сталевар'), ('ревним|і', 'n216.N.loc.sing.mas', 'D2Mr', ''), ('ревним|и', 'n221.N.nom.plur.mas', 'D2Mr', 'сталевар'), ('ревним|ів', 'n222.N.gen.plur.mas', 'D2Mr', 'сталевар'), ('ревним|ам', 'n223.N.dat.plur.mas', 'D2Mr', 'сталевар'), ('ревним|ами', 'n225.N.ins.plur.mas', 'D2Mr', 'сталевар'), ('ревним|ах', 'n226.N.loc.plur.mas', 'D2Mr', 'сталевар')]
+LHypotheses:: ревними : [('ревним|и', 'v612.V.p2.sing.impr', 'VIy', 'бер'), ('ревним|ім', 'v621.V.p1.plur.impr', 'VIy', 'бер'), ('ревним|імо', 'v621.V.p1.plur.impr', 'VIy', ''), ('ревним|іть', 'v623.V.p2.plur.impr', 'VIy', 'бер')]
+LHypotheses:: ревними : [('ревн|ий', 'a111.A.nom.sing.mas', 'Ah', 'гарн'), ('ревн|ого', 'a112.A.gen.sing.mas', 'Ah', 'гарн'), ('ревн|ому', 'a113.A.dat.sing.mas', 'Ah', 'гарн'), ('ревн|им', 'a115.A.ins.sing.mas', 'Ah', 'гарн'), ('ревн|і', 'a121.A.nom.plur.mas', 'Ah', 'гарн'), ('ревн|их', 'a122.A.gen.plur.mas', 'Ah', 'гарн'), ('ревн|ими', 'a125.A.ins.plur.mas', 'Ah', 'гарн'), ('ревн|их', 'a126.A.loc.plur.mas', 'Ah', 'гарн'), ('ревн|е', 'a211.A.nom.sing.neu', 'Ah', 'гарн'), ('ревн|а', 'a311.A.nom.sing.fem', 'Ah', 'гарн'), ('ревн|ої', 'a312.A.gen.sing.fem', 'Ah', 'гарн'), ('ревн|ій', 'a313.A.dat.sing.fem', 'Ah', 'гарн'), ('ревн|у', 'a314.A.acc.sing.fem', 'Ah', 'гарн'), ('ревн|ою', 'a315.A.ins.sing.fem', 'Ah', 'гарн'), ('ревн|ій', 'a316.A.loc.sing.fem', 'Ah', 'гарн')]
+LHypotheses:: ревними : [('ревн|', 'a111.A.nom.sing.mas', 'Ap', 'братів'), ('ревн|ого', 'a112.A.gen.sing.mas', 'Ap', 'братов'), ('ревн|ому', 'a113.A.dat.sing.mas', 'Ap', 'братов'), ('ревн|им', 'a115.A.ins.sing.mas', 'Ap', 'братов'), ('ревн|і', 'a121.A.nom.plur.mas', 'Ap', 'братов'), ('ревн|их', 'a122.A.gen.plur.mas', 'Ap', 'братов'), ('ревн|ими', 'a125.A.ins.plur.mas', 'Ap', 'братов'), ('ревн|их', 'a126.A.loc.plur.mas', 'Ap', 'братов'), ('ревн|е', 'a211.A.nom.sing.neu', 'Ap', 'братов'), ('ревн|а', 'a311.A.nom.sing.fem', 'Ap', 'братов'), ('ревн|ої', 'a312.A.gen.sing.fem', 'Ap', 'братов'), ('ревн|ій', 'a313.A.dat.sing.fem', 'Ap', 'братов'), ('ревн|у', 'a314.A.acc.sing.fem', 'Ap', 'братов'), ('ревн|ою', 'a315.A.ins.sing.fem', 'Ap', 'братов'), ('ревн|ій', 'a316.A.loc.sing.fem', 'Ap', 'братов')]
+confirmed paradigms :: 0 :: 0 :: 0
+writing paradigms list...
+
+
+
+
+
+

@@ -1,0 +1,1064 @@
+Submission websites:
+    https://www.softconf.com/acl2019/bsnlp/
+    
+    https://www.softconf.com/acl2019/bionlp/
+
+
+Bibliography
+
+https://guides.github.com/activities/citable-code/
+
+Andriy Rysin, Vasyl Starko. 2019. Project to generate POS tag dictionary for Ukrainian language. GitHub repository, https://github.com/brown-uk/dict_uk
+
+
+
+----------------
+reusing fragments:
+   
+
+
+   abstract:
+
+	
+	given that such resources knowledge-light resources are available for most languages, the method may be generalised to other languages...
+	
+	available for most under-resourced languages
+	
+	
+	
+	for inflected parts of speech
+
+
+word forms and morphological features 
+
+
+
+(see Section~\ref{ssec:PrevWork})
+
+in recent texts
+
+
+
+
+
+
+
+the  with new 
+
+
+-- more ancient 
+
+the task of updating the lexicon for natural language applications may be facilitated by the tendency of new words 
+
+can be greatly facilitated 
+
+// this task is a bit easier 
+
+
+Development of new lexicon in Ukrainian :: reflecting political and technical changes 
+
+
+// regular... 
+
+- dynamics of language 
+
+;
+
+-- little attention to this issue
+
+
+
+
+----------------
+
+
+The paper addresses a problem of generating inflectional paradigms and corresponding morphological features for neologisms in Ukrainian, which is a highly inflected Slavonic language, for which wide-coverage morphological lexicons have been developed (see Section~\ref{ssec:PrevWork})
+
+
+---------------
+
+For highly inflected languages with 'synthetic' morphology, such as Slavonic languages, this task is even more difficult, since most words have complex morphological paradigms, which require fine-grained annotation of parts-of-speech and their grammatical sub-categories. Creation of high-quality morphological resources for these languages often requires an extensive effort over many years.
+
+with 'synthetic' morphology, such as Slavonic languages, 
+
+
+
+2/05/2019
+neulogisms:
+, i.e., words that emerge in corpora due of recent political events, new technological and social developments reflected in language and 
+an application to
+
+
+ monitor neologisms in recent corpora and to 
+
+  Since the proposed methodology uses
+
+
+
+in "Philosophical Investigations
+Ludwig Wittgenstein noted in "Philosophical Investigations": 
+
+
+
+	
+	
+	in highly-inflected languages of generating paradigms for entities 
+	
+
+	
+	
+	Method is evaluated via improvements of lexical coverage on different types of corpora.
+	
+	// for Introduction .. description of the approach:
+	// As new entities more often follow regular inflection patterns, the proposed method only searches for paradigms without historical stem alternations, which are more typical for older items that are already covered by the static lexical resources. The main advantage of the proposed approach is that it does not require training or linguistic annotation of corpora, so it works best in combination with a static morphological lexicon, which covers less regular frequent paradigms. 
+	// complementary... 
+	
+	or a description of stem alternation
+	
+	
+	or knowledge of alternation patterns
+	cost -- it works in combination with a static lexicon that should cover frequent less regular paradigms
+	
+	The method needs to work in combination with the 
+	
+	However, the main advantage is 
+	
+	For practical purposes the 
+	
+	proposed method works in combination with the 
+	
+	In practical scenario
+	
+	For practical tasks of morphological 
+	
+	For this reason, the proposed method works with 
+	
+	// advantage -- no need for training... 
+	// requires -- grammar and sufficiently large corpus
+	// evaluation : coverage, frequency ranges... 
+	
+	 For the purposes of implementation speed  approach focusses on regular morphosyntactic patterns, which normally are followed by new entities. Improvements in coverage 
+	/// for different frequency ranges... 
+	Combination of the existing static morphological lexicon and added paradigms for new entities shows improvements in coverage of news corpora, compared to the coverage an existing `fixed' Ukrainian morphological lexicon. The method allows developers of natural language applications to quickly predict paradigms and morphological features for newly emerged entities with relatively knowledge-light resources. The open-source software package can be downloaded from the (anonymous) Github repository: https://github.com/qumtie/paralex4morphosyntax and can use be applied to other low-resourced highly inflected languages which have internet corpora and linguistic descriptions of their inflection system, following the example of inflection tables for Ukrainian.
+	// inflectional languages -- currently not other types
+	// unsupervised 
+
+
+, in particular -- Slavonic and Baltic 
+
+such as journalistic corpora or Wikipedia articles.
+
+any application or a linguistic resource that relies on 
+
+
+applies these observations to the problem of 
+
+// new lexicon problem :: 
+
+developing the morphological lexicon for Ukrainian.
+
+/// !!! ///
+-- possible addition:
+Our research measures the amount of the lexical change in Ukrainian that happened over recent years and
+
+
+
+  and annotation effort or linguistic expertise
+
+
+  since for highly-inflected languages,
+
+   about word forms 
+
+
+
+
+// Morphology :: what is morphological lexicon
+
+
+and this task remains a challenge in computational linguistics especially for low-resourced languages. 
+
+// brief description of the algorithm....
+
+
+
+predicts 
+
+with their associated feature values
+
+
+
+
+
+-----
+
+
+  
+evaluated via measuring improvement in coverage across 
+
+is used to generate Ukrainian paradig
+
+
+so several paradigms may competing, . These alternative paradigms are ranked by the number of confirmed word forms, and the top paradigm is 
+
+(also predicting the lemma and  attached to the stem)
+The algorithm then generates their lemmas, part-of-speech and morphological feature annotation,  
+ and chooses between competing paradigms based on how many word forms predicted by each of the competing paradigms can be found in the corpus.
+
+
+ a sufficient number of word forms 
+
+These entities need to cover a sufficient 
+
+
+// Approach
+
+// Limitations
+
+
+
+: creating the static core lexicon and inflection tab
+
+as the expertise-intensive tasks need to be done only once, core lexicon and inflection tables (which require linguistic expertise, need to created only once
+
+are normally listed in general-purpose grammars for a language, or with limited 
+
+requiring linguistic expertise 
+
+need to be  (or reused from available general-purpose grammars) and the new entities can be repeatedly 
+
+they need one-off 
+
+
+traditional and compact grammar descriptions 
+
+The core intuition behind the proposed algorithm is that 
+
+
+requires a 
+
+// 
+
+
+to achieve better coverage on new corpora 
+
+these resources 
+
+
+there is a need for a quick method of identifying neologisms and generating their paradigms . 
+
+
+Lack of coverage of  on the lexical level  Even though there 
+
+
+
+ proposes a method of quickly updating the lexicon by identifying neologisms in a corpus of recent texts and automatically predicting their paradigms that follow regular patterns presented as inflection tables in traditional descriptive grammars of the language.
+
+
+// to make the point: most elaborate task is to deal with exceptions;
+--> distortion models may not cover
+--> we need a simple and quick method, which would improve coverage 
+--> complement existing resources --> 
+--> compare to existing work... 
+
+// previous work -- new tendencies in Ukrainian lexicon :: literature - Karpilovska...
+
+Even though there has been 
+
+are wide-coverage mophological 
+
+
+This task is much harder for highly 
+
+The problem of generating morphological paradigms and corresponding annotation of part-of-speech and grammatical sub-categories for a large lexicon is an important problem for many highly inflected 
+
+: predicting paradigmatic structure of Ukrainian 
+
+ for highly inflected languages 
+
+
+
+-----
+
+
+
+
+and examples in Section~\ref{sec:Algorithm}) we present the algorithm,
+
+in more detail
+
+
+
+
+
+// point to the nature and important difference with Ahberg's approach
+in the current approach 
+
+
+it is noted ... 
+
+
+correct and wrong paradigms and 
+
+
+
+
+
+
+are predicted for each word form (either found in corpus or previously unseen)
+
+
+// competing paradigms may be both correct :: vybory; pryklady...
+
+// the split may be performed by any 
+
+// no negative examples
+
+
+For example, ///
+
+// discussion of the algorithm...
+// advantages :: possible ambiguity... vybory... pryklady... 
+
+
+
+// illustration
+
+
+
+
+
+
+\subsection{Ukrainian morphological resources}
+
+\subsection{Dynamic processes in the Ukrainian lexicon}
+
+\subsection{Frameworks for morphological lexicon development}
+
+
+This section reviews work in three areas relevant to the topic of this paper: approaches to the development of morphological resources for highly inflected low-resourced languages, available resources for Ukrainian and understanding the dynamic processes in the lexicon which drive the need for updating the lexicon coverage.
+
+
+
+News	461451019	31021650
+Wikipedia	185645357	15786948
+Fiction	18323509	1811548
+Laws and legal acts	578988264	29208302
+		
+Total	1244408149	77828448
+
+
+
+News	461451019	31021650
+Wikipedia	185645357	15786948
+Fiction	18323509	1811548
+Laws and legal acts	578988264	29208302
+
+Total	1244408149	77828448
+
+
+and then compare the coverage using 
+
+as a baseline we use 
+
+
+
+
+A semi-supervised method has been proposed in \cite{ahlberg2015paradigm}
+
+
+Our approach makes strong linguistic assumptions, as described in Section~\ref{sec:Algorithm}.
+
+
+
+However, little attention has been paid to modelling morphological inflections of the new lexicon and new Named Entities (names )
+
+or to address the most widespread  
+
+
+
+However, for practical low-resource scenarios there is a need for unsupervised  approaches. 
+// terminological note: paradigms vs. inflection tables
+
+
+\subsection{C for paradigm generation}
+
+
+
+
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{evaluation-coverage-all-corpora.jpg}
+	\caption{Percent of non-covered types (y) with filtered out lower frequencies, up to (x).}
+	\label{fig:pc-noTyp}
+\end{figure}
+
+The figure indicates that the percent of not covered types is reduced for all frequency ranges. The biggest 
+
+
+
+
+Improvement in coverage across corpora indicate that 
+
+
+even at the times of 
+
+changes such 
+
+and inflection tables for Ukrainian
+
+=========
+
+
+
+
+This document has been adapted from the instructions
+for earlier ACL and NAACL proceedings,
+including 
+those for 
+NAACL 2019 by Stephanie Lukin and Alla Roskovskaya, 
+ACL 2018 by Shay Cohen, Kevin Gimpel, and Wei Lu, 
+NAACL 2018 by Margaret Michell and Stephanie Lukin,
+2017/2018 (NA)ACL bibtex suggestions from Jason Eisner,
+ACL 2017 by Dan Gildea and Min-Yen Kan, 
+NAACL 2017 by Margaret Mitchell, 
+ACL 2012 by Maggie Li and Michael White, 
+those from ACL 2010 by Jing-Shing Chang and Philipp Koehn, 
+those for ACL 2008 by JohannaD. Moore, Simone Teufel, James Allan, and Sadaoki Furui, 
+those for ACL 2005 by Hwee Tou Ng and Kemal Oflazer, 
+those for ACL 2002 by Eugene Charniak and Dekang Lin, 
+and earlier ACL and EACL formats.
+Those versions were written by several
+people, including John Chen, Henry S. Thompson and Donald
+Walker. Additional elements were taken from the formatting
+instructions of the \emph{International Joint Conference on Artificial
+  Intelligence} and the \emph{Conference on Computer Vision and
+  Pattern Recognition}.
+
+\section{Introduction}
+
+The following instructions are directed to authors of papers submitted
+to ACL 2019 or accepted for publication in its proceedings. All
+authors are required to adhere to these specifications. Authors are
+required to provide a Portable Document Format (PDF) version of their
+papers. \textbf{The proceedings are designed for printing on A4
+paper.}
+
+\section{General Instructions}
+
+Manuscripts must be in two-column format.  Exceptions to the
+two-column format include the title, authors' names and complete
+addresses, which must be centered at the top of the first page, and
+any full-width figures or tables (see the guidelines in
+Subsection~\ref{ssec:first}). \textbf{Type single-spaced.} 
+
+ 
+
+Start all
+pages directly under the top margin. See the guidelines later
+regarding formatting the first page.  The manuscript should be
+printed single-sided and its length
+should not exceed the maximum page limit described in Section~\ref{sec:length}.
+Pages are numbered for  initial submission. However, \textbf{do not number the pages in the camera-ready version}.
+
+By uncommenting {\small\verb|\aclfinalcopy|} at the top of this 
+ document, it will compile to produce an example of the camera-ready formatting; by leaving it commented out, the document will be anonymized for initial submission.  When you first create your submission on softconf, please fill in your submitted paper ID where {\small\verb|***|} appears in the {\small\verb|\def\aclpaperid{***}|} definition at the top.
+ 
+The review process is double-blind, so do not include any author information (names, addresses) when submitting a paper for review.  
+However, you should maintain space for names and addresses so that they will fit in the final (accepted) version.  The ACL 2019 \LaTeX\ style will create a titlebox space of 2.5in for you when {\small\verb|\aclfinalcopy|} is commented out.  
+
+\subsection{The Ruler}
+The ACL 2019 style defines a printed ruler which should be presented in the
+version submitted for review.  The ruler is provided in order that
+reviewers may comment on particular lines in the paper without
+circumlocution.  If you are preparing a document without the provided
+style files, please arrange for an equivalent ruler to
+appear on the final output pages.  The presence or absence of the ruler
+should not change the appearance of any other content on the page.  The
+camera ready copy should not contain a ruler. (\LaTeX\ users may uncomment the {\small\verb|\aclfinalcopy|} command in the document preamble.)  
+
+Reviewers: note that the ruler measurements do not align well with
+lines in the paper -- this turns out to be very difficult to do well
+when the paper contains many figures and equations, and, when done,
+looks ugly. In most cases one would expect that the approximate
+location will be adequate, although you can also use fractional
+references (\emph{e.g.}, the first paragraph on this page ends at mark $108.5$).
+
+\subsection{Electronically-available resources}
+
+ACL provides this description in \LaTeX2e{} (\texttt{\small acl2019.tex}) and PDF
+format (\texttt{\small acl2019.pdf}), along with the \LaTeX2e{} style file used to
+format it (\texttt{\small acl2019.sty}) and an ACL bibliography style (\texttt{\small acl\_natbib.bst})
+and example bibliography (\texttt{\small acl2019.bib}).
+These files are all available at
+\texttt{\small http://acl2019.org/downloads/ acl2019-latex.zip}. 
+ We
+strongly recommend the use of these style files, which have been
+appropriately tailored for the ACL 2019 proceedings.
+
+\subsection{Format of Electronic Manuscript}
+\label{sect:pdf}
+
+For the production of the electronic manuscript you must use Adobe's
+Portable Document Format (PDF). PDF files are usually produced from
+\LaTeX\ using the \textit{pdflatex} command. If your version of
+\LaTeX\ produces Postscript files, you can convert these into PDF
+using \textit{ps2pdf} or \textit{dvipdf}. On Windows, you can also use
+Adobe Distiller to generate PDF.
+
+Please make sure that your PDF file includes all the necessary fonts
+(especially tree diagrams, symbols, and fonts with Asian
+characters). When you print or create the PDF file, there is usually
+an option in your printer setup to include none, all or just
+non-standard fonts.  Please make sure that you select the option of
+including ALL the fonts. \textbf{Before sending it, test your PDF by
+  printing it from a computer different from the one where it was
+  created.} Moreover, some word processors may generate very large PDF
+files, where each page is rendered as an image. Such images may
+reproduce poorly. In this case, try alternative ways to obtain the
+PDF. One way on some systems is to install a driver for a postscript
+printer, send your document to the printer specifying ``Output to a
+file'', then convert the file to PDF.
+
+It is of utmost importance to specify the \textbf{A4 format} (21 cm
+x 29.7 cm) when formatting the paper. When working with
+\texttt{dvips}, for instance, one should specify \texttt{-t a4}.
+Or using the command \verb|\special{papersize=210mm,297mm}| in the latex
+preamble (directly below the \verb|\usepackage| commands). Then using 
+\texttt{dvipdf} and/or \texttt{pdflatex} which would make it easier for some.
+
+Print-outs of the PDF file on A4 paper should be identical to the
+hardcopy version. If you cannot meet the above requirements about the
+production of your electronic submission, please contact the
+publication chairs as soon as possible.
+
+\subsection{Layout}
+\label{ssec:layout}
+
+Format manuscripts two columns to a page, in the manner these
+instructions are formatted. The exact dimensions for a page on A4
+paper are:
+
+\begin{itemize}
+\item Left and right margins: 2.5 cm
+\item Top margin: 2.5 cm
+\item Bottom margin: 2.5 cm
+\item Column width: 7.7 cm
+\item Column height: 24.7 cm
+\item Gap between columns: 0.6 cm
+\end{itemize}
+
+\noindent Papers should not be submitted on any other paper size.
+ If you cannot meet the above requirements about the production of 
+ your electronic submission, please contact the publication chairs 
+ above as soon as possible.
+
+\subsection{Fonts}
+
+For reasons of uniformity, Adobe's \textbf{Times Roman} font should be
+used. In \LaTeX2e{} this is accomplished by putting
+
+\begin{quote}
+\begin{verbatim}
+\usepackage{times}
+\usepackage{latexsym}
+\end{verbatim}
+\end{quote}
+in the preamble. If Times Roman is unavailable, use \textbf{Computer
+  Modern Roman} (\LaTeX2e{}'s default).  Note that the latter is about
+  10\% less dense than Adobe's Times Roman font.
+
+\begin{table}[t!]
+\begin{center}
+\begin{tabular}{|l|rl|}
+\hline \textbf{Type of Text} & \textbf{Font Size} & \textbf{Style} \\ \hline
+paper title & 15 pt & bold \\
+author names & 12 pt & bold \\
+author affiliation & 12 pt & \\
+the word ``Abstract'' & 12 pt & bold \\
+section titles & 12 pt & bold \\
+subsection titles & 11 pt & bold \\
+document text & 11 pt  &\\
+captions & 10 pt & \\
+abstract text & 10 pt & \\
+bibliography & 10 pt & \\
+footnotes & 9 pt & \\
+\hline
+\end{tabular}
+\end{center}
+\caption{\label{font-table} Font guide. }
+\end{table}
+
+\subsection{The First Page}
+\label{ssec:first}
+
+Center the title, author's name(s) and affiliation(s) across both
+columns. Do not use footnotes for affiliations. Do not include the
+paper ID number assigned during the submission process. Use the
+two-column format only when you begin the abstract.
+
+\textbf{Title}: Place the title centered at the top of the first page, in
+a 15-point bold font. (For a complete guide to font sizes and styles,
+see Table~\ref{font-table}) Long titles should be typed on two lines
+without a blank line intervening. Approximately, put the title at 2.5
+cm from the top of the page, followed by a blank line, then the
+author's names(s), and the affiliation on the following line. Do not
+use only initials for given names (middle initials are allowed). Do
+not format surnames in all capitals (\emph{e.g.}, use ``Mitchell'' not
+``MITCHELL'').  Do not format title and section headings in all
+capitals as well except for proper names (such as ``BLEU'') that are
+conventionally in all capitals.  The affiliation should contain the
+author's complete address, and if possible, an electronic mail
+address. Start the body of the first page 7.5 cm from the top of the
+page.
+
+The title, author names and addresses should be completely identical
+to those entered to the electronical paper submission website in order
+to maintain the consistency of author information among all
+publications of the conference. If they are different, the publication
+chairs may resolve the difference without consulting with you; so it
+is in your own interest to double-check that the information is
+consistent.
+
+\textbf{Abstract}: Type the abstract at the beginning of the first
+column. The width of the abstract text should be smaller than the
+width of the columns for the text in the body of the paper by about
+0.6 cm on each side. Center the word \textbf{Abstract} in a 12 point bold
+font above the body of the abstract. The abstract should be a concise
+summary of the general thesis and conclusions of the paper. It should
+be no longer than 200 words. The abstract text should be in 10 point font.
+
+\textbf{Text}: Begin typing the main body of the text immediately after
+the abstract, observing the two-column format as shown in the present document. Do not include page numbers.
+
+\textbf{Indent}: Indent when starting a new paragraph, about 0.4 cm. Use 11 points for text and subsection headings, 12 points for section headings and 15 points for the title. 
+
+
+\begin{table}
+\centering
+\small
+\begin{tabular}{cc}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Command} & \textbf{Output}\\\hline
+\verb|{\"a}| & {\"a} \\
+\verb|{\^e}| & {\^e} \\
+\verb|{\`i}| & {\`i} \\ 
+\verb|{\.I}| & {\.I} \\ 
+\verb|{\o}| & {\o} \\
+\verb|{\'u}| & {\'u}  \\ 
+\verb|{\aa}| & {\aa}  \\\hline
+\end{tabular} & 
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Command} & \textbf{Output}\\\hline
+\verb|{\c c}| & {\c c} \\ 
+\verb|{\u g}| & {\u g} \\ 
+\verb|{\l}| & {\l} \\ 
+\verb|{\~n}| & {\~n} \\ 
+\verb|{\H o}| & {\H o} \\ 
+\verb|{\v r}| & {\v r} \\ 
+\verb|{\ss}| & {\ss} \\\hline
+\end{tabular}
+\end{tabular}
+\caption{Example commands for accented characters, to be used in, \emph{e.g.}, \BibTeX\ names.}\label{tab:accents}
+\end{table}
+
+\subsection{Sections}
+
+\textbf{Headings}: Type and label section and subsection headings in the
+style shown on the present document.  Use numbered sections (Arabic
+numerals) in order to facilitate cross references. Number subsections
+with the section number and the subsection number separated by a dot,
+in Arabic numerals.
+Do not number subsubsections.
+
+\begin{table*}[t!]
+\centering
+\begin{tabular}{lll}
+  output & natbib & previous ACL style files\\
+  \hline
+  \citep{Gusfield:97} & \verb|\citep| & \verb|\cite| \\
+  \citet{Gusfield:97} & \verb|\citet| & \verb|\newcite| \\
+  \citeyearpar{Gusfield:97} & \verb|\citeyearpar| & \verb|\shortcite| \\
+\end{tabular}
+\caption{Citation commands supported by the style file.
+  The citation style is based on the natbib package and
+  supports all natbib citation commands.
+  It also supports commands defined in previous ACL style files
+  for compatibility.
+  }
+\end{table*}
+
+\textbf{Citations}: Citations within the text appear in parentheses
+as~\cite{Gusfield:97} or, if the author's name appears in the text
+itself, as Gusfield~\shortcite{Gusfield:97}.
+Using the provided \LaTeX\ style, the former is accomplished using
+{\small\verb|\cite|} and the latter with {\small\verb|\shortcite|} or {\small\verb|\newcite|}. Collapse multiple citations as in~\cite{Gusfield:97,Aho:72}; this is accomplished with the provided style using commas within the {\small\verb|\cite|} command, \emph{e.g.}, {\small\verb|\cite{Gusfield:97,Aho:72}|}. Append lowercase letters to the year in cases of ambiguities.  
+ Treat double authors as
+in~\cite{Aho:72}, but write as in~\cite{Chandra:81} when more than two
+authors are involved. Collapse multiple citations as
+in~\cite{Gusfield:97,Aho:72}. Also refrain from using full citations
+as sentence constituents.
+
+We suggest that instead of
+\begin{quote}
+  ``\cite{Gusfield:97} showed that ...''
+\end{quote}
+you use
+\begin{quote}
+``Gusfield \shortcite{Gusfield:97}   showed that ...''
+\end{quote}
+
+If you are using the provided \LaTeX{} and Bib\TeX{} style files, you
+can use the command \verb|\citet| (cite in text)
+to get ``author (year)'' citations.
+
+You can use the command \verb|\citealp| (alternative cite without 
+parentheses) to get ``author year'' citations (which is useful for 
+using citations within parentheses, as in \citealp{Gusfield:97}).
+
+If the Bib\TeX{} file contains DOI fields, the paper
+title in the references section will appear as a hyperlink
+to the DOI, using the hyperref \LaTeX{} package.
+To disable the hyperref package, load the style file
+with the \verb|nohyperref| option: \\{\small
+\verb|\usepackage[nohyperref]{acl2019}|}
+
+\textbf{Compilation Issues}: Some of you might encounter the following error during compilation: 
+
+``{\em \verb|\pdfendlink| ended up in different nesting level than \verb|\pdfstartlink|.}''
+
+This happens when \verb|pdflatex| is used and a citation splits across a page boundary. To fix this, the style file contains a patch consisting of the following two lines: (1) \verb|\RequirePackage{etoolbox}| (line 454 in \texttt{acl2019.sty}), and (2) A long line below (line 455 in \texttt{acl2019.sty}).
+
+If you still encounter compilation issues even with the patch enabled, disable the patch by commenting the two lines, and then disable the \verb|hyperref| package (see above), recompile and see the problematic citation.
+Next rewrite that sentence containing the citation. (See, {\em e.g.}, {\small\tt http://tug.org/errors.html})
+
+\textbf{Digital Object Identifiers}:  As part of our work to make ACL
+materials more widely used and cited outside of our discipline, ACL
+has registered as a CrossRef member, as a registrant of Digital Object
+Identifiers (DOIs), the standard for registering permanent URNs for
+referencing scholarly materials.  As of 2017, we are requiring all
+camera-ready references to contain the appropriate DOIs (or as a
+second resort, the hyperlinked ACL Anthology Identifier) to all cited
+works.  Thus, please ensure that you use Bib\TeX\ records that contain
+DOI or URLs for any of the ACL materials that you reference.
+Appropriate records should be found for most materials in the current
+ACL Anthology at \url{http://aclanthology.info/}.
+
+As examples, we cite \cite{P16-1001} to show you how papers with a DOI
+will appear in the bibliography.  We cite \cite{C14-1001} to show how
+papers without a DOI but with an ACL Anthology Identifier will appear
+in the bibliography.  
+
+As reviewing will be double-blind, the submitted version of the papers
+should not include the authors' names and affiliations. Furthermore,
+self-references that reveal the author's identity, \emph{e.g.},
+\begin{quote}
+``We previously showed \cite{Gusfield:97} ...''  
+\end{quote}
+should be avoided. Instead, use citations such as 
+\begin{quote}
+``\citeauthor{Gusfield:97} \shortcite{Gusfield:97}
+previously showed ... ''
+\end{quote}
+
+Any preliminary non-archival versions of submitted papers should be listed in the submission form but not in the review version of the paper. ACL 2019 reviewers are generally aware that authors may present preliminary versions of their work in other venues, but will not be provided the list of previous presentations from the submission form. 
+
+
+\textbf{Please do not use anonymous citations} and do not include
+ when submitting your papers. Papers that do not
+conform to these requirements may be rejected without review.
+
+\textbf{References}: Gather the full set of references together under
+the heading \textbf{References}; place the section before any Appendices. 
+Arrange the references alphabetically
+by first author, rather than by order of occurrence in the text.
+By using a .bib file, as in this template, this will be automatically 
+handled for you. See the \verb|\bibliography| commands near the end for more.
+
+Provide as complete a citation as possible, using a consistent format,
+such as the one for \emph{Computational Linguistics\/} or the one in the 
+\emph{Publication Manual of the American 
+Psychological Association\/}~\cite{APA:83}. Use of full names for
+authors rather than initials is preferred. A list of abbreviations
+for common computer science journals can be found in the ACM 
+\emph{Computing Reviews\/}~\cite{ACM:83}.
+
+The \LaTeX{} and Bib\TeX{} style files provided roughly fit the
+American Psychological Association format, allowing regular citations, 
+short citations and multiple citations as described above.  
+
+\begin{itemize}
+\item Example citing an arxiv paper: \cite{rasooli-tetrault-2015}. 
+\item Example article in journal citation: \cite{Ando2005}.
+\item Example article in proceedings, with location: \cite{borsch2011}.
+\item Example article in proceedings, without location: \cite{andrew2007scalable}.
+\end{itemize}
+See corresponding .bib file for further details.
+
+Submissions should accurately reference prior and related work, including code and data. If a piece of prior work appeared in multiple venues, the version that appeared in a refereed, archival venue should be referenced. If multiple versions of a piece of prior work exist, the one used by the authors should be referenced. Authors should not rely on automated citation indices to provide accurate references for prior and related work.
+
+\textbf{Appendices}: Appendices, if any, directly follow the text and the
+references (but see above).  Letter them in sequence and provide an
+informative title: \textbf{Appendix A. Title of Appendix}.
+
+\subsection{Footnotes}
+
+\textbf{Footnotes}: Put footnotes at the bottom of the page and use 9
+point font. They may be numbered or referred to by asterisks or other
+symbols.\footnote{This is how a footnote should appear.} Footnotes
+should be separated from the text by a line.\footnote{Note the line
+separating the footnotes from the text.}
+
+\subsection{Graphics}
+
+\textbf{Illustrations}: Place figures, tables, and photographs in the
+paper near where they are first discussed, rather than at the end, if
+possible.  Wide illustrations may run across both columns.  Color
+illustrations are discouraged, unless you have verified that  
+they will be understandable when printed in black ink.
+
+\textbf{Captions}: Provide a caption for every illustration; number each one
+sequentially in the form:  ``Figure 1. Caption of the Figure.'' ``Table 1.
+Caption of the Table.''  Type the captions of the figures and 
+tables below the body, using 10 point text. Captions should be placed below illustrations. Captions that are one line are centered (see Table~\ref{font-table}). Captions longer than one line are left-aligned (see Table~\ref{tab:accents}). Do not overwrite the default caption sizes. The acl2019.sty file is compatible with the caption and subcaption packages; do not add optional arguments.
+
+
+\subsection{Accessibility}
+\label{ssec:accessibility}
+
+In an effort to accommodate people who are color-blind (as well as those printing
+to paper), grayscale readability for all accepted papers will be
+encouraged.  Color is not forbidden, but authors should ensure that
+tables and figures do not rely solely on color to convey critical
+distinctions. A simple criterion: All curves and points in your figures should be clearly distinguishable without color.
+
+% Min: no longer used as of ACL 2018, following ACL exec's decision to
+% remove this extra workflow that was not executed much.
+% BEGIN: remove
+%% \section{XML conversion and supported \LaTeX\ packages}
+
+%% Following ACL 2014 we will also we will attempt to automatically convert 
+%% your \LaTeX\ source files to publish papers in machine-readable 
+%% XML with semantic markup in the ACL Anthology, in addition to the 
+%% traditional PDF format.  This will allow us to create, over the next 
+%% few years, a growing corpus of scientific text for our own future research, 
+%% and picks up on recent initiatives on converting ACL papers from earlier 
+%% years to XML. 
+
+%% We encourage you to submit a ZIP file of your \LaTeX\ sources along
+%% with the camera-ready version of your paper. We will then convert them
+%% to XML automatically, using the LaTeXML tool
+%% (\url{http://dlmf.nist.gov/LaTeXML}). LaTeXML has \emph{bindings} for
+%% a number of \LaTeX\ packages, including the ACL 2018 stylefile. These
+%% bindings allow LaTeXML to render the commands from these packages
+%% correctly in XML. For best results, we encourage you to use the
+%% packages that are officially supported by LaTeXML, listed at
+%% \url{http://dlmf.nist.gov/LaTeXML/manual/included.bindings}
+% END: remove
+
+\section{Translation of non-English Terms}
+
+It is also advised to supplement non-English characters and terms
+with appropriate transliterations and/or translations
+since not all readers understand all such characters and terms.
+Inline transliteration or translation can be represented in
+the order of: original-form transliteration ``translation''.
+
+\section{Length of Submission}
+\label{sec:length}
+
+The ACL 2019 main conference accepts submissions of long papers and
+short papers.
+ Long papers may consist of up to eight (8) pages of
+content plus unlimited pages for references. Upon acceptance, final
+versions of long papers will be given one additional page -- up to nine (9)
+pages of content plus unlimited pages for references -- so that reviewers' comments
+can be taken into account. Short papers may consist of up to four (4)
+pages of content, plus unlimited pages for references. Upon
+acceptance, short papers will be given five (5) pages in the
+proceedings and unlimited pages for references. 
+For both long and short papers, all illustrations and tables that are part
+of the main text must be accommodated within these page limits, observing
+the formatting instructions given in the present document. Papers that do not conform to the specified length and formatting requirements are subject to be rejected without review.
+
+ACL 2019 does encourage the submission of additional material that is relevant to the reviewers but not an integral part of the paper. There are two such types of material: appendices, which can be read, and non-readable supplementary materials, often data or code.  Do not include this additional material in the same document as your main paper. Additional material must be submitted as one or more separate files, and must adhere to the same anonymity guidelines as the main paper. The paper must be self-contained: it is optional for reviewers to look at the supplementary material. Papers should not refer, for further detail, to documents, code or data resources that are not available to the reviewers. Refer to Appendix~\ref{sec:appendix} and Appendix~\ref{sec:supplemental} for further information. 
+
+Workshop chairs may have different rules for allowed length and
+whether supplemental material is welcome. As always, the respective
+call for papers is the authoritative source.
+
+\section*{Acknowledgments}
+
+The acknowledgments should go immediately before the references.  Do
+not number the acknowledgments section. Do not include this section
+when submitting your paper for review. \\
+
+\noindent \textbf{Preparing References:} \\
+Include your own bib file like this:
+\verb|\bibliographystyle{acl_natbib}|
+\verb|\bibliography{acl2019}| 
+
+where \verb|acl2019| corresponds to a acl2019.bib file
+
+
+
+
+
+
+
+\section{Appendices}
+\label{sec:appendix}
+Appendices are material that can be read, and include lemmas, formulas, proofs, and tables that are not critical to the reading and understanding of the paper. 
+Appendices should be \textbf{uploaded as supplementary material} when submitting the paper for review. Upon acceptance, the appendices come after the references, as shown here. Use
+\verb|\appendix| before any appendix section to switch the section
+numbering over to letters.
+
+
+\section{Supplemental Material}
+\label{sec:supplemental}
+Submissions may include non-readable supplementary material used in the work and described in the paper. Any accompanying software and/or data should include licenses and documentation of research review as appropriate. Supplementary material may report preprocessing decisions, model parameters, and other details necessary for the replication of the experiments reported in the paper. Seemingly small preprocessing decisions can sometimes make a large difference in performance, so it is crucial to record such decisions to precisely characterize state-of-the-art methods. 
+
+Nonetheless, supplementary material should be supplementary (rather
+than central) to the paper. \textbf{Submissions that misuse the supplementary 
+material may be rejected without review.}
+Supplementary material may include explanations or details
+of proofs or derivations that do not fit into the paper, lists of
+features or feature templates, sample inputs and outputs for a system,
+pseudo-code or source code, and data. (Source code and data should
+be separate uploads, rather than part of the paper).
+
+The paper should not rely on the supplementary material: while the paper
+may refer to and cite the supplementary material and the supplementary material will be available to the
+reviewers, they will not be asked to review the
+supplementary material.
+
+
+
+\appendix
+
+
+
+@book{Aho:72,
+    author  = {Alfred V. Aho and Jeffrey D. Ullman},
+    title   = {The Theory of Parsing, Translation and Compiling},
+    year    = "1972",
+    volume  = "1",
+    publisher = {Prentice-Hall},
+    address = {Englewood Cliffs, NJ}
+}
+
+@book{APA:83,
+    author  = {{American Psychological Association}},
+    title   = {Publications Manual},
+    year    = "1983",
+   publisher = {American Psychological Association},
+   address = {Washington, DC}
+}
+
+@article{ACM:83,
+	author = {Association for Computing Machinery},
+	year = "1983",
+	journal = {Computing Reviews},
+	volume = "24",
+	number = "11",
+	pages = "503--512"
+}
+
+@article{Chandra:81,
+	author = {Ashok K. Chandra and Dexter C. Kozen and Larry J. Stockmeyer},
+	year = "1981",
+	title = {Alternation},
+	journal = {Journal of the Association for Computing Machinery},
+	volume = "28",
+	number = "1",
+	pages = "114--133",
+	doi = "10.1145/322234.322243",
+}
+
+@inproceedings{andrew2007scalable,
+  title={Scalable training of {L1}-regularized log-linear models},
+  author={Andrew, Galen and Gao, Jianfeng},
+  booktitle={Proceedings of the 24th International Conference on Machine Learning},
+  pages={33--40},
+  year={2007},
+}
+
+@book{Gusfield:97,
+    author  = {Dan Gusfield},
+    title   = {Algorithms on Strings, Trees and Sequences},
+    year    = "1997",
+    publisher = {Cambridge University Press},
+    address = {Cambridge, UK}
+}
+
+@inproceedings{borsch2011,
+	Address = {Canberra, Australia},
+	Author = {Benjamin Borschinger and Mark Johnson},
+	Booktitle = {Proceedings of the Australasian Language Technology Association Workshop 2011},
+	Month = {December},
+	Pages = {10--18},
+	Title = {A Particle Filter algorithm for {B}ayesian Wordsegmentation},
+	Year = {2011}}
+
+@article{rasooli-tetrault-2015,
+    author    = {Mohammad Sadegh Rasooli and Joel R. Tetreault},
+    title     = {Yara Parser: {A} Fast and Accurate Dependency Parser},
+    journal   = {Computing Research Repository},
+    volume    = {arXiv:1503.06733},
+    year      = {2015},
+    url       = {http://arxiv.org/abs/1503.06733},
+    note    = {version 2}
+}
+
+@article{Ando2005,
+	Acmid = {1194905},
+	Author = {Ando, Rie Kubota and Zhang, Tong},
+	Issn = {1532-4435},
+	Issue_Date = {12/1/2005},
+	Journal = {Journal of Machine Learning Research},
+	Month = dec,
+	Numpages = {37},
+	Pages = {1817--1853},
+	Publisher = {JMLR.org},
+	Title = {A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data},
+	Volume = {6},
+	Year = {2005}}
+
+@InProceedings{P16-1001,
+  author =	"Goodman, James
+  	 and Vlachos, Andreas
+	     and Naradowsky, Jason",
+  title =    "Noise reduction and targeted exploration in imitation learning for      Abstract Meaning Representation parsing    ",
+  booktitle = 	    "Proceedings of the 54th Annual Meeting of the Association for      Computational Linguistics (Volume 1: Long Papers)    ",
+  year =    "2016",
+  publisher =	"Association for Computational Linguistics",
+  pages =   "1--11",
+  location =	"Berlin, Germany",
+  doi =    "10.18653/v1/P16-1001",
+  url =    "http://aclweb.org/anthology/P16-1001"
+}
+
+@InProceedings{C14-1001,
+  author =	"Harper, Mary",
+  title = 	"Learning from 26 Languages: Program Management and Science in the Babel Program",
+  booktitle = 	"Proceedings of COLING 2014, the 25th International Conference on Computational Linguistics: Technical Papers",
+  year =    "2014",
+  publisher =	"Dublin City University and Association for Computational Linguistics",
+  pages =   "1",
+  location =	"Dublin, Ireland",
+  url =    "http://aclweb.org/anthology/C14-1001"
+}
+
+
+
+
+=========
+
+
+
+
+
+
+    

@@ -1,0 +1,268 @@
+12/04/2019
+Planning experiments for morphosyntax project
+
+Evaluation of the approach:
+	>> success in lemma confirmation for inflected words
+	>> success in paradigm generation
+	>> coverage of the corpus ???
+
+	generate all word forms (test mode in dict_uk)?
+	generate additional word forms in proposed approach >> 
+		>> to identify classes of words which have been added
+		>> theoretical background: new words in language, the need to maintain the coverage 
+		>> dynamic system
+
+	write the motivation
+	write theoretical part
+
+Procedure for checking coverage:
+	The coverage is checked on the frq word list:
+	- 
+
+
+Insertion of stress = 
+	poetry corpus...
+
+Multiword expressions,
+TAG
+Construction grammar...
+
+
+
+Argument:
+	compare two corpora: 
+		> ukrainian internet corpus 2014 vs. News corpus 2018
+		> the degree of overlap ???
+		> same size >>
+
+		words with sufficient different frequencies;
+		new words >> ??
+
+		answering how much language changes over time 
+		// political and other reasons 
+
+		the need:
+		>> accounting for the dynamic aspect of morphology... 
+
+
+		language change argument >> supporting .. / motivation
+		problem for highly inflected languages
+
+		coverage of new words ???
+		vs. coverage of old words ???
+
+			>> separate statistics....>>> 
+			>> motivation for the research >> 
+
+
+
+Evaluation ideas:
+	1. we can test the approach on the generated list of lemmas --> paradigms should be filled in full, but we will see the amount of noise from the alternations in stem and would be able to capture alternations in a morphosyntactic model.
+
+	2. assess average fill of paradigms from the corpus 
+		- for a given corpus -- what is the coverage / fill of paradigms -- how many forms on ave each paradigm contains; what are most frequent forms?
+
+
+Roadmap:
+	implement core algorithm; testing ground -- fiction corpus;
+	implement evaluation processes
+	start writing the paper
+
+
+
+
+
+15/04/2019
+	- paradigm.py 
+		>> extending functionality
+		>> reading corpus file;
+
+		>> workflows
+
+
+18/04/2019
+    - start writing :: principles... 
+    - implementing paradigm induction
+    
+    
+    
+    Example:
+        > confirming two paradigms:
+        тверді / твердий . твердь
+        non-confirming: alternative rejected:
+            решт-и / реш-ти (дієслово)
+            
+            
+    linguistic hypotheses approach...
+    
+    
+    Question: difference: нести , пекти ? -- same code?
+    added benefits:
+        guessing sub-class: 
+        кредит -- кредита - gen ??? or кредиту???
+        
+        spurious lexemes found:
+            лисому - лисом ??? лисомові ???
+            
+        errors:
+            Ліга, Ліги, Ліг
+            -- masc.?? why??? >> threshold in ambiguous forms, not in all possible forms...???
+            
+            
+19/04/2019
+    - stage-by-stage development:
+    1. basic functionality output;
+    2. writing up -- in the paper;
+        >> further experiments if time / space allows...
+        
+    3. updating according to the lines of further research
+    4. ensuring core functionality is ensured first...
+    
+    
+    - order of presentation: sorting returned dictionary?
+    
+    limitations:
+        тату -- невідмінюване, we need context information... 
+        >> complete overlap of paradigm -- cannot be captured
+            syntactic information to be used... 
+            
+            
+    error: 
+        підштовхнулуть ~ verbal morphology...
+        на перекуру -- на перекурі Not this <
+        takes only first option , doesn't explore furtehr ... ??? competing paradigms --> implementing... 
+        
+        >> important: to test coverage...
+        односельчан -- vs. односельчанин
+        
+        
+    further research: directions - 
+        syntactic interface for morphological categories:
+            - guessing morph category from just one occurrence + syntactic role
+        phonological variation and models
+            - distortion models
+        multiple paradigms capturing... 
+            - induction of semantic interpretable categories, e.g., animacy...
+            >> valencies, subcategorization frames...
+            
+        
+        
+    experiment plan
+        - building output with lemmas
+        - checking coverage
+        
+        - writing paper...
+        
+        - principle: reading from local drive, redirecting output to external drive...
+        
+        error detection / addressing:::
+        - error analysis: keep alternative hypotheses and select the highest scoring one...
+        - ambiguous positions merge into one ???
+        
+        - what to do if several hypotheses match the data?
+        - different word forms can give confirmation / rise to different sets of hypotheses, so each should be treated separately...
+        
+        frozenset : frq
+        
+        1 word --> different possibilities of a paradigm...
+            >> wrong paradigms / ranked
+            >> correct alternative paradigms
+            >> for each word :: we need a ranked list of confirmed paradigms:
+                ??? selecting only top paradigm???
+                + global list of paradigms;
+                + merge similar endings into one joint inflection... >> ? Automatically? >> not count ??? how to do this?
+            1st stage: list of ranked hypotheses for each word
+            2nd stage: merge those hypotheses...
+            
+        ікону -- фабрику, робітнику, ікон-ити???
+            >> hypotheses comparison...
+            
+        phonological movements: мрець -- мерцеві, мерцям
+        
+        автомобіле -- автомобіль -- error...
+        аруратності -- акуратностя
+        
+        образ -- образа ...
+        брати 
+            
+        
+        
+        - overlap???
+            
+    
+    check:
+        1. coverage of Rysin on old; on new
+        2. overlap of my and Rysin
+        3. additional >> added value
+        4. errors...
+        
+        
+    plan of the article:
+        - resources;
+        - see the section on previous work... >>> 
+            >> history of the morphosyntactic research in Ukrainian... >> corpus based lexicography... 
+    
+    
+    bullet points to cover:
+    
+    - morphological lexicon generation task vs. other tasks;
+    - neologisms and the need to cover them;
+    - approaches...
+    
+    - regularity and irregularity;
+    
+
+Dynamics of the lexicon: the need to address that...
+
+Our language can be regarded as an ancient city: a maze of little streets and squares, of old and new houses, of houses with extensions from various periods, and all this sur- rounded by a multitude of new suburbs with straight and regular streets and uniform houses.
+
+p. 11 - Wittgenstein, philosophical investigations...
+
+
+
+comparisons:
+    rel frqs
+    for 2012 vs. 2018
+    
+    
+    finding files:
+        news.tokenized.shuffled_uk-frqdict.txt >> 2017 corpus
+        /Users/bogdan/elisp/_ghdata/corp/ukcorpus
+        
+        frqDict-internet-ua.txt
+        /Users/bogdan/elisp/_ghdata/corp/ukcorpus2014
+        
+    // lang identification is not perfect... 
+    // up to 10% ; remedying... 
+        >> remedy :: coverage frequency -- lower than UK ...
+        + relative frqs 
+        not covered :: 12 corpus:
+        мінохоронздоров'я -- 450 
+        коломойского -- 418
+        інтербізнесконсалтинг -- 414
+        могадішо -- 413
+        
+
+        
+        йолка -- 176
+        176 йолка
+        175 озоноруйнуючих
+        
+        
+        what's left of the weekend off... 
+        
+2/05/2019
+    plan for the article:
+    
+    1. intro
+    
+    2. experiment set up
+    
+    
+    // more details about the morphological lexicon :
+        - in the previous work section...
+        
+        
+
+        
+        

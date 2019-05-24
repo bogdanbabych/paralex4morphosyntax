@@ -1,0 +1,1035 @@
+N.nom.sing.fem
+	 variants:
+		stem:фабрик	infl:а	class:D1h
+	 variants:
+		stem:робітниц	infl:я	class:D1s
+	 variants:
+		stem:наді	infl:я	class:D1j
+	 variants:
+		stem:площ	infl:а	class:D1m
+N.gen.sing.fem
+	 variants:
+		stem:фабрик	infl:и	class:D1h
+	 variants:
+		stem:робітниц	infl:і	class:D1s
+	 variants:
+		stem:наді	infl:ї	class:D1j
+	 variants:
+		stem:площ	infl:і	class:D1m
+N.dat.sing.fem
+	 variants:
+		stem:фабриц	infl:і	class:D1h
+	 variants:
+		stem:робітниц	infl:і	class:D1s
+	 variants:
+		stem:наді	infl:ї	class:D1j
+	 variants:
+		stem:площ	infl:і	class:D1m
+N.acc.sing.fem
+	 variants:
+		stem:фабрик	infl:у	class:D1h
+	 variants:
+		stem:робітниц	infl:ю	class:D1s
+	 variants:
+		stem:наді	infl:ю	class:D1j
+	 variants:
+		stem:площ	infl:у	class:D1m
+N.ins.sing.fem
+	 variants:
+		stem:фабрик	infl:ою	class:D1h
+	 variants:
+		stem:робітниц	infl:ею	class:D1s
+	 variants:
+		stem:наді	infl:єю	class:D1j
+	 variants:
+		stem:площ	infl:ею	class:D1m
+N.loc.sing.fem
+	 variants:
+		stem:фабриц	infl:і	class:D1h
+	 variants:
+		stem:робітниц	infl:і	class:D1s
+	 variants:
+		stem:наді	infl:ї	class:D1j
+	 variants:
+		stem:площ	infl:і	class:D1m
+N.voc.sing.fem
+	 variants:
+		stem:фабрик	infl:о	class:D1h
+	 variants:
+		stem:робітниц	infl:е	class:D1s
+	 variants:
+		stem:наді	infl:є	class:D1j
+	 variants:
+		stem:площ	infl:е	class:D1m
+N.nom.plur.fem
+	 variants:
+		stem:фабрик	infl:и	class:D1h
+	 variants:
+		stem:робітниц	infl:і	class:D1s
+	 variants:
+		stem:наді	infl:ї	class:D1j
+	 variants:
+		stem:площ	infl:і	class:D1m
+N.gen.plur.fem
+	 variants:
+		stem:фабрик	infl:	class:D1h
+	 variants:
+		stem:робітниц	infl:ь	class:D1s
+	 variants:
+		stem:наді	infl:й	class:D1j
+	 variants:
+		stem:площ	infl:	class:D1m
+N.dat.plur.fem
+	 variants:
+		stem:фабрик	infl:ам	class:D1h
+	 variants:
+		stem:робітниц	infl:ям	class:D1s
+	 variants:
+		stem:наді	infl:ям	class:D1j
+	 variants:
+		stem:площ	infl:ам	class:D1m
+N.ins.plur.fem
+	 variants:
+		stem:фабрик	infl:ами	class:D1h
+	 variants:
+		stem:робітниц	infl:ями	class:D1s
+	 variants:
+		stem:наді	infl:ями	class:D1j
+	 variants:
+		stem:площ	infl:ами	class:D1m
+N.loc.plur.fem
+	 variants:
+		stem:фабрик	infl:ах	class:D1h
+	 variants:
+		stem:робітниц	infl:ях	class:D1s
+	 variants:
+		stem:наді	infl:ях	class:D1j
+	 variants:
+		stem:площ	infl:ах	class:D1m
+N.voc.plur.fem
+	 variants:
+		stem:фабрик	infl:и	class:D1h
+	 variants:
+		stem:робітниц	infl:і	class:D1s
+	 variants:
+		stem:наді	infl:ї	class:D1j
+	 variants:
+		stem:площ	infl:і	class:D1m
+N.nom.sing.mas
+	 variants:
+		stem:робітник	infl:	class:D2Mh
+	 variants:
+		stem:сталевар	infl:	class:D2Mr
+	 variants:
+		stem:учител	infl:ь	class:D2Ms
+	 variants:
+		stem:секретар	infl:	class:D2Mrs
+	 variants:
+		stem:кра	infl:й	class:D2Mjs
+	 variants:
+		stem:товариш	infl:	class:D2Mm
+	 variants:
+		stem:школяр	infl:	class:D2Mrm
+N.gen.sing.mas
+	 variants:
+		stem:робітник	infl:а	class:D2Mh
+	 variants:
+		stem:сталевар	infl:а	class:D2Mr
+	 variants:
+		stem:учител	infl:я	class:D2Ms
+	 variants:
+		stem:секретар	infl:я	class:D2Mrs
+	 variants:
+		stem:кра	infl:ю	class:D2Mjs
+	 variants:
+		stem:товариш	infl:а	class:D2Mm
+	 variants:
+		stem:школяр	infl:а	class:D2Mrm
+N.dat.sing.mas
+	 variants:
+		stem:робітник	infl:ові	class:D2Mh
+		stem:	infl:у	class:D2Mh
+	 variants:
+		stem:сталевар	infl:ові	class:D2Mr
+		stem:	infl:у	class:D2Mr
+	 variants:
+		stem:учител	infl:еві	class:D2Ms
+		stem:	infl:ю	class:D2Ms
+	 variants:
+		stem:секретар	infl:еві	class:D2Mrs
+		stem:	infl:ю	class:D2Mrs
+	 variants:
+		stem:кра	infl:єві	class:D2Mjs
+		stem:	infl:ю	class:D2Mjs
+	 variants:
+		stem:товариш	infl:еві	class:D2Mm
+		stem:	infl:у	class:D2Mm
+	 variants:
+		stem:школяр	infl:еві	class:D2Mrm
+		stem:	infl:у	class:D2Mrm
+N.ins.sing.mas
+	 variants:
+		stem:робітник	infl:ом	class:D2Mh
+	 variants:
+		stem:сталевар	infl:ом	class:D2Mr
+	 variants:
+		stem:учител	infl:ем	class:D2Ms
+	 variants:
+		stem:секретар	infl:ем	class:D2Mrs
+	 variants:
+		stem:кра	infl:єм	class:D2Mjs
+	 variants:
+		stem:товариш	infl:ем	class:D2Mm
+	 variants:
+		stem:школяр	infl:ем	class:D2Mrm
+N.loc.sing.mas
+	 variants:
+		stem:робітник	infl:ові	class:D2Mh
+		stem:	infl:у	class:D2Mh
+	 variants:
+		stem:сталевар	infl:ові	class:D2Mr
+		stem:	infl:і	class:D2Mr
+	 variants:
+		stem:учител	infl:еві	class:D2Ms
+		stem:	infl:і	class:D2Ms
+		stem:	infl:ю	class:D2Ms
+	 variants:
+		stem:секретар	infl:еві	class:D2Mrs
+		stem:	infl:і	class:D2Mrs
+		stem:	infl:ю	class:D2Mrs
+	 variants:
+		stem:кра	infl:ї	class:D2Mjs
+		stem:кра	infl:ю	class:D2Mjs
+	 variants:
+		stem:товариш	infl:еві	class:D2Mm
+		stem:	infl:і	class:D2Mm
+		stem:	infl:у	class:D2Mm
+	 variants:
+		stem:школяр	infl:еві	class:D2Mrm
+		stem:	infl:і	class:D2Mrm
+N.voc.sing.mas
+	 variants:
+		stem:робітник	infl:	class:D2Mh
+		stem:робітнич	infl:у	class:D2Mh
+		stem:	infl:е	class:D2Mh
+	 variants:
+		stem:сталевар	infl:е	class:D2Mr
+	 variants:
+		stem:учител	infl:ю	class:D2Ms
+	 variants:
+		stem:секретар	infl:ю	class:D2Mrs
+	 variants:
+		stem:кра	infl:ю	class:D2Mjs
+	 variants:
+		stem:товариш	infl:у	class:D2Mm
+	 variants:
+		stem:школяр	infl:е	class:D2Mrm
+N.nom.plur.mas
+	 variants:
+		stem:робітник	infl:и	class:D2Mh
+	 variants:
+		stem:сталевар	infl:и	class:D2Mr
+	 variants:
+		stem:учител	infl:і	class:D2Ms
+	 variants:
+		stem:секретар	infl:і	class:D2Mrs
+	 variants:
+		stem:кра	infl:ї	class:D2Mjs
+	 variants:
+		stem:товариш	infl:і	class:D2Mm
+	 variants:
+		stem:школяр	infl:і	class:D2Mrm
+N.gen.plur.mas
+	 variants:
+		stem:робітник	infl:ів	class:D2Mh
+	 variants:
+		stem:сталевар	infl:ів	class:D2Mr
+	 variants:
+		stem:учител	infl:ів	class:D2Ms
+	 variants:
+		stem:секретар	infl:ів	class:D2Mrs
+	 variants:
+		stem:кра	infl:їв	class:D2Mjs
+	 variants:
+		stem:товариш	infl:ів	class:D2Mm
+	 variants:
+		stem:школяр	infl:ів	class:D2Mrm
+N.dat.plur.mas
+	 variants:
+		stem:робітник	infl:ам	class:D2Mh
+	 variants:
+		stem:сталевар	infl:ам	class:D2Mr
+	 variants:
+		stem:учител	infl:ям	class:D2Ms
+	 variants:
+		stem:секретар	infl:ям	class:D2Mrs
+	 variants:
+		stem:кра	infl:ям	class:D2Mjs
+	 variants:
+		stem:товариш	infl:ам	class:D2Mm
+	 variants:
+		stem:школяр	infl:ам	class:D2Mrm
+N.ins.plur.mas
+	 variants:
+		stem:робітник	infl:ами	class:D2Mh
+	 variants:
+		stem:сталевар	infl:ами	class:D2Mr
+	 variants:
+		stem:учител	infl:ями	class:D2Ms
+	 variants:
+		stem:секретар	infl:ями	class:D2Mrs
+	 variants:
+		stem:кра	infl:ями	class:D2Mjs
+	 variants:
+		stem:товариш	infl:ами	class:D2Mm
+	 variants:
+		stem:школяр	infl:ами	class:D2Mrm
+N.loc.plur.mas
+	 variants:
+		stem:робітник	infl:ах	class:D2Mh
+	 variants:
+		stem:сталевар	infl:ах	class:D2Mr
+	 variants:
+		stem:учител	infl:ях	class:D2Ms
+	 variants:
+		stem:секретар	infl:ях	class:D2Mrs
+	 variants:
+		stem:кра	infl:ях	class:D2Mjs
+	 variants:
+		stem:товариш	infl:ах	class:D2Mm
+	 variants:
+		stem:школяр	infl:ах	class:D2Mrm
+N.voc.plur.mas
+	 variants:
+		stem:робітник	infl:и	class:D2Mh
+	 variants:
+		stem:сталевар	infl:и	class:D2Mr
+	 variants:
+		stem:учител	infl:і	class:D2Ms
+	 variants:
+		stem:секретар	infl:і	class:D2Mrs
+	 variants:
+		stem:кра	infl:ї	class:D2Mjs
+	 variants:
+		stem:товариш	infl:і	class:D2Mm
+	 variants:
+		stem:школяр	infl:і	class:D2Mrm
+N.nom.sing.neu
+	 variants:
+		stem:міст	infl:о	class:D2Nh
+	 variants:
+		stem:місц	infl:е	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:е	class:D2Nm
+N.gen.sing.neu
+	 variants:
+		stem:міст	infl:а	class:D2Nh
+	 variants:
+		stem:місц	infl:я	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:а	class:D2Nm
+N.dat.sing.neu
+	 variants:
+		stem:міст	infl:у	class:D2Nh
+	 variants:
+		stem:місц	infl:ю	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:у	class:D2Nm
+N.ins.sing.neu
+	 variants:
+		stem:міст	infl:ом	class:D2Nh
+	 variants:
+		stem:місц	infl:ем	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:ем	class:D2Nm
+N.loc.sing.neu
+	 variants:
+		stem:міст	infl:і	class:D2Nh
+	 variants:
+		stem:місц	infl:і	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:і	class:D2Nm
+N.voc.sing.neu
+	 variants:
+		stem:міст	infl:о	class:D2Nh
+	 variants:
+		stem:місц	infl:е	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:е	class:D2Nm
+N.nom.plur.neu
+	 variants:
+		stem:міст	infl:а	class:D2Nh
+	 variants:
+		stem:місц	infl:я	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:а	class:D2Nm
+N.gen.plur.neu
+	 variants:
+		stem:міст	infl:	class:D2Nh
+	 variants:
+		stem:місц	infl:ь	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:	class:D2Nm
+N.dat.plur.neu
+	 variants:
+		stem:міст	infl:ам	class:D2Nh
+	 variants:
+		stem:місц	infl:ям	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:ам	class:D2Nm
+N.ins.plur.neu
+	 variants:
+		stem:міст	infl:ами	class:D2Nh
+	 variants:
+		stem:місц	infl:ями	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:ами	class:D2Nm
+N.loc.plur.neu
+	 variants:
+		stem:міст	infl:ах	class:D2Nh
+	 variants:
+		stem:місц	infl:ях	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:ах	class:D2Nm
+N.voc.plur.neu
+	 variants:
+		stem:міст	infl:а	class:D2Nh
+	 variants:
+		stem:місц	infl:я	class:D2Ns
+	 variants:
+		stem:прізвищ	infl:а	class:D2Nm
+N.nom.sing.fem
+	 variants:
+		stem:тін	infl:ь	class:D3si
+	 variants:
+		stem:подорож	infl:	class:D3sb
+	 variants:
+		stem:радіст	infl:ь	class:D3i
+N.gen.sing.fem
+	 variants:
+		stem:тін	infl:і	class:D3si
+	 variants:
+		stem:подорож	infl:і	class:D3sb
+	 variants:
+		stem:радост	infl:і	class:D3i
+N.dat.sing.fem
+	 variants:
+		stem:тін	infl:і	class:D3si
+	 variants:
+		stem:подорож	infl:і	class:D3sb
+	 variants:
+		stem:радост	infl:і	class:D3i
+N.acc.sing.fem
+	 variants:
+		stem:тін	infl:ь	class:D3si
+	 variants:
+		stem:подорож	infl:	class:D3sb
+	 variants:
+		stem:радіст	infl:ь	class:D3i
+N.ins.sing.fem
+	 variants:
+		stem:тінн	infl:ю	class:D3si
+	 variants:
+		stem:подорожж	infl:ю	class:D3sb
+	 variants:
+		stem:радіст	infl:ю	class:D3i
+N.loc.sing.fem
+	 variants:
+		stem:тін	infl:і	class:D3si
+	 variants:
+		stem:подорож	infl:і	class:D3sb
+	 variants:
+		stem:радост	infl:і	class:D3i
+N.voc.sing.fem
+	 variants:
+		stem:тін	infl:е	class:D3si
+	 variants:
+		stem:подорож	infl:е	class:D3sb
+	 variants:
+		stem:радост	infl:е	class:D3i
+N.nom.plur.fem
+	 variants:
+		stem:тін	infl:і	class:D3si
+	 variants:
+		stem:подорож	infl:і	class:D3sb
+	 variants:
+		stem:радост	infl:і	class:D3i
+N.gen.plur.fem
+	 variants:
+		stem:тін	infl:ей	class:D3si
+	 variants:
+		stem:подорож	infl:ей	class:D3sb
+	 variants:
+		stem:радост	infl:ей	class:D3i
+N.dat.plur.fem
+	 variants:
+		stem:тін	infl:ям	class:D3si
+	 variants:
+		stem:подорож	infl:ам	class:D3sb
+	 variants:
+		stem:радост	infl:ям	class:D3i
+N.ins.plur.fem
+	 variants:
+		stem:тін	infl:ями	class:D3si
+	 variants:
+		stem:подорож	infl:ами	class:D3sb
+	 variants:
+		stem:радост	infl:ями	class:D3i
+N.loc.plur.fem
+	 variants:
+		stem:тін	infl:ях	class:D3si
+	 variants:
+		stem:подорож	infl:ах	class:D3sb
+	 variants:
+		stem:радост	infl:ях	class:D3i
+N.voc.plur.fem
+	 variants:
+		stem:тін	infl:і	class:D3si
+	 variants:
+		stem:подорож	infl:і	class:D3sb
+	 variants:
+		stem:радост	infl:і	class:D3i
+N.nom.sing.neu
+	 variants:
+		stem:курч	infl:а	class:D4a
+	 variants:
+		stem:ім’	infl:я	class:D4b
+N.gen.sing.neu
+	 variants:
+		stem:курч	infl:ати	class:D4a
+	 variants:
+		stem:ім	infl:ені	class:D4b
+		stem:ім’	infl:я	class:D4b
+N.dat.sing.neu
+	 variants:
+		stem:курч	infl:аті	class:D4a
+	 variants:
+		stem:ім	infl:ені	class:D4b
+N.acc.sing.neu
+	 variants:
+		stem:курч	infl:а	class:D4a
+	 variants:
+		stem:ім’	infl:я	class:D4b
+N.ins.sing.neu
+	 variants:
+		stem:курч	infl:ам	class:D4a
+	 variants:
+		stem:ім	infl:енем	class:D4b
+		stem:ім’	infl:ям	class:D4b
+N.loc.sing.neu
+	 variants:
+		stem:курч	infl:аті	class:D4a
+	 variants:
+		stem:ім	infl:ені	class:D4b
+N.voc.sing.neu
+	 variants:
+		stem:курч	infl:а	class:D4a
+	 variants:
+		stem:ім’	infl:я	class:D4b
+N.nom.plur.neu
+	 variants:
+		stem:курч	infl:ата	class:D4a
+	 variants:
+		stem:ім	infl:ена	class:D4b
+N.gen.plur.neu
+	 variants:
+		stem:курч	infl:ат	class:D4a
+	 variants:
+		stem:ім	infl:ен	class:D4b
+N.dat.plur.neu
+	 variants:
+		stem:курч	infl:атам	class:D4a
+	 variants:
+		stem:ім	infl:енам	class:D4b
+N.ins.plur.neu
+	 variants:
+		stem:курч	infl:атами	class:D4a
+	 variants:
+		stem:ім	infl:енами	class:D4b
+N.loc.plur.neu
+	 variants:
+		stem:курч	infl:атах	class:D4a
+	 variants:
+		stem:ім	infl:енах	class:D4b
+N.voc.plur.neu
+	 variants:
+		stem:курч	infl:ата	class:D4a
+	 variants:
+		stem:ім	infl:ена	class:D4b
+A.nom.sing.mas
+	 variants:
+		stem:гарн	infl:ий	class:Ah
+	 variants:
+		stem:син	infl:ій	class:As
+	 variants:
+		stem:безкра	infl:їй	class:Aj
+	 variants:
+		stem:братів	infl:	class:Ap
+A.gen.sing.mas
+	 variants:
+		stem:гарн	infl:ого	class:Ah
+	 variants:
+		stem:синь	infl:ого	class:As
+	 variants:
+		stem:безкрай	infl:ого	class:Aj
+	 variants:
+		stem:братов	infl:ого	class:Ap
+A.dat.sing.mas
+	 variants:
+		stem:гарн	infl:ому	class:Ah
+	 variants:
+		stem:синь	infl:ому	class:As
+	 variants:
+		stem:безкрай	infl:ому	class:Aj
+	 variants:
+		stem:братов	infl:ому	class:Ap
+A.ins.sing.mas
+	 variants:
+		stem:гарн	infl:им	class:Ah
+	 variants:
+		stem:син	infl:ім	class:As
+	 variants:
+		stem:безкра	infl:їм	class:Aj
+	 variants:
+		stem:братов	infl:им	class:Ap
+A.loc.sing.mas
+	 variants:
+		stem:гарн	infl:ому	class:Ah
+		stem:	infl:ім	class:Ah
+	 variants:
+		stem:синь	infl:ому	class:As
+		stem:син	infl:ім	class:As
+	 variants:
+		stem:безкрай	infl:ому	class:Aj
+		stem:безкра	infl:їм	class:Aj
+	 variants:
+		stem:братов	infl:ому	class:Ap
+		stem:	infl:ім	class:Ap
+A.nom.plur.mas
+	 variants:
+		stem:гарн	infl:і	class:Ah
+	 variants:
+		stem:син	infl:і	class:As
+	 variants:
+		stem:безкра	infl:ї	class:Aj
+	 variants:
+		stem:братов	infl:і	class:Ap
+A.gen.plur.mas
+	 variants:
+		stem:гарн	infl:их	class:Ah
+	 variants:
+		stem:син	infl:іх	class:As
+	 variants:
+		stem:безкра	infl:їх	class:Aj
+	 variants:
+		stem:братов	infl:их	class:Ap
+A.dat.plur.mas
+	 variants:
+		stem:гарн	infl:им	class:Ah
+	 variants:
+		stem:син	infl:ім	class:As
+	 variants:
+		stem:безкра	infl:їм	class:Aj
+	 variants:
+		stem:братов	infl:им	class:Ap
+A.ins.plur.mas
+	 variants:
+		stem:гарн	infl:ими	class:Ah
+	 variants:
+		stem:син	infl:іми	class:As
+	 variants:
+		stem:безкра	infl:їми	class:Aj
+	 variants:
+		stem:братов	infl:ими	class:Ap
+A.loc.plur.mas
+	 variants:
+		stem:гарн	infl:их	class:Ah
+	 variants:
+		stem:син	infl:іх	class:As
+	 variants:
+		stem:безкра	infl:їх	class:Aj
+	 variants:
+		stem:братов	infl:их	class:Ap
+A.nom.sing.neu
+	 variants:
+		stem:гарн	infl:е	class:Ah
+	 variants:
+		stem:син	infl:є	class:As
+	 variants:
+		stem:безкра	infl:є	class:Aj
+	 variants:
+		stem:братов	infl:е	class:Ap
+A.gen.sing.neu
+	 variants:
+		stem:гарн	infl:ого	class:Ah
+	 variants:
+		stem:синь	infl:ого	class:As
+	 variants:
+		stem:безкрай	infl:ого	class:Aj
+	 variants:
+		stem:братов	infl:ого	class:Ap
+A.dat.sing.neu
+	 variants:
+		stem:гарн	infl:ому	class:Ah
+	 variants:
+		stem:синь	infl:ому	class:As
+	 variants:
+		stem:безкрай	infl:ому	class:Aj
+	 variants:
+		stem:братов	infl:ому	class:Ap
+A.acc.sing.neu
+	 variants:
+		stem:гарн	infl:е	class:Ah
+	 variants:
+		stem:син	infl:є	class:As
+	 variants:
+		stem:безкра	infl:є	class:Aj
+	 variants:
+		stem:братов	infl:е	class:Ap
+A.ins.sing.neu
+	 variants:
+		stem:гарн	infl:им	class:Ah
+	 variants:
+		stem:син	infl:ім	class:As
+	 variants:
+		stem:безкра	infl:їм	class:Aj
+	 variants:
+		stem:братов	infl:им	class:Ap
+A.loc.sing.neu
+	 variants:
+		stem:гарн	infl:ому	class:Ah
+		stem:	infl:ім	class:Ah
+	 variants:
+		stem:синь	infl:ому	class:As
+		stem:син	infl:ім	class:As
+	 variants:
+		stem:безкрай	infl:ому	class:Aj
+		stem:безкра	infl:їм	class:Aj
+	 variants:
+		stem:братов	infl:ому	class:Ap
+		stem:	infl:ім	class:Ap
+A.nom.plur.neu
+	 variants:
+		stem:гарн	infl:і	class:Ah
+	 variants:
+		stem:син	infl:і	class:As
+	 variants:
+		stem:безкра	infl:ї	class:Aj
+	 variants:
+		stem:братов	infl:і	class:Ap
+A.gen.plur.neu
+	 variants:
+		stem:гарн	infl:их	class:Ah
+	 variants:
+		stem:син	infl:іх	class:As
+	 variants:
+		stem:безкра	infl:їх	class:Aj
+	 variants:
+		stem:братов	infl:их	class:Ap
+A.dat.plur.neu
+	 variants:
+		stem:гарн	infl:им	class:Ah
+	 variants:
+		stem:син	infl:ім	class:As
+	 variants:
+		stem:безкра	infl:їм	class:Aj
+	 variants:
+		stem:братов	infl:им	class:Ap
+A.ins.plur.neu
+	 variants:
+		stem:гарн	infl:ими	class:Ah
+	 variants:
+		stem:син	infl:іми	class:As
+	 variants:
+		stem:безкра	infl:їми	class:Aj
+	 variants:
+		stem:братов	infl:ими	class:Ap
+A.loc.plur.neu
+	 variants:
+		stem:гарн	infl:их	class:Ah
+	 variants:
+		stem:син	infl:іх	class:As
+	 variants:
+		stem:безкра	infl:їх	class:Aj
+	 variants:
+		stem:братов	infl:их	class:Ap
+A.nom.sing.fem
+	 variants:
+		stem:гарн	infl:а	class:Ah
+	 variants:
+		stem:син	infl:я	class:As
+	 variants:
+		stem:безкра	infl:я	class:Aj
+	 variants:
+		stem:братов	infl:а	class:Ap
+A.gen.sing.fem
+	 variants:
+		stem:гарн	infl:ої	class:Ah
+	 variants:
+		stem:синь	infl:ої	class:As
+	 variants:
+		stem:безкрай	infl:ої	class:Aj
+	 variants:
+		stem:братов	infl:ої	class:Ap
+A.dat.sing.fem
+	 variants:
+		stem:гарн	infl:ій	class:Ah
+	 variants:
+		stem:син	infl:ій	class:As
+	 variants:
+		stem:безкра	infl:їй	class:Aj
+	 variants:
+		stem:братов	infl:ій	class:Ap
+A.acc.sing.fem
+	 variants:
+		stem:гарн	infl:у	class:Ah
+	 variants:
+		stem:син	infl:ю	class:As
+	 variants:
+		stem:безкра	infl:ю	class:Aj
+	 variants:
+		stem:братов	infl:у	class:Ap
+A.ins.sing.fem
+	 variants:
+		stem:гарн	infl:ою	class:Ah
+	 variants:
+		stem:синь	infl:ою	class:As
+	 variants:
+		stem:безкрай	infl:ою	class:Aj
+	 variants:
+		stem:братов	infl:ою	class:Ap
+A.loc.sing.fem
+	 variants:
+		stem:гарн	infl:ій	class:Ah
+	 variants:
+		stem:син	infl:ій	class:As
+	 variants:
+		stem:безкра	infl:їй	class:Aj
+	 variants:
+		stem:братов	infl:ій	class:Ap
+A.nom.plur.fem
+	 variants:
+		stem:гарн	infl:і	class:Ah
+	 variants:
+		stem:син	infl:і	class:As
+	 variants:
+		stem:безкра	infl:ї	class:Aj
+	 variants:
+		stem:братов	infl:і	class:Ap
+A.gen.plur.fem
+	 variants:
+		stem:гарн	infl:их	class:Ah
+	 variants:
+		stem:син	infl:іх	class:As
+	 variants:
+		stem:безкра	infl:їх	class:Aj
+	 variants:
+		stem:братов	infl:их	class:Ap
+A.dat.plur.fem
+	 variants:
+		stem:гарн	infl:им	class:Ah
+	 variants:
+		stem:син	infl:ім	class:As
+	 variants:
+		stem:безкра	infl:їм	class:Aj
+	 variants:
+		stem:братов	infl:им	class:Ap
+A.ins.plur.fem
+	 variants:
+		stem:гарн	infl:ими	class:Ah
+	 variants:
+		stem:син	infl:іми	class:As
+	 variants:
+		stem:безкра	infl:їми	class:Aj
+	 variants:
+		stem:братов	infl:ими	class:Ap
+A.loc.plur.fem
+	 variants:
+		stem:гарн	infl:их	class:Ah
+	 variants:
+		stem:син	infl:іх	class:As
+	 variants:
+		stem:безкра	infl:їх	class:Aj
+	 variants:
+		stem:братов	infl:их	class:Ap
+V.p1.sing.pres
+	 variants:
+		stem:ід	infl:у	class:D1h
+	 variants:
+		stem:кол	infl:ю	class:D1m
+	 variants:
+		stem:чу	infl:ю	class:D1s
+V.p2.sing.pres
+	 variants:
+		stem:ід	infl:еш	class:D1h
+	 variants:
+		stem:кол	infl:еш	class:D1m
+	 variants:
+		stem:чу	infl:єш	class:D1s
+V.p3.sing.pres
+	 variants:
+		stem:ід	infl:е	class:D1h
+	 variants:
+		stem:кол	infl:е	class:D1m
+	 variants:
+		stem:чу	infl:є	class:D1s
+V.p1.plur.pres
+	 variants:
+		stem:ід	infl:емо	class:D1h
+	 variants:
+		stem:кол	infl:емо	class:D1m
+	 variants:
+		stem:чу	infl:ємо	class:D1s
+V.p2.plur.pres
+	 variants:
+		stem:ід	infl:ете	class:D1h
+	 variants:
+		stem:кол	infl:ете	class:D1m
+	 variants:
+		stem:чу	infl:єте	class:D1s
+V.p3.plur.pres
+	 variants:
+		stem:ід	infl:уть	class:D1h
+	 variants:
+		stem:кол	infl:ють	class:D1m
+	 variants:
+		stem:чу	infl:ють	class:D1s
+V.p1.sing.pres
+	 variants:
+		stem:робл	infl:ю	class:D2h
+	 variants:
+		stem:бач	infl:у	class:D2m
+	 variants:
+		stem:го	infl:ю	class:D2s
+V.p2.sing.pres
+	 variants:
+		stem:роб	infl:иш	class:D2h
+	 variants:
+		stem:бач	infl:иш	class:D2m
+	 variants:
+		stem:го	infl:їш	class:D2s
+V.p3.sing.pres
+	 variants:
+		stem:роб	infl:ить	class:D2h
+	 variants:
+		stem:бач	infl:ить	class:D2m
+	 variants:
+		stem:го	infl:їть	class:D2s
+V.p1.plur.pres
+	 variants:
+		stem:роб	infl:имо	class:D2h
+	 variants:
+		stem:бач	infl:имо	class:D2m
+	 variants:
+		stem:го	infl:їмо	class:D2s
+V.p2.plur.pres
+	 variants:
+		stem:роб	infl:ите	class:D2h
+	 variants:
+		stem:бач	infl:ите	class:D2m
+	 variants:
+		stem:го	infl:їте	class:D2s
+V.p3.plur.pres
+	 variants:
+		stem:робл	infl:ять	class:D2h
+	 variants:
+		stem:бач	infl:ать	class:D2m
+	 variants:
+		stem:го	infl:ять	class:D2s
+V.mas.sing.past
+	 variants:
+		stem:бра	infl:в	class:DPv
+	 variants:
+		stem:ніс	infl:	class:DPz
+	 variants:
+		stem:пік	infl:	class:DPz
+V.fem.sing.past
+	 variants:
+		stem:бра	infl:ла	class:DPv
+	 variants:
+		stem:нес	infl:ла	class:DPz
+	 variants:
+		stem:пек	infl:ла	class:DPz
+V.neu.sing.past
+	 variants:
+		stem:бра	infl:ло	class:DPv
+	 variants:
+		stem:нес	infl:ло	class:DPz
+	 variants:
+		stem:пек	infl:ло	class:DPz
+V.mfn.plur.past
+	 variants:
+		stem:бра	infl:ли	class:DPv
+	 variants:
+		stem:нес	infl:ли	class:DPz
+	 variants:
+		stem:пек	infl:ли	class:DPz
+V.inf
+	 variants:
+		stem:бра	infl:ти	class:DPv
+	 variants:
+		stem:нес	infl:ти	class:DPz
+	 variants:
+		stem:пек	infl:ти	class:DPz
+V.p1.sing.futr
+	 variants:
+		stem:бра	infl:тиму	class:DFh
+	 variants:
+		stem:нес	infl:тиму	class:DFm
+	 variants:
+		stem:пек	infl:тиму	class:DFs
+V.p2.sing.futr
+	 variants:
+		stem:бра	infl:тимеш	class:DFh
+	 variants:
+		stem:нес	infl:тимеш	class:DFm
+	 variants:
+		stem:пек	infl:тимеш	class:DFs
+V.p3.sing.futr
+	 variants:
+		stem:бра	infl:тиме	class:DFh
+	 variants:
+		stem:нес	infl:тиме	class:DFm
+	 variants:
+		stem:пек	infl:тиме	class:DFs
+V.p1.plur.futr
+	 variants:
+		stem:бра	infl:тимемо	class:DFh
+		stem:	infl:тимем	class:DFh
+	 variants:
+		stem:нес	infl:тимемо	class:DFm
+		stem:	infl:тимем	class:DFm
+	 variants:
+		stem:пек	infl:тимемо	class:DFs
+		stem:	infl:тимем	class:DFs
+V.p2.plur.futr
+	 variants:
+		stem:бра	infl:тимете	class:DFh
+	 variants:
+		stem:нес	infl:тимете	class:DFm
+	 variants:
+		stem:пек	infl:тимете	class:DFs
+V.p1.plur.futr
+	 variants:
+		stem:бра	infl:тимуть	class:DFh
+	 variants:
+		stem:нес	infl:тимуть	class:DFm
+	 variants:
+		stem:пек	infl:тимуть	class:DFs
+V.p2.sing.impr
+	 variants:
+		stem:бер	infl:и	class:DIy
+	 variants:
+		stem:купуй	infl:	class:DIz
+V.p1.plur.impr
+	 variants:
+		stem:бер	infl:ім	class:DIy
+		stem:	infl:імо	class:DIy
+	 variants:
+		stem:купуй	infl:мо	class:DIz
+V.p2.plur.impr
+	 variants:
+		stem:бер	infl:іть	class:DIy
+		stem:	infl:те	class:DIy
+	 variants:
+		stem:купуй	infl:те	class:DIz
