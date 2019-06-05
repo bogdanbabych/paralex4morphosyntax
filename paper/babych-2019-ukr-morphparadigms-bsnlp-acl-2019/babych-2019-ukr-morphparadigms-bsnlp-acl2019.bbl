@@ -1,0 +1,200 @@
+\begin{thebibliography}{27}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Aharoni and Goldberg(2016)}]{aharoni2016morphological}
+Roee Aharoni and Yoav Goldberg. 2016.
+\newblock Morphological inflection generation with hard monotonic attention.
+\newblock \emph{arXiv preprint arXiv:1611.01487}.
+
+\bibitem[{Ahlberg et~al.(2015)Ahlberg, Forsberg, and
+  Hulden}]{ahlberg2015paradigm}
+Malin Ahlberg, Markus Forsberg, and Mans Hulden. 2015.
+\newblock Paradigm classification in supervised learning of morphology.
+\newblock In \emph{Proceedings of the 2015 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies}, pages 1024--1029.
+
+\bibitem[{Babych and Sharoff(2016)}]{babych2016ukrainian}
+Bogdan Babych and Serge Sharoff. 2016.
+\newblock Ukrainian part-of-speech tagger for hybrid mt: Rapid induction of
+  morphological disambiguation resources from a closely related language.
+\newblock In \emph{Fifth Workshop on Hybrid Approaches to Translation (HyTra)}.
+  EAMT, Riga: June 1st 2016.
+
+\bibitem[{Cotterell et~al.(2017)Cotterell, Vylomova, Khayrallah, Kirov, and
+  Yarowsky}]{cotterell2017paradigm}
+Ryan Cotterell, Ekaterina Vylomova, Huda Khayrallah, Christo Kirov, and David
+  Yarowsky. 2017.
+\newblock Paradigm completion for derivational morphology.
+\newblock \emph{arXiv preprint arXiv:1708.09151}.
+
+\bibitem[{Dyomkin et~al.(2019)Dyomkin, Chaplinskyi, Stegnii, Marikovskyi,
+  Tykhonov, Petriv, Shekhovtsov, Chalyi, Kodliuk, Pavliuchenko, Kunikevych, and
+  Skopyk}]{Dyomkin-2019}
+Vsevolod Dyomkin, Dmytro Chaplinskyi, Anatoliy Stegnii, Oleksandr Marikovskyi,
+  Viacheslav Tykhonov, Oles Petriv, Serhii Shekhovtsov, Mykhailo Chalyi,
+  Tetiana Kodliuk, Mykyta Pavliuchenko, Oksana Kunikevych, and Khrystyna
+  Skopyk. 2019.
+\newblock \href {https://github.com/lang-uk/lang.org.ua} {lang-uk}.
+\newblock \emph{GitHub repository}.
+\newblock \url{http://lang.org.ua/en/corpora/#anchor4}.
+
+\bibitem[{Fam and Lepage(2018)}]{fam2018ips}
+Rashel Fam and Yves Lepage. 2018.
+\newblock Ips-waseda system at conll-sigmorphon 2018 shared task on
+  morphological inflection.
+\newblock \emph{Proceedings of the CoNLL SIGMORPHON 2018 Shared Task: Universal
+  Morphological Reinflection}, pages 33--42.
+
+\bibitem[{Faruqui et~al.(2016)Faruqui, McDonald, and
+  Soricut}]{faruqui2016morpho}
+Manaal Faruqui, Ryan McDonald, and Radu Soricut. 2016.
+\newblock Morpho-syntactic lexicon generation using graph-based semi-supervised
+  learning.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  4:1--16.
+
+\bibitem[{Faruqui et~al.(2015)Faruqui, Tsvetkov, Neubig, and
+  Dyer}]{faruqui2015morphological}
+Manaal Faruqui, Yulia Tsvetkov, Graham Neubig, and Chris Dyer. 2015.
+\newblock Morphological inflection generation using character sequence to
+  sequence learning.
+\newblock \emph{arXiv preprint arXiv:1512.06110}.
+
+\bibitem[{Forcada et~al.(2011)Forcada, Ginest{\'\i}-Rosell, Nordfalk,
+  O’Regan, Ortiz-Rojas, P{\'e}rez-Ortiz, S{\'a}nchez-Mart{\'\i}nez,
+  Ram{\'\i}rez-S{\'a}nchez, and Tyers}]{forcada2011apertium}
+Mikel~L Forcada, Mireia Ginest{\'\i}-Rosell, Jacob Nordfalk, Jim O’Regan,
+  Sergio Ortiz-Rojas, Juan~Antonio P{\'e}rez-Ortiz, Felipe
+  S{\'a}nchez-Mart{\'\i}nez, Gema Ram{\'\i}rez-S{\'a}nchez, and Francis~M
+  Tyers. 2011.
+\newblock Apertium: a free/open-source platform for rule-based machine
+  translation.
+\newblock \emph{Machine translation}, 25(2):127--144.
+
+\bibitem[{Gryaznukhina(1999)}]{gryaznukhina-ed-1999}
+Tetiana~O. Gryaznukhina, editor. 1999.
+\newblock \emph{Syntactic analysis of scientific texts on computers. /
+  Sintaksicheskiy analiz nauchnogo teksta na EVM}.
+\newblock Naukova Dumka, Kyiv, Ukraine.
+
+\bibitem[{Hryshchenko et~al.(1997)Hryshchenko, I., Ja., I., and
+  M.}]{hryshchenko1997sulm}
+Arnold~P. Hryshchenko, Matsko~Liubov I., Pliushch~Mariya Ja., Totska~Nina I.,
+  and Uzdyhan~Ivanna M. 1997.
+\newblock \emph{Modern Ukrainian Literary Langauge / Suchasna Ukrajins'ka
+  Literaturna Mova}.
+\newblock Vyshcha Shkola, Kyiv.
+
+\bibitem[{Hulden et~al.(2014)Hulden, Forsberg, and Ahlberg}]{hulden2014semi}
+Mans Hulden, Markus Forsberg, and Malin Ahlberg. 2014.
+\newblock Semi-supervised learning of morphological paradigms and lexicons.
+\newblock In \emph{Proceedings of the 14th Conference of the European Chapter
+  of the Association for Computational Linguistics}, pages 569--578.
+
+\bibitem[{Karpilovs'ka et~al.(2008)Karpilovs'ka, Kysliuk, Klymenko, Kryts'ka,
+  K., and Romaniuk}]{karpilovska2013aktyvni}
+Yevheniya~A. Karpilovs'ka, Larysa~P. Kysliuk, Nina~F. Klymenko, Valentyna~I.
+  Kryts'ka, Puzdyr'eva~Tetiana K., and Yuliya~V. Romaniuk. 2008.
+\newblock \emph{Active resources of modern Ukranian nomination. Ideographic
+  dictionary of the new lexicon / Aktyvni resursy suchasnoji Ukrajins'koji
+  nominatsiji: Ideohrafichnyj slovnyk novoji leksyky}.
+\newblock KMM, Kyiv.
+
+\bibitem[{Kirov and Cotterell(2018)}]{kirov2018recurrent}
+Christo Kirov and Ryan Cotterell. 2018.
+\newblock Recurrent neural networks in linguistic theory: Revisiting pinker and
+  prince (1988) and the past tense debate.
+\newblock \emph{Transactions of the Association for Computational Linguistics},
+  6:651--665.
+
+\bibitem[{Klymenko et~al.(2008)Klymenko, Karpilovs'ka, and
+  Kysliuk}]{klymenko2008dynamichni}
+Nina~F. Klymenko, Yevheniya~A. Karpilovs'ka, and Larysa~P. Kysliuk. 2008.
+\newblock \emph{Dynamic processes in the modern Ukrainian lexicon / Dynamichni
+  protsesy v suchasnomu ukrajins'komu leksykoni}.
+\newblock Vydavnychyi Dim Dmytra Burago.
+
+\bibitem[{Koskenniemi et~al.(2018)}]{koskenniemi2018guessing}
+Kimmo~Matti Koskenniemi et~al. 2018.
+\newblock Guessing lexicon entries using finite-state methods.
+\newblock In \emph{Proceedings of the Fourth International Workshop on
+  Computatinal Linguistics for Uralic Languages}. Association for Computational
+  Linguistics.
+
+\bibitem[{Kotsyba et~al.(2009)Kotsyba, Mykulyaky, and
+  Shevchenko}]{kotsyba2009ugtag}
+Natalia Kotsyba, Andriy Mykulyaky, and Igor Shevchenko. 2009.
+\newblock Ugtag: morphological analyzer and tagger for the ukrainian language.
+\newblock In \emph{Proceedings of the international conference Practical
+  Applications in Language and Computers (PALC 2009)}.
+
+\bibitem[{Kotsyba et~al.(2010)Kotsyba, Shevchenko, Derzhanski, and
+  Mykulyak}]{kotsyba2010multext}
+Natalia Kotsyba, Igor Shevchenko, Ivan Derzhanski, and Andriy Mykulyak. 2010.
+\newblock \href {http://nl.ijs.si/ME/V4/msd/html/msd-uk.html} {Multext-east
+  morphosyntactic specifications, version 4. 3.11 url:
+  \url{http://nl.ijs.si/ME/V4/msd/html/msd-uk.html}}.
+
+\bibitem[{Nivre et~al.(2016)Nivre, De~Marneffe, Ginter, Goldberg, Hajic,
+  Manning, McDonald, Petrov, Pyysalo, Silveira et~al.}]{nivre2016universal}
+Joakim Nivre, Marie-Catherine De~Marneffe, Filip Ginter, Yoav Goldberg, Jan
+  Hajic, Christopher~D Manning, Ryan~T McDonald, Slav Petrov, Sampo Pyysalo,
+  Natalia Silveira, et~al. 2016.
+\newblock Universal dependencies v1: A multilingual treebank collection.
+\newblock In \emph{LREC}.
+
+\bibitem[{Perebyjnis et~al.(1989)Perebyjnis, Darchuk, and
+  Gryaznukhina}]{gryaznukhina-ed-1989}
+Valentyna~S. Perebyjnis, Nataliya~P. Darchuk, and Tetiana~O. Gryaznukhina.
+  1989.
+\newblock \emph{Morphological analysis of scientific texts on computers /
+  Morfologicheskiy analiz nauchnogo teksta na EVM}.
+\newblock Naukova Dumka, Kyiv, Ukraine.
+
+\bibitem[{Press and Pugh(2015)}]{press2015ukrainian}
+Ian Press and Stefan Pugh. 2015.
+\newblock \emph{Ukrainian: A comprehensive grammar}.
+\newblock Routledge.
+
+\bibitem[{Ranta(2011)}]{ranta11gram}
+Aarne Ranta. 2011.
+\newblock \emph{Grammatical framework: Programming with multilingual grammars},
+  volume 173.
+\newblock CSLI Publications, Center for the Study of Language and Information
+  Stanford.
+
+\bibitem[{Rysin and Starko(2019)}]{Rysin-Starko-2019}
+Andriy Rysin and Vasyl Starko. 2019.
+\newblock \href {https://github.com/brown-uk/dict_uk} {Project to generate pos
+  tag dictionary for ukrainian language}.
+\newblock \emph{GitHub repository}.
+\newblock \url{https://github.com/brown-uk/dict_uk}.
+
+\bibitem[{Silfverberg et~al.(2018)Silfverberg, Liu, and
+  Hulden}]{silfverberg2018computational}
+Miikka Silfverberg, Ling Liu, and Mans Hulden. 2018.
+\newblock A computational model for the linguistic notion of morphological
+  paradigm.
+\newblock In \emph{Proceedings of the 27th International Conference on
+  Computational Linguistics}, pages 1615--1626.
+
+\bibitem[{Spencer(2001)}]{spencer2001paradigm}
+Andrew Spencer. 2001.
+\newblock The paradigm-based model of morphosyntax.
+\newblock \emph{Transactions of the Philological Society}, 99(2):279--314.
+
+\bibitem[{Wittgenstein(2009)}]{Wittgenstein-2009}
+Ludwig Wittgenstein. 2009.
+\newblock \emph{Philosophical investigations}.
+\newblock Wiley-Blackwell.
+
+\bibitem[{Wolf-Sonkin et~al.(2018)Wolf-Sonkin, Naradowsky, Mielke, and
+  Cotterell}]{wolf2018structured}
+Lawrence Wolf-Sonkin, Jason Naradowsky, Sebastian~J Mielke, and Ryan Cotterell.
+  2018.
+\newblock A structured variational autoencoder for contextual morphological
+  inflection.
+\newblock \emph{arXiv preprint arXiv:1806.03746}.
+
+\end{thebibliography}

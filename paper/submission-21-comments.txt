@@ -1,0 +1,140 @@
+Dear Bogdan Babych:
+
+On behalf of the BSNLP 2019 Program Committee, I am delighted to inform you that the following submission has been accepted to appear at the conference:
+
+Unsupervised induction of Ukrainian morphological paradigms for the new lexicon: extending coverage for Named Entities and neologisms using inflection tables and unannotated corpora.
+
+The Program Committee worked very hard to thoroughly review all the submitted papers. Please repay their efforts, by following their suggestions when you revise your paper. Note that, in order to take the reviewer comments into account, you can extend your paper by 1 page.
+
+When you are finished, you can upload your final manuscript at the following site:
+
+https://www.softconf.com/acl2019/bsnlp/
+
+You will be prompted to login to your START account. If you do not see your submission, you can access it with the following passcode:
+
+21X-G2P3D5G4G3
+
+Alternatively, you can click on the following URL, which will take you directly to a form to submit your final paper (after logging into your account):
+
+https://www.softconf.com/acl2019/bsnlp/user/scmd.cgi?scmd=aLogin&passcode=21X-G2P3D5G4G3
+
+The reviews and comments are attached below. Again, try to follow their advice when you revise your paper.
+
+Please note that the deadline for submitting the final version of your paper is *June 5th*. We are sorry for the short deadline, but some reviewers were late in sending their reviews, on the other hand, we are limited by the ACL deadline for submitting the final proceedings.
+
+Congratulations on your fine work. If you have any additional questions, please feel free to get in touch.
+
+Best Regards,
+BSNLP 2019 Organizers
+BSNLP 2019
+
+============================================================================
+BSNLP 2019 Reviews for Submission #21
+============================================================================
+
+Title: Unsupervised induction of Ukrainian morphological paradigms for the new lexicon: extending coverage for Named Entities and neologisms using inflection tables and unannotated corpora.
+Authors: Bogdan Babych
+============================================================================
+                            REVIEWER #1
+============================================================================
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                   APPROPRIATENESS (1-5): 5
+                      PRESENTATION (1-5): 4
+                           NOVELTY (1-5): 4
+                       CORRECTNESS (1-5): 4
+                      THOROUGHNESS (1-5): 4
+
+Detailed Comments
+---------------------------------------------------------------------------
+The paper describes research work on unsupervised methods for extending Ukrainian morphological lexica.
+The presented work constitutes significant scientific contribution for a long paper at BSNLP WS.
+It is a good read, the algorithms are well explained, a comprehensive evaluation is provided,
+and the relevant related work is mentioned.
+
+The presented method might come in handy for researches and/or practitioners who need to extend their
+morphological resources for Slavic languages.
+
+There are a couple of questions and issues to fix though:
+
+1) In the pseudo code in Figure 1:
+- in the inner most loop the variable expectedToken is assigned a value twice and then
+exploited in the IF statement. It is somewhat counter-intuitive since as far as I understood the IF checks both values
+- it would be nice to include the ranking in the pseudo code too for the sake of completeness
+
+2) There is no information on how multi-token NE would be treated. I understand that the presented method does NOT
+tackle the inflection of multi-token names, if affirmative, please explicitly mention this since the word "Named Entity"
+appears in the title, so it is a bit misleading
+
+3) it would also be nice to have some sort of accuracy evaluation of the method apart from the corpus coverage-based evaluation provided, e.g., how many of the generated
+morphological entries are really correct.
+---------------------------------------------------------------------------
+
+
+
+============================================================================
+                            REVIEWER #2
+============================================================================
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                   APPROPRIATENESS (1-5): 5
+                      PRESENTATION (1-5): 3
+                           NOVELTY (1-5): 3
+                       CORRECTNESS (1-5): 3
+                      THOROUGHNESS (1-5): 3
+
+Detailed Comments
+---------------------------------------------------------------------------
+Contents summary: see the excessively long paper title. Highlights of the method: for an unknown word, test all possible splits against all paradigms. For matching paradigms, generate all other forms and search for them in corpus. The more forms found, the better paradigm.
+
+The general working of the method is quite clear from the paper, yet some details would deserve to be clarified:
+
+Loanwords and foreign named entities may not always fit well in the host morphological system (e.g. because they end in a vowel that is not attested in domestic words). How does the method deal with such words?
+
+What if the processed word is already the stem, e.g., "Трамп" / "Trump"? Is "WORD+0" one of the tested splits? Does it result in a larger number of competing paradigms? For clarity, it would be nice to mention this possibility in the paper.
+
+For newly imported words, especially for foreign named entities, I would expect the speakers to sometimes have doubts about the correct inflection or spelling. It is then possible that the corpus will contain multiple variants of the same intended form, not all of them correct, or not all of them preferred. When looking for other generated forms in the corpus, does the method take into account the frequency of the forms found?
+
+Page 5, lines 487-499 say that experiments were performed without the distortion model because phonological alternations are typical for older lexicon and may not apply to new borrowings. The vowel alternation [o]->[i] is given as an example. Does this claim also apply to the alternations of stem-final consonants, such as [k]->[ts]???
+
+Table 2 and text on line 529: what is a word form "generated" from a corpus?
+
+There is a number of graphs that show the increasing coverage of morphological forms in test corpora. However, I am missing any evaluation of the precision of the method. It is obvious that if we include even word forms that occurred only once in the corpus, we will get the highest possible coverage. But it is also more probable that we will make erroneous deductions, so we probably do not want to use such a greedy approach. Manual evaluation of a random sample might help guide the user of the method.
+
+Typos etc.:
+
+Line 37: "results shows" --> "results show"
+Line 587: "morpholigical" --> "morphological"
+Line 763: "sill" --> "still"
+---------------------------------------------------------------------------
+
+
+
+============================================================================
+                            REVIEWER #3
+============================================================================
+
+---------------------------------------------------------------------------
+Reviewer's Scores
+---------------------------------------------------------------------------
+                   APPROPRIATENESS (1-5): 4
+                      PRESENTATION (1-5): 5
+                           NOVELTY (1-5): 1
+                       CORRECTNESS (1-5): 3
+                      THOROUGHNESS (1-5): 1
+
+Detailed Comments
+---------------------------------------------------------------------------
+The authors present a simple, but clean approach to extending the Ukranian inflectional lexicon by (1) generating candidate paradigms for out-of-vocabulary forms and (2) ranking the candidate paradigms by the number of paradigm forms covered in a corpus. They perform experiments on improved corpus coverage by automatically expanding the inflectional lexicon via various corpora.
+
+What I miss significantly is an evaluation of the accuracy of the algorithm itself. This is unknown and improving coverage via wrong entries does not help much. Additionally, the algorithm is very simple (the authors claim to propose it, but it was used in the past many times) and using a machine-learning approach has proven in the past to be more effective (such as [1] and [2] for Croatian).
+
+The good side of the paper is its clarity.
+
+[1] http://www.trojina.org/slovenscina2.0/arhiv/2013/2/Slo2.0_2013_2_02.pdf
+[2] https://www.aclweb.org/anthology/R15-1050
+---------------------------------------------------------------------------
