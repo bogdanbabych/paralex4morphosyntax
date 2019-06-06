@@ -11,45 +11,45 @@ Warning--entry type for "kotsyba2010multext" isn't style-file defined
 --line 30 of file acl2019.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Warning--can't use both author and editor fields in gryaznukhina-ed-1989
-You've used 27 entries,
+You've used 35 entries,
             3571 wiz_defined-function locations,
-            836 strings with 11683 characters,
-and the built_in function-call counts, 18913 in all, are:
-= -- 1561
-> -- 1028
-< -- 16
-+ -- 330
-- -- 297
-* -- 1233
-:= -- 2893
-add.period$ -- 111
-call.type$ -- 27
-change.case$ -- 240
-chr.to.int$ -- 27
-cite$ -- 28
-duplicate$ -- 1258
-empty$ -- 1359
-format.name$ -- 383
-if$ -- 4115
+            883 strings with 13197 characters,
+and the built_in function-call counts, 24637 in all, are:
+= -- 2110
+> -- 1205
+< -- 26
++ -- 388
+- -- 345
+* -- 1536
+:= -- 3696
+add.period$ -- 147
+call.type$ -- 35
+change.case$ -- 310
+chr.to.int$ -- 35
+cite$ -- 36
+duplicate$ -- 1667
+empty$ -- 1823
+format.name$ -- 449
+if$ -- 5430
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 263
-newline$ -- 140
-num.names$ -- 109
-pop$ -- 607
+missing$ -- 340
+newline$ -- 180
+num.names$ -- 141
+pop$ -- 790
 preamble$ -- 1
-purify$ -- 205
+purify$ -- 253
 quote$ -- 0
-skip$ -- 904
+skip$ -- 1220
 stack$ -- 0
-substring$ -- 534
-swap$ -- 576
-text.length$ -- 5
+substring$ -- 808
+swap$ -- 774
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 219
+type$ -- 291
 warning$ -- 1
-while$ -- 101
+while$ -- 142
 width$ -- 0
-write$ -- 340
+write$ -- 446
 (There were 2 warnings)

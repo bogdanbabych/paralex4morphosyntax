@@ -53,10 +53,162 @@ Paragraph for the paper:
 
 
 
-The algorithm that is proposed in this paper (see Section~\ref{sec:Algorithm}) uses the fundamental idea that ``the existence of a hypothetical lemma can be guessed if several different words found in the corpus are best interpreted as morphological variants of this lemma" \cite{clement2004morphology}. This idea has been developed for automated induction of morphological lexica for different languages and implemented in practical applications such as spell checking (e.g., ispell) and information retrieval systems: \cite{krovetz1993viewing}, \cite{grefenstette2002expanding}, \cite{segalovich2003fast},  \cite{clement2004morphology}, \cite{oliver2004enlarging}, \cite{sagot2005automatic}, with more recent work using more accurate machine learning approaches: \cite{vsnajder2013models}, \cite{hulden2014semi}, \cite{ahlberg2015paradigm}, \cite{ljubevsic2015predicting}.
+The algorithm that is proposed in this paper uses the fundamental idea that ``the existence of a hypothetical lemma can be guessed if several different words found in the corpus are best interpreted as morphological variants of this lemma" \cite{clement2004morphology}. This idea has been developed for automated induction of morphological lexica for different languages and implemented in practical applications such as spell checking (e.g., ispell) and information retrieval systems: \cite{krovetz1993viewing}, \cite{grefenstette2002expanding}, \cite{segalovich2003fast},  \cite{clement2004morphology}, \cite{oliver2004enlarging}, \cite{sagot2005automatic}, with more recent work using more accurate machine learning approaches: \cite{vsnajder2013models}, \cite{hulden2014semi}, \cite{ahlberg2015paradigm}, \cite{ljubevsic2015predicting}.
+
+However, the approach proposed in this paper develops these ideas by explicitly focussing on the following conceptual points:
+
+(1) The extracted units are paradigms, and not lemmas or mappings from inflected word forms to lemmas or paradigms. The advantage of such approach is that inflected word forms in the corpus provide only indirect, latent justification for the existence of paradigms, so there is a separation between a form which initiates generation of hypotheses and those (possibly ambiguous) word forms that are used as evidence: they can independently justify the existence of several different paradigms, which avoids the artificial pressure to choose a single top-ranked paradigm and lemma for each inflected form, as it is the case in \cite{oliver2004enlarging} or \cite{hulden2014semi}. This latent paradigm induction is also more robust against potential noise in the corpus, since misspellings would not normally collect enough inflected forms for confirming their projected paradigms.
+
+A side-effect of this approach is that lemmas always need to come from induced paradigms, which for Slavonic languages is not always the case in traditional lexicography: e.g., verbs have two independent stems (and therefore -- paradigms) for past and non-past forms, but the traditional lemma (the infinitive) can only be derived from the past stem, so non-past forms in the proposed method need to have a non-canonical lemma -- the first person singular, rather than the infinitive. These separate paradigms may be linked at a separate processing stage on the basis of the similarity of the lexical meaning, e.g., measured by word embeddings or another distributional similarity metric.
+
+(2) The proposed approach focusses only on the regular dynamic component of the lexicon, which methodologically enables a clean separation between the core method of the paradigm induction and the extensions or other methods needed to address historical or irregular features, such as stem alternations or suppletive forms, for which separate distortion models can be developed or learnt from corpora. Also the inflection tables for generating paradigms hypotheses are derived from comprehensive grammatical descriptions rather than from potentially noisy data.
+
+(3) Evaluation in the proposed approach is part of the development workflow: it focusses primarily on the dynamics of corpus coverage with generated word forms for different maximum frequency thresholds. Such comprehensive automated evaluation indicates on the large scale where maximal improvement in coverage can be expected, so which frequencies can be used as cut-off points to filter out less reliable and noisier paradigms.
+
+Another important aspect of evaluation is the accuracy of the generated paradigms, e.g., the proportion of correctly generated entries, which in this paper is evaluated only indirectly, as the coverage on previously unseen corpus, as correctly generated paradigms should cover more types in the unseen corpora. Direct evaluation of accuracy will be a matter of future work, as it requires systematic sampling for different frequency ranges and more extensive manual annotation effort, which is beyond the scope of this paper.
+
+Note that the accuracy evaluation for the algorithm would require a more complex potentially multidimensional metric, which would need to address the following aspects of accuracy: (a) correctness of the whole paradigm vs. correctness of individual forms and morphological codes, such as the case labels for animate vs. inanimate nouns that, e.g., may overlap in accusative and genitive or nominative, depending on this morphological category; (b) partial overlaps of sub-paradigms, e.g., soft, hard and mixed phonological groups, or the regular masculine vs. neuter overlap in several indirect case values in nominal and adjectival paradigms, etc.; (c) defective paradigms and potential word forms; (d) morphological variants in paradigms; (e) word forms determined by independent parameters but not by the paradigm-wide inflection class, e.g., vocative case in Ukrainian; (f) different impact of errors in paradigms, depending on syntagmatic frequency, which may be determined stylistically, grammatically or lexically (e.g., the imperative is less frequent in narrative texts, so imperative errors should be counted as less serious then errors in more common 3rd-person-singular forms.
+
+>>>
+
+removed
+
+
+
+ (in this paper we do not address the problem of annotation of multi-word Named Entities)
+
+ A side-effect of this approach is that lemmas always need to come from induced paradigms, which for Slavonic languages is not always the case in traditional lexicography: e.g., verbs have two independent stems (and therefore -- paradigms) for past and non-past forms, but the traditional lemma (the infinitive) can only be derived from the past stem, so non-past forms in the proposed method need to have a non-canonical lemma -- the first person singular, rather than the infinitive. These separate paradigms may be linked at a separate processing stage on the basis of the similarity of the lexical meaning, e.g., measured by word embeddings or another distributional similarity metric.
+
+
+ \section{Acknowledgement}
+ \label{sec:Acknowledgement}
+ I thank the three anonymous reviewers for their insightful comments and suggestions.
+
+
+ The inflection tables for Ukrainian used in the experiment and the software code for generating paradigms from corpora, which implements the proposed algorithm, are released on GitHub repository: \url{https://github.com/bogdanbabych/paralex4morphosyntax}.
+
+
+ for confirming their projected paradigms
+
+ 
+
+ %\begin{abstract}
+%  This document contains the instructions for preparing a camera-ready
+%  manuscript for the proceedings of ACL 2019. The document itself
+%  conforms to its own specifications, and is therefore an example of
+%  what your manuscript should look like. These instructions should be
+%  used for both papers submitted for review and for final versions of
+%  accepted papers.  Authors are asked to conform to all the directions
+%  reported in this document.
+%\end{abstract}
+
+
+
+
+
+
+
+
+
+>>>>
+
+
+
+
+
+
+plural forms are more frequent for 'paired' names of body parts, such as 'hand', 'foot', etc.)
+
+
+independently variing paradigms.
+
+(c) parts of paradigms that depend on separate paramet, such as vocative
+
+differences in relative value of
+
+
+ complexity of the evaluated
+
+
+is beyond the scope of this paper and . Note that
+
+mainly because it does not have
+
+
+n this paper this is evaluated only indirectly
+
+
+Such evaluation is beyond the scope of this paper and will be
+
+
+// less of a concern:
+// coverage is not existing
+
+
+the frequency thresholds that give , which can be used as .
+
+
+
+
+Assumption : scenario : dealing with 'leading of the system' -- coverage of proper names, etc.
+
+
+potentially based on
+
+
+// different aspects
+- morphological codes (e.g., animacy)
+- parametrised parts of the paragidm (vocative)
+- sub-paradigms / variants of the paradigm ~
+
+
+(previously unseen) corpus for different maximal frequency thresholds The goal is to experimentally establish thresholds where generation achieves
+
+
+large-scale
+
+
+>> rather than individual paradigms ...
+>> automated large-scale evaluation >> rather than manual
+
+
+
+large scale
+
+
+of this evaluation
+
+
+
+
+for different frequency thresholds
+
+Evaluation of the accuracy of the paradigms is a more complex problem (cannot be characterised by a single measure), since
+
+
+is beyond the scope of this paper and will be a matter of future work.
+
+-
+
+
+(3) Inflection tables are based on complete descriptions
+
+(2) use of inflection tables :: from grammars
+
+
+ approach is also
+- more robust
+
+
+, but is
+
+(2) clean model : separation
 
 
 >> However our approach is explicitly exploring the following conceptual points:
+
+
+
 
 (unlike Tadic,; Ahberg.. 2017)
 (see )

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.13)  2 JUN 2019 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.6.13)  6 JUN 2019 00:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -879,13 +879,38 @@ Underfull \hbox (badness 1325) in paragraph at lines 52--53
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 52--53
-\T1/ptm/m/n/10 in-flec-tion ta-bles, which can be found in
+Underfull \hbox (badness 1735) in paragraph at lines 52--53
+\T1/ptm/m/n/10 paradigms for en-ti-ties cre-ated by the dy-
+ []
+
+
+Underfull \hbox (badness 7186) in paragraph at lines 52--53
+\T1/ptm/m/n/10 is es-pe-cially se-ri-ous for highly-inflected
+ []
+
+
+Underfull \hbox (badness 2126) in paragraph at lines 52--53
+\T1/ptm/m/n/10 lan-guages in do-mains with spe-cialised or
+ []
+
+
+Underfull \hbox (badness 4765) in paragraph at lines 52--53
+\T1/ptm/m/n/10 up-dat-ing the mor-pho-log-i-cal lex-i-con does
+ []
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 52--53
+\T1/ptm/m/n/10 method is im-ple-mented in an open-source
+ []
+
+
+Underfull \hbox (badness 1546) in paragraph at lines 52--53
+\T1/ptm/m/n/10 pack-age on a GitHub repos-i-tory [][]$\T1/pcr/m/n/10 https :
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 52--53
-\T1/ptm/m/n/10 i-tory [][]$\T1/pcr/m/n/10 https : / / github . com / qumtie /
+\T1/pcr/m/n/10 / / github . com / bogdanbabych /
  []
 
 
@@ -909,17 +934,12 @@ Underfull \hbox (badness 5475) in paragraph at lines 52--53
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 73--74
-\T1/ptm/m/n/10.95 This metaphor from Wittgen-stein's later work
- []
-
-
-Underfull \hbox (badness 1406) in paragraph at lines 75--76
+Underfull \hbox (badness 1406) in paragraph at lines 66--67
 \T1/ptm/m/n/10.95 cor-pora and fur-ther pro-poses and eval-u-ates a
  []
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 75--76
+Underfull \hbox (badness 1424) in paragraph at lines 66--67
 \T1/ptm/m/n/10.95 knowledge-light ap-proach to ex-tend-ing lex-i-cal
  []
 
@@ -931,44 +951,64 @@ Underfull \hbox (badness 1424) in paragraph at lines 75--76
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Underfull \hbox (badness 2809) in paragraph at lines 92--93
+Underfull \hbox (badness 2809) in paragraph at lines 83--84
 \T1/ptm/m/n/10.95 large Ukrainian cor-pora col-lected in lang-uk
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 95.
+               Default added (so using `tbp') on input line 86.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 97.
+(Font)              <10.95> on input line 88.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 98.
-[3] <algorithm-description.jpg, id=145, 603.25375pt x 532.99126pt>
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 89.
+
+Underfull \hbox (badness 1062) in paragraph at lines 113--114
+\T1/ptm/m/n/10.95 tion ta-bles for in-flected parts-of-speech which
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 113--114
+\T1/ptm/m/n/10.95 hy-po-thet-i-cal paradigm. In this ap-proach for
+ []
+
+
+Underfull \hbox (badness 2837) in paragraph at lines 113--114
+\T1/ptm/m/n/10.95 is se-lected among the com-pet-ing paradigms.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+[][]$\T1/pcr/m/n/10.95 https : / / github . com / bogdanbabych /
+ []
+
+[3] <algorithm-description.jpg, id=147, 603.25375pt x 532.99126pt>
 File: algorithm-description.jpg Graphic file (type jpg)
 
 <use algorithm-description.jpg>
-Package pdftex.def Info: algorithm-description.jpg used on input line 124.
+Package pdftex.def Info: algorithm-description.jpg used on input line 117.
 (pdftex.def)             Requested size: 219.08612pt x 193.56833pt.
 
-Underfull \hbox (badness 3668) in paragraph at lines 129--130
+Underfull \hbox (badness 3668) in paragraph at lines 122--123
 []\T1/ptm/m/n/10.95 For a gen-eral case to cover less reg-u-lar
  []
 
-LaTeX Font Info:    Try loading font information for T2A+ptm on input line 131.
+LaTeX Font Info:    Try loading font information for T2A+ptm on input line 124.
 
-LaTeX Font Info:    No file T2Aptm.fd. on input line 131.
+LaTeX Font Info:    No file T2Aptm.fd. on input line 124.
 
 LaTeX Font Warning: Font shape `T2A/ptm/m/n' undefined
-(Font)              using `T2A/cmr/m/n' instead on input line 131.
+(Font)              using `T2A/cmr/m/n' instead on input line 124.
 
-<algorithm-illustration.jpg, id=149, 2184.16pt x 1455.4375pt>
+<algorithm-illustration.jpg, id=151, 2184.16pt x 1455.4375pt>
 File: algorithm-illustration.jpg Graphic file (type jpg)
 
 <use algorithm-illustration.jpg>
-Package pdftex.def Info: algorithm-illustration.jpg used on input line 134.
+Package pdftex.def Info: algorithm-illustration.jpg used on input line 127.
 (pdftex.def)             Requested size: 455.24408pt x 303.34125pt.
 
-Underfull \hbox (badness 1895) in paragraph at lines 143--144
+Underfull \hbox (badness 1895) in paragraph at lines 136--137
 []\T1/ptm/m/n/10.95 In the third stage, each of the com-pet-ing
  []
 
@@ -976,38 +1016,38 @@ Underfull \hbox (badness 1895) in paragraph at lines 143--144
 Underfull \vbox (badness 2547) has occurred while \output is active []
 
  [4 <./algorithm-description.jpg>]
-Underfull \hbox (badness 5592) in paragraph at lines 147--148
+Underfull \hbox (badness 5592) in paragraph at lines 140--141
 \T1/ptm/m/n/10.95 to clearly dis-tin-guish be-tween a com-pet-ing
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 147--148
+Underfull \hbox (badness 1552) in paragraph at lines 140--141
 \T1/ptm/m/n/10.95 wrong paradigm and an al-ter-na-tive le-git-i-mate
  []
 
 
-Underfull \hbox (badness 4556) in paragraph at lines 147--148
+Underfull \hbox (badness 4556) in paragraph at lines 140--141
 \T1/ptm/m/n/10.95 paradigm, which cor-re-sponds to a dif-fer-ent
  []
 
 
-Underfull \hbox (badness 2856) in paragraph at lines 147--148
+Underfull \hbox (badness 2856) in paragraph at lines 140--141
 \T1/ptm/m/n/10.95 read-ing of an am-bigu-ous word form. For
  []
 
 
-Underfull \hbox (badness 5741) in paragraph at lines 147--148
+Underfull \hbox (badness 5741) in paragraph at lines 140--141
 \T1/ptm/m/n/10.95 ex-am-ple, the word form \T1/ptm/m/it/10.95 pryk-lad|y \T1/pt
 m/m/n/10.95 be-longs
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 \T1/ptm/m/n/10.95 both to \T1/ptm/m/it/10.95 PoS=N.nom.plur; lemma=pryklad
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
 \T1/ptm/m/it/10.95 (`ex-am-ple') \T1/ptm/m/n/10.95 and to \T1/ptm/m/it/10.95 Po
 S=V.imper.pers2.sing;
  []
@@ -1021,206 +1061,223 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [5 <./algorithm-illustration.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 158.
+               Default added (so using `tbp') on input line 149.
 
 
-Overfull \hbox (0.80647pt too wide) in paragraph at lines 160--173
+Overfull \hbox (0.80647pt too wide) in paragraph at lines 151--164
  [] 
  []
 
-<evaluation-coverage-dict_uk.jpg, id=171, 455.25183pt x 256.14061pt>
+
+Underfull \hbox (badness 2005) in paragraph at lines 171--172
+\T1/ptm/m/n/10.95 be the ac-cu-racy of the gen-er-ated paradigms,
+ []
+
+<evaluation-coverage-dict_uk.jpg, id=174, 455.25183pt x 256.14061pt>
 File: evaluation-coverage-dict_uk.jpg Graphic file (type jpg)
 
 <use evaluation-coverage-dict_uk.jpg>
-Package pdftex.def Info: evaluation-coverage-dict_uk.jpg used on input line 182
+Package pdftex.def Info: evaluation-coverage-dict_uk.jpg used on input line 181
 .
 (pdftex.def)             Requested size: 219.08612pt x 123.26266pt.
 
-<evaluation-coverage-wikiN.jpg, id=179, 455.25183pt x 256.14061pt>
+Underfull \vbox (badness 1721) has occurred while \output is active []
+
+ [6 <./evaluation-coverage-dict_uk.jpg>]
+<evaluation-coverage-wikiN.jpg, id=188, 455.25183pt x 256.14061pt>
 File: evaluation-coverage-wikiN.jpg Graphic file (type jpg)
 
 <use evaluation-coverage-wikiN.jpg>
-Package pdftex.def Info: evaluation-coverage-wikiN.jpg used on input line 192.
+Package pdftex.def Info: evaluation-coverage-wikiN.jpg used on input line 191.
 (pdftex.def)             Requested size: 219.08612pt x 123.26266pt.
 
-<evaluation-coverage-wikiL.jpg, id=180, 455.25183pt x 256.14061pt>
+<evaluation-coverage-wikiL.jpg, id=189, 455.25183pt x 256.14061pt>
 File: evaluation-coverage-wikiL.jpg Graphic file (type jpg)
 
 <use evaluation-coverage-wikiL.jpg>
-Package pdftex.def Info: evaluation-coverage-wikiL.jpg used on input line 198.
+Package pdftex.def Info: evaluation-coverage-wikiL.jpg used on input line 197.
 (pdftex.def)             Requested size: 219.08612pt x 123.26266pt.
 
-<evaluation-coverage-newsW.jpg, id=181, 455.25183pt x 256.14061pt>
+<evaluation-coverage-newsW.jpg, id=190, 455.25183pt x 256.14061pt>
 File: evaluation-coverage-newsW.jpg Graphic file (type jpg)
 
 <use evaluation-coverage-newsW.jpg>
-Package pdftex.def Info: evaluation-coverage-newsW.jpg used on input line 205.
+Package pdftex.def Info: evaluation-coverage-newsW.jpg used on input line 204.
 (pdftex.def)             Requested size: 219.08612pt x 123.26266pt.
 
-<evaluation-coverage-newsL.jpg, id=182, 455.25183pt x 256.14061pt>
+<evaluation-coverage-newsL.jpg, id=191, 455.25183pt x 256.14061pt>
 File: evaluation-coverage-newsL.jpg Graphic file (type jpg)
 
 <use evaluation-coverage-newsL.jpg>
-Package pdftex.def Info: evaluation-coverage-newsL.jpg used on input line 211.
+Package pdftex.def Info: evaluation-coverage-newsL.jpg used on input line 210.
 (pdftex.def)             Requested size: 219.08612pt x 123.26266pt.
 
-<evaluation-coverage-lawW.jpg, id=183, 455.25183pt x 256.14061pt>
+<evaluation-coverage-lawW.jpg, id=192, 455.25183pt x 256.14061pt>
 File: evaluation-coverage-lawW.jpg Graphic file (type jpg)
 
 <use evaluation-coverage-lawW.jpg>
-Package pdftex.def Info: evaluation-coverage-lawW.jpg used on input line 218.
+Package pdftex.def Info: evaluation-coverage-lawW.jpg used on input line 217.
 (pdftex.def)             Requested size: 219.08612pt x 123.26266pt.
 
-<evaluation-coverage-lawN.jpg, id=184, 455.25183pt x 256.14061pt>
+<evaluation-coverage-lawN.jpg, id=193, 455.25183pt x 256.14061pt>
 File: evaluation-coverage-lawN.jpg Graphic file (type jpg)
 
 <use evaluation-coverage-lawN.jpg>
-Package pdftex.def Info: evaluation-coverage-lawN.jpg used on input line 224.
+Package pdftex.def Info: evaluation-coverage-lawN.jpg used on input line 223.
 (pdftex.def)             Requested size: 219.08612pt x 123.26266pt.
-
-<evaluation-improv-DiffNoTypNews.jpg, id=187, 455.25183pt x 256.14061pt>
+ [7 <./evaluation-coverage-wikiN.jpg> <./evaluation-coverage-wikiL.jpg> <./eval
+uation-coverage-newsW.jpg> <./evaluation-coverage-newsL.jpg> <./evaluation-cove
+rage-lawW.jpg>]
+<evaluation-improv-DiffNoTypNews.jpg, id=207, 455.25183pt x 256.14061pt>
 File: evaluation-improv-DiffNoTypNews.jpg Graphic file (type jpg)
 
 <use evaluation-improv-DiffNoTypNews.jpg>
 Package pdftex.def Info: evaluation-improv-DiffNoTypNews.jpg used on input line
- 235.
+ 234.
 (pdftex.def)             Requested size: 219.08612pt x 123.26266pt.
 
-<evaluation-improv-DiffNoTypWiki.jpg, id=188, 455.25183pt x 256.14061pt>
+<evaluation-improv-DiffNoTypWiki.jpg, id=208, 455.25183pt x 256.14061pt>
 File: evaluation-improv-DiffNoTypWiki.jpg Graphic file (type jpg)
 
 <use evaluation-improv-DiffNoTypWiki.jpg>
 Package pdftex.def Info: evaluation-improv-DiffNoTypWiki.jpg used on input line
- 241.
+ 240.
 (pdftex.def)             Requested size: 219.08612pt x 123.26266pt.
- [6 <./evaluation-coverage-dict_uk.jpg> <./evaluation-coverage-wikiN.jpg>] [7 <
-./evaluation-coverage-wikiL.jpg> <./evaluation-coverage-newsW.jpg> <./evaluatio
-n-coverage-newsL.jpg> <./evaluation-coverage-lawW.jpg> <./evaluation-coverage-l
-awN.jpg> <./evaluation-improv-DiffNoTypNews.jpg>]
-Underfull \hbox (badness 1205) in paragraph at lines 272--273
-[]\T1/ptm/m/n/10.95 The in-flec-tion ta-bles for Ukrainian used in
+
+Underfull \vbox (badness 1077) has occurred while \output is active []
+
+ [8 <./evaluation-coverage-lawN.jpg> <./evaluation-improv-DiffNoTypNews.jpg> <.
+/evaluation-improv-DiffNoTypWiki.jpg>]
+Underfull \hbox (badness 1052) in paragraph at lines 266--269
+\T1/ptm/m/n/10.95 Min-istry of Health')  [][][][][]\T2A/ptm/m/n/10.95 iн-тер-бi
+-зне-скон-сал-тинг
  []
 
-(./babych-2019-ukr-morphparadigms-bsnlp-acl2019.bbl
-Underfull \vbox (badness 5954) has occurred while \output is active []
 
- [8 <./evaluation-improv-DiffNoTypWiki.jpg>]
-Underfull \hbox (badness 1028) in paragraph at lines 26--30
+Underfull \hbox (badness 1253) in paragraph at lines 266--269
+[][][][] []\T1/ptm/m/n/10.95 (`In-ter-net busi-ness con-sult-ing'),  [][][][][]
+\T2A/ptm/m/n/10.95 кре-мен-чу-
+ []
+
+
+Underfull \vbox (badness 6047) has occurred while \output is active []
+
+
+(./babych-2019-ukr-morphparadigms-bsnlp-acl2019.bbl [9]
+Underfull \hbox (badness 1028) in paragraph at lines 38--42
 \T1/ptm/m/n/10 lah, Christo Kirov, and David Yarowsky. 2017.
  []
 
 
-Underfull \hbox (badness 8038) in paragraph at lines 34--41
+Underfull \hbox (badness 8038) in paragraph at lines 46--53
 []\T1/ptm/m/n/10 Vsevolod Dy-omkin, Dmytro Chap-lin-skyi, Ana-
  []
 
 
-Underfull \hbox (badness 7273) in paragraph at lines 34--41
+Underfull \hbox (badness 7273) in paragraph at lines 46--53
 \T1/ptm/m/n/10 toliy Steg-nii, Olek-sandr Marikovskyi, Vi-ach-
  []
 
 
-Underfull \hbox (badness 5008) in paragraph at lines 34--41
+Underfull \hbox (badness 5008) in paragraph at lines 46--53
 \T1/ptm/m/n/10 uchenko, Ok-sana Ku-nikevych, and Khrystyna
  []
 
 
-Underfull \hbox (badness 2443) in paragraph at lines 67--74
+Underfull \hbox (badness 2443) in paragraph at lines 79--86
 \T1/ptm/m/n/10 Ramнrez-Sбnchez, and Fran-cis M Ty-ers. 2011.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--88
+Underfull \hbox (badness 10000) in paragraph at lines 102--107
 []\T1/ptm/m/n/10 Arnold P. Hryshchenko, Matsko Li-ubov I.,
  []
 
 
-Underfull \hbox (badness 6141) in paragraph at lines 83--88
+Underfull \hbox (badness 6141) in paragraph at lines 102--107
 \T1/ptm/m/it/10 Lan-gauge / Suchasna Ukra-jins'ka Lit-er-aturna
  []
 
 
-Underfull \hbox (badness 6792) in paragraph at lines 97--103
+Underfull \hbox (badness 6792) in paragraph at lines 110--116
 []\T1/ptm/m/n/10 Yevheniya A. Karpilovs'ka, Larysa P. Kys-liuk,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--103
+Underfull \hbox (badness 10000) in paragraph at lines 110--116
 \T1/ptm/m/n/10 Nina F. Kly-menko, Va-len-tyna I. Kryts'ka,
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 97--103
+Underfull \hbox (badness 3396) in paragraph at lines 110--116
 \T1/ptm/m/n/10 Puzdyr'eva Tetiana K., and Yuliya V. Ro-ma-
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 97--103
+Underfull \hbox (badness 2478) in paragraph at lines 110--116
 \T1/ptm/m/it/10 nom-i-na-tion. Ideo-graphic dic-tio-nary of the new
  []
 
 
-Underfull \hbox (badness 7613) in paragraph at lines 127--131
+Underfull \hbox (badness 7613) in paragraph at lines 140--144
 []\T1/ptm/m/n/10 Natalia Kot-syba, An-driy Mykulyaky, and Igor
  []
 
 
-Underfull \hbox (badness 1383) in paragraph at lines 134--138
+Underfull \hbox (badness 1383) in paragraph at lines 147--151
 []\T1/ptm/m/n/10 Natalia Kot-syba, Igor Shevchenko, Ivan Derzhan-
  []
 
 
-Underfull \hbox (badness 3514) in paragraph at lines 134--138
+Underfull \hbox (badness 3514) in paragraph at lines 147--151
 \T1/ptm/m/n/10 ski, and An-driy Mykulyak. 2010.  [][]Multext-
  []
 
 
-Underfull \hbox (badness 4217) in paragraph at lines 134--138
+Underfull \hbox (badness 4217) in paragraph at lines 147--151
 \T1/ptm/m/n/10 east mor-phosyn-tac-tic spec-i-fi-ca-tions, ver-sion 4.
  []
 
-
-Underfull \hbox (badness 1400) in paragraph at lines 149--154
+[10]
+Underfull \hbox (badness 1400) in paragraph at lines 185--190
 \T1/ptm/m/it/10 fo-logich-eskiy analiz nauchnogo tek-sta na EVM\T1/ptm/m/n/10 .
 
  []
 
-[9]
-Underfull \hbox (badness 1292) in paragraph at lines 168--173
+
+Underfull \hbox (badness 1292) in paragraph at lines 204--209
 \T1/ptm/m/it/10 GitHub repos-i-tory\T1/ptm/m/n/10 .  [][]$\T1/pcr/m/n/10 https 
 : / / github . com /
  []
 
 
-Underfull \hbox (badness 1102) in paragraph at lines 194--199
+Underfull \hbox (badness 1102) in paragraph at lines 247--252
 []\T1/ptm/m/n/10 Lawrence Wolf-Sonkin, Ja-son Narad-owsky, Se-bas-
  []
 
 
-Underfull \hbox (badness 1796) in paragraph at lines 194--199
+Underfull \hbox (badness 1796) in paragraph at lines 247--252
 \T1/ptm/m/n/10 tian J Mielke, and Ryan Cot-terell. 2018.  A
  []
 
 
-Underfull \hbox (badness 7451) in paragraph at lines 194--199
+Underfull \hbox (badness 7451) in paragraph at lines 247--252
 \T1/ptm/m/n/10 struc-tured vari-a-tional au-toen-coder for con-tex-
  []
 
 
-Underfull \hbox (badness 2961) in paragraph at lines 194--199
+Underfull \hbox (badness 2961) in paragraph at lines 247--252
 \T1/ptm/m/n/10 tual mor-pho-log-i-cal in-flec-tion.  \T1/ptm/m/it/10 arXiv prep
 rint
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
- [10
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 287.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 287.
  (./babych-2019-ukr-morphparadigms-bsnlp-acl2019.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 287.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 287.
 Package rerunfilecheck Info: File `babych-2019-ukr-morphparadigms-bsnlp-acl2019
 .out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -1228,14 +1285,14 @@ Package rerunfilecheck Info: File `babych-2019-ukr-morphparadigms-bsnlp-acl2019
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 279.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 287.
  )
 (\end occurred when \iffalse on line 351 was incomplete) 
 Here is how much of TeX's memory you used:
- 8952 strings out of 493014
- 129917 string characters out of 6133351
- 232704 words of memory out of 5000000
- 12307 multiletter control sequences out of 15000+600000
+ 8985 strings out of 493014
+ 130796 string characters out of 6133351
+ 231094 words of memory out of 5000000
+ 12331 multiletter control sequences out of 15000+600000
  35940 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,10n,46p,1857b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1247,11 +1304,11 @@ ts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texmf-dist/fonts
 rw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on babych-2019-ukr-morphparadigms-bsnlp-acl2019.pdf (10 pages, 1
-085855 bytes).
+Output written on babych-2019-ukr-morphparadigms-bsnlp-acl2019.pdf (11 pages, 1
+093920 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 275 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

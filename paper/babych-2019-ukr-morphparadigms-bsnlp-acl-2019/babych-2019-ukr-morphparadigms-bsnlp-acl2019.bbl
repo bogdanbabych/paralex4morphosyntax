@@ -1,10 +1,16 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{35}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{Aharoni and Goldberg(2016)}]{aharoni2016morphological}
 Roee Aharoni and Yoav Goldberg. 2016.
 \newblock Morphological inflection generation with hard monotonic attention.
 \newblock \emph{arXiv preprint arXiv:1611.01487}.
+
+\bibitem[{Ahlberg et~al.(2014)Ahlberg, Forsberg, and Hulden}]{hulden2014semi}
+Malin Ahlberg, Markus Forsberg, and Mans Hulden. 2014.
+\newblock Semi-supervised learning of morphological paradigms and lexicons.
+\newblock In \emph{Proceedings of the 14th Conference of the European Chapter
+  of the Association for Computational Linguistics}, pages 569--578.
 
 \bibitem[{Ahlberg et~al.(2015)Ahlberg, Forsberg, and
   Hulden}]{ahlberg2015paradigm}
@@ -20,6 +26,12 @@ Bogdan Babych and Serge Sharoff. 2016.
   morphological disambiguation resources from a closely related language.
 \newblock In \emph{Fifth Workshop on Hybrid Approaches to Translation (HyTra)}.
   EAMT, Riga: June 1st 2016.
+
+\bibitem[{Cl{\'e}ment et~al.(2004)Cl{\'e}ment, Lang, and
+  Sagot}]{clement2004morphology}
+Lionel Cl{\'e}ment, Bernard Lang, and Beno{\^\i}t Sagot. 2004.
+\newblock Morphology based automatic acquisition of large-coverage lexica.
+\newblock In \emph{LREC 04}, pages 1841--1844.
 
 \bibitem[{Cotterell et~al.(2017)Cotterell, Vylomova, Khayrallah, Kirov, and
   Yarowsky}]{cotterell2017paradigm}
@@ -72,6 +84,13 @@ Mikel~L Forcada, Mireia Ginest{\'\i}-Rosell, Jacob Nordfalk, Jim O’Regan,
   translation.
 \newblock \emph{Machine translation}, 25(2):127--144.
 
+\bibitem[{Grefenstette et~al.(2002)Grefenstette, Qu, and
+  Evans}]{grefenstette2002expanding}
+Gregory Grefenstette, Yan Qu, and David Evans. 2002.
+\newblock Expanding lexicons by inducing paradigms and validating attested
+  forms.
+\newblock In \emph{LREC 2002}.
+
 \bibitem[{Gryaznukhina(1999)}]{gryaznukhina-ed-1999}
 Tetiana~O. Gryaznukhina, editor. 1999.
 \newblock \emph{Syntactic analysis of scientific texts on computers. /
@@ -85,12 +104,6 @@ Arnold~P. Hryshchenko, Matsko~Liubov I., Pliushch~Mariya Ja., Totska~Nina I.,
 \newblock \emph{Modern Ukrainian Literary Langauge / Suchasna Ukrajins'ka
   Literaturna Mova}.
 \newblock Vyshcha Shkola, Kyiv.
-
-\bibitem[{Hulden et~al.(2014)Hulden, Forsberg, and Ahlberg}]{hulden2014semi}
-Mans Hulden, Markus Forsberg, and Malin Ahlberg. 2014.
-\newblock Semi-supervised learning of morphological paradigms and lexicons.
-\newblock In \emph{Proceedings of the 14th Conference of the European Chapter
-  of the Association for Computational Linguistics}, pages 569--578.
 
 \bibitem[{Karpilovs'ka et~al.(2008)Karpilovs'ka, Kysliuk, Klymenko, Kryts'ka,
   K., and Romaniuk}]{karpilovska2013aktyvni}
@@ -136,6 +149,22 @@ Natalia Kotsyba, Igor Shevchenko, Ivan Derzhanski, and Andriy Mykulyak. 2010.
   morphosyntactic specifications, version 4. 3.11 url:
   \url{http://nl.ijs.si/ME/V4/msd/html/msd-uk.html}}.
 
+\bibitem[{Krovetz(1993)}]{krovetz1993viewing}
+Robert Krovetz. 1993.
+\newblock Viewing morphology as an inference process.
+\newblock In \emph{Proceedings of the 16th annual international ACM SIGIR
+  conference on Research and development in information retrieval}, pages
+  191--202. ACM.
+
+\bibitem[{Ljube{\v{s}}i{\'c} et~al.(2015)Ljube{\v{s}}i{\'c}, Espla-Gomis,
+  Klubi{\v{c}}ka, and Preradovi{\'c}}]{ljubevsic2015predicting}
+Nikola Ljube{\v{s}}i{\'c}, Miquel Espla-Gomis, Filip Klubi{\v{c}}ka, and
+  Nives~Mikeli{\'c} Preradovi{\'c}. 2015.
+\newblock Predicting inflectional paradigms and lemmata of unknown words for
+  semi-automatic expansion of morphological lexicons.
+\newblock In \emph{Proceedings of the International Conference Recent Advances
+  in Natural Language Processing}, pages 379--387.
+
 \bibitem[{Nivre et~al.(2016)Nivre, De~Marneffe, Ginter, Goldberg, Hajic,
   Manning, McDonald, Petrov, Pyysalo, Silveira et~al.}]{nivre2016universal}
 Joakim Nivre, Marie-Catherine De~Marneffe, Filip Ginter, Yoav Goldberg, Jan
@@ -143,6 +172,13 @@ Joakim Nivre, Marie-Catherine De~Marneffe, Filip Ginter, Yoav Goldberg, Jan
   Natalia Silveira, et~al. 2016.
 \newblock Universal dependencies v1: A multilingual treebank collection.
 \newblock In \emph{LREC}.
+
+\bibitem[{Oliver and Tadi{\'c}(2004)}]{oliver2004enlarging}
+Antoni Oliver and Marko Tadi{\'c}. 2004.
+\newblock Enlarging the croatian morphological lexicon by automatic lexical
+  acquisition from raw corpora.
+\newblock In \emph{Fourth International Conference on Language Resources and
+  Evaluation LREC2004}. ELRA.
 
 \bibitem[{Perebyjnis et~al.(1989)Perebyjnis, Darchuk, and
   Gryaznukhina}]{gryaznukhina-ed-1989}
@@ -171,6 +207,18 @@ Andriy Rysin and Vasyl Starko. 2019.
 \newblock \emph{GitHub repository}.
 \newblock \url{https://github.com/brown-uk/dict_uk}.
 
+\bibitem[{Sagot(2005)}]{sagot2005automatic}
+Beno{\^\i}t Sagot. 2005.
+\newblock Automatic acquisition of a slovak lexicon from a raw corpus.
+\newblock In \emph{International Conference on Text, Speech and Dialogue},
+  pages 156--163. Springer.
+
+\bibitem[{Segalovich(2003)}]{segalovich2003fast}
+Ilya Segalovich. 2003.
+\newblock A fast morphological algorithm with unknown word guessing induced by
+  a dictionary for a web search engine.
+\newblock In \emph{MLMTA}, pages 273--280. Citeseer.
+
 \bibitem[{Silfverberg et~al.(2018)Silfverberg, Liu, and
   Hulden}]{silfverberg2018computational}
 Miikka Silfverberg, Ling Liu, and Mans Hulden. 2018.
@@ -178,6 +226,11 @@ Miikka Silfverberg, Ling Liu, and Mans Hulden. 2018.
   paradigm.
 \newblock In \emph{Proceedings of the 27th International Conference on
   Computational Linguistics}, pages 1615--1626.
+
+\bibitem[{{\v{S}}najder(2013)}]{vsnajder2013models}
+Jan {\v{S}}najder. 2013.
+\newblock Models for predicting the inflectional paradigm of croatian words.
+\newblock \emph{Sloven{\v{s}}cina}, 20:1--34.
 
 \bibitem[{Spencer(2001)}]{spencer2001paradigm}
 Andrew Spencer. 2001.
